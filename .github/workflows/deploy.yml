@@ -142,7 +142,6 @@ jobs:
               sed -i 's/^APP_ENV=.*/APP_ENV=production/' .env
               sed -i 's/^APP_DEBUG=.*/APP_DEBUG=false/' .env
             fi
-            grep -q '^APP_KEY=.' .env || php artisan key:generate --force
             mkdir -p bootstrap/cache
             mkdir -p storage/framework/cache
             mkdir -p storage/framework/cache/data
@@ -151,6 +150,7 @@ jobs:
             mkdir -p storage/app/public
             mkdir -p storage/logs
             chmod -R 775 bootstrap/cache storage
+            grep -q '^APP_KEY=.' .env || php artisan key:generate --force
             rm -rf public/storage
             php artisan storage:link
             php -v
