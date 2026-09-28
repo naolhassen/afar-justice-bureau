@@ -1,196 +1,147 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}" dir="ltr">
+<html lang="{{ app()->getLocale() }}">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>{{ __('messages.metadata.title') }}</title>
     <meta name="description" content="{{ __('messages.metadata.description') }}">
 
-    <!--===== FAB ICON =======-->
-    <link rel="shortcut icon" href="{{ asset('images/logo.jpg') }}" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link href="{{ asset('counsel/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('counsel/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('counsel/css/responsive.css') }}" rel="stylesheet">
 
-    <!--===== CSS LINK =======-->
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/aos.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/fontawesome.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/slick-slider.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/sidebar.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/nice-select.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/swiper-slider.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{{ asset('logo.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('logo.png') }}" type="image/png">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
     <style>
+        /* Afar Justice Bureau color overrides */
         :root {
-            --prosperity-purple: #9b59b6;
-            --prosperity-purple-dark: #7d3c98;
-            --prosperity-purple-light: #c19cd9;
+            --justice-primary: #9b59b6;
+            --justice-primary-dark: #7d3c98;
+            --justice-primary-light: #c19cd9;
+            --justice-gold: #c8a951;
         }
 
-        html, body {
-            direction: ltr !important;
-            text-align: left !important;
-            unicode-bidi: normal !important;
+        /* Override the template's gold/dark color scheme with Afar Justice purple */
+        .theme-btn.btn-style-one .txt {
+            background: var(--justice-primary);
         }
-
-        .vl-header-area,
-        .vl-header-sticky.sticky,
-        .vl-transparent-header {
-            background: #fff !important;
-            box-shadow: 0 2px 20px rgba(43, 19, 67, 0.08) !important;
+        .theme-btn.btn-style-one .txt:hover {
+            background: var(--justice-primary-dark);
         }
-
-        .vl-logo a span {
-            color: #9b59b6 !important;
+        .sec-title h2::before,
+        .sec-title h2::after {
+            background: var(--justice-primary) !important;
         }
-
-        .vl-main-menu ul li > a,
-        .vl-main-menu ul li.has-dropdown > a {
-            color: #9b59b6 !important;
-            font-weight: 600;
-            position: relative;
+        .services-block .inner-box:hover {
+            border-color: var(--justice-primary) !important;
         }
-        .vl-main-menu ul li > a:hover,
-        .vl-main-menu ul li > a.active,
-        .vl-main-menu ul li.active > a {
-            color: #7d3c98 !important;
+        .services-block .inner-box .content .icon {
+            color: var(--justice-primary);
         }
-        .vl-main-menu ul li > a.active::after,
-        .vl-main-menu ul li.active > a::after {
-            content: '';
-            display: block;
-            width: 6px;
-            height: 6px;
-            background: #9b59b6;
-            border-radius: 50%;
-            margin: 6px auto 0;
+        .practice-block .inner-box:hover {
+            background: var(--justice-primary);
         }
-        .vl-main-menu ul li .sub-menu li a {
-            color: #2B1343 !important;
+        a:hover, a:focus {
+            color: var(--justice-primary);
         }
-        .vl-main-menu ul li .sub-menu li a:hover,
-        .vl-main-menu ul li .sub-menu li a.active {
-            color: #9b59b6 !important;
+        .main-header .navigation > li:hover > a,
+        .main-header .navigation > li.current > a {
+            color: var(--justice-primary) !important;
         }
-
-        .header-lang-select {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 14px;
-            border-radius: 30px;
-            background: #fff;
-            color: #9b59b6;
-            font-size: 14px;
-            font-weight: 600;
-            border: 1px solid #9b59b6;
-            transition: all 0.3s ease;
+        .main-footer {
+            background: #1a0a2e;
         }
-        .header-lang-select:hover, .header-lang-select:focus, .header-lang-select.show {
-            background: #9b59b6;
-            border-color: #9b59b6;
+        .footer-bottom {
+            background: #140822;
+        }
+        .theme-btn.btn-style-two .txt {
+            color: var(--justice-primary);
+            border-color: var(--justice-primary);
+        }
+        .theme-btn.btn-style-two .txt:hover {
+            background: var(--justice-primary);
             color: #fff;
         }
-        .header-lang-select::after {
-            border-top-color: currentColor;
+        .counter-section .image-layer {
+            background-color: var(--justice-primary-dark);
         }
 
-        .dropdown-menu.language-menu {
-            background: #fff !important;
-            border: 1px solid #9b59b6 !important;
-            border-radius: 12px !important;
-            padding: 8px !important;
-            min-width: 180px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        /* Language switcher styling */
+        .lang-switcher {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: 15px;
         }
-        .dropdown-menu.language-menu .dropdown-item {
-            color: #2B1343 !important;
-            border-radius: 8px;
-            transition: all 0.2s ease;
+        .lang-switcher a {
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #555;
+            transition: all 0.3s;
         }
-        .dropdown-menu.language-menu .dropdown-item:hover,
-        .dropdown-menu.language-menu .dropdown-item:focus {
-            background: rgba(155, 89, 182, 0.12) !important;
-            color: #9b59b6 !important;
-        }
-        .dropdown-menu.language-menu .dropdown-item.active {
-            background: #9b59b6 !important;
-            color: #fff !important;
-        }
-
-        .text-danger, .text-danger:hover, .text-danger:focus, a.text-danger {
-            color: #9b59b6 !important;
-        }
-        .bg-danger, .btn-danger, .btn-danger:hover, .btn-danger:focus, .btn-danger:active {
-            background-color: #9b59b6 !important;
-            border-color: #9b59b6 !important;
-            color: #fff !important;
-        }
-
-        .vl-btn1, .vl-btn1:hover, .vl-btn1:focus {
-            background: #9b59b6 !important;
-            border-color: #9b59b6 !important;
-            color: #fff !important;
-        }
-        .vl-btn1 i {
-            color: #fff !important;
-        }
-
-        .bar.red, .progress .bar {
-            background: #9b59b6 !important;
+        .lang-switcher a:hover,
+        .lang-switcher a.active-lang {
+            background: var(--justice-primary);
+            color: #fff;
         }
 
         .party-logo-img {
-            height: 44px;
+            height: 50px;
             width: auto;
             border-radius: 8px;
             object-fit: contain;
         }
     </style>
+    @stack('styles')
 </head>
-<body class="homepage3-body">
 
-    <!--===== PRELOADER STARTS =======-->
-    <div class="preloader">
-        <div class="loading-container">
-            <div class="loading"></div>
-            <div id="loading-icon">
-                <img src="{{ asset('images/logo.jpg') }}" alt="Prosperity Party" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
-            </div>
-        </div>
+<body class="hidden-bar-wrapper">
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+        @include('components.header')
+
+        <main>
+            @yield('content')
+        </main>
+
+        @include('components.footer')
+
     </div>
-    <!--===== PRELOADER ENDS =======-->
+    <!--End pagewrapper-->
 
-    <!--===== PROGRESS STARTS =======-->
-    <div class="paginacontainer">
-        <div class="progress-wrap">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
-            </svg>
-        </div>
-    </div>
-    <!--===== PROGRESS ENDS =======-->
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
 
-    @include('components.header')
-
-    <main>
-        @yield('content')
-    </main>
-
-    @include('components.footer')
-
-    <!--===== JS SCRIPT LINK =======-->
-    <script src="{{ asset('assets/js/plugins/jquery-3-7-1.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/fontawesome.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/aos.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/counter.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/magnific-popup.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/nice-select.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/waypoints.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/sidebar.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/slick-slider.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/swiper-slider.js') }}"></script>
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('counsel/js/jquery.js') }}"></script>
+    <script src="{{ asset('counsel/js/popper.min.js') }}"></script>
+    <script src="{{ asset('counsel/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('counsel/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+    <script src="{{ asset('counsel/js/jquery.fancybox.js') }}"></script>
+    <script src="{{ asset('counsel/js/appear.js') }}"></script>
+    <script src="{{ asset('counsel/js/parallax.min.js') }}"></script>
+    <script src="{{ asset('counsel/js/tilt.jquery.min.js') }}"></script>
+    <script src="{{ asset('counsel/js/jquery.paroller.min.js') }}"></script>
+    <script src="{{ asset('counsel/js/owl.js') }}"></script>
+    <script src="{{ asset('counsel/js/wow.js') }}"></script>
+    <script src="{{ asset('counsel/js/nav-tool.js') }}"></script>
+    <script src="{{ asset('counsel/js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('counsel/js/script.js') }}"></script>
+    @stack('scripts')
 </body>
+
 </html>

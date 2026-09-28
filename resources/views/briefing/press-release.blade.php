@@ -34,9 +34,9 @@ $releases = [
                             <div class="p-4 bg-white rounded-3 border mb-4">
                                 <h6 class="fw-bold mb-2">{{ __('messages.contact.info') }}</h6>
                                 <p class="text-muted small mb-1">{{ __('messages.contact.headOffice') }}</p>
-                                <p class="text-muted small mb-0"><a href="mailto:prosperityafarbranch@gmail.com" class="text-danger">prosperityafarbranch@gmail.com</a></p>
+                                <p class="text-muted small mb-0"><a href="mailto:{{ __('messages.contact.emailValue') }}" class="text-danger">{{ __('messages.contact.emailValue') }}</a></p>
                             </div>
-                            <a href="mailto:prosperityafarbranch@gmail.com?subject=Press Inquiries" class="vl-btn1">
+                            <a href="mailto:{{ __('messages.contact.emailValue') }}?subject=Press Inquiries" class="vl-btn1">
                                 <i class="fa-solid fa-microphone me-2"></i> Media Inquiries
                             </a>
                         </div>

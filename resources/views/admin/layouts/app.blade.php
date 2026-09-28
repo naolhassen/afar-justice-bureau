@@ -266,8 +266,8 @@ $menu = [
 <div class="admin-wrapper">
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <img src="{{ asset('images/logo.jpg') }}" alt="logo">
-            <div class="brand">Afar <span>Prosperity</span></div>
+            <img src="{{ asset('logo.png') }}" alt="logo">
+            <div class="brand">Afar <span>Justice</span></div>
         </div>
         <ul class="sidebar-menu">
             @foreach($menu as $item)

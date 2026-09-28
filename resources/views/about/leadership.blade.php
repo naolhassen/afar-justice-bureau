@@ -29,7 +29,7 @@
                                     <p style="color: #9b59b6; font-weight: 500;">{{ __($leader['position']) }}</p>
                                 </div>
                                 <div class="share">
-                                    <a href="mailto:prosperityafarbranch@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                                    <a href="mailto:{{ __('messages.contact.emailValue') }}"><i class="fa-solid fa-envelope"></i></a>
                                 </div>
                             </div>
                             <ul>

@@ -1,534 +1,475 @@
 @extends('layouts.app')
 
 @section('content')
-@php
-$locale = app()->getLocale();
-@endphp
 
-<!--===== HERO AREA STARTS =======-->
-<div class="hero3" style="background-image: url({{ asset('assets/img/all-images/bg/hero-bg2.png') }}); background-position: center bottom; background-repeat: no-repeat; background-size: cover;">
-  <img src="{{ asset('assets/img/elements/elements16.png') }}" alt="" class="elements16 aniamtion-key-1">
-  <img src="{{ asset('assets/img/elements/elements17.png') }}" alt="" class="elements17 aniamtion-key-1">
-  <img src="{{ asset('assets/img/elements/elements18.png') }}" alt="" class="elements18">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-xl-7">
-        <div class="heading2">
-          <h1 class="vl-section-title text-dark" data-aos="fade-left" data-aos-duration="1000">
-              {{ __('messages.hero.title') }} <span style="color: #9b59b6;">{{ __('messages.hero.titleHighlight') }}</span>
-          </h1>
-          <div class="space16"></div>
-          <p class="text-white-50" data-aos="fade-left" data-aos-duration="1000">
-              {{ __('messages.hero.description') }}
-          </p>
-          <div class="space32"></div>
-          <div class="btn-area1" data-aos="fade-left" data-aos-duration="1200">
-            <a href="{{ route('briefing.news', ['locale' => $locale]) }}" class="vl-btn1">
-                {{ __('messages.hero.cta') }} <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="{{ route('about.vision-mission', ['locale' => $locale]) }}" class="vl-btn2">
-                {{ __('messages.hero.secondaryCta') }} <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <!-- Social Nav -->
+        <ul class="social-nav">
+            <li class="facebook"><a href="https://www.facebook.com/"><span class="fa fa-facebook-f"></span></a></li>
+            <li class="twitter"><a href="https://www.twitter.com/"><span class="fa fa-twitter"></span></a></li>
+            <li class="linkedin"><a href="https://www.linkedin.com/"><span class="fa fa-linkedin"></span></a></li>
+        </ul>
+        <div class="main-slider-carousel owl-carousel owl-theme">
 
-      <div class="col-xl-5">
-        <div class="hero-img" data-aos="zoom-in-up" data-aos-duration="1000">
-          <img src="{{ asset('images/hero-img.png') }}" alt="Prosperity Afar" style="max-width: 100%; height: auto; border-radius: 20px;">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--===== HERO AREA ENDS =======-->
-
-<!--===== BRAND / PILLARS SLIDER AREA STARTS =======-->
-<div class="others-slider-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-12">
-        <div class="brand-slider-area">
-          <div class="brand-img" style="display: inline-flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-star" style="font-size: 24px; color: #fff;"></i>
-            <span style="font-family: 'Abyssinica SIL', 'Nyala', 'Ethiopia Jiret', 'Noto Sans Ethiopic', sans-serif; font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap;">ኢትዮጵያ አሸንፋለች!</span>
-          </div>
-          <div class="brand-img" style="display: inline-flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-hand-fist" style="font-size: 24px; color: #fff;"></i>
-            <span style="font-family: 'Trebuchet MS', 'Lucida Grande', 'Helvetica Neue', Arial, sans-serif; font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap;">Itiyopiya Teyseh!</span>
-          </div>
-          <div class="brand-img" style="display: inline-flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-trophy" style="font-size: 24px; color: #fff;"></i>
-            <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap;">Ethiopia Will Win!</span>
-          </div>
-          <div class="brand-img" style="display: inline-flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-star" style="font-size: 24px; color: #fff;"></i>
-            <span style="font-family: 'Abyssinica SIL', 'Nyala', 'Ethiopia Jiret', 'Noto Sans Ethiopic', sans-serif; font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap;">ኢትዮጵያ አሸንፋለች!</span>
-          </div>
-          <div class="brand-img" style="display: inline-flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-hand-fist" style="font-size: 24px; color: #fff;"></i>
-            <span style="font-family: 'Trebuchet MS', 'Lucida Grande', 'Helvetica Neue', Arial, sans-serif; font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap;">Itiyopiya Teyseh!</span>
-          </div>
-          <div class="brand-img" style="display: inline-flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-trophy" style="font-size: 24px; color: #fff;"></i>
-            <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap;">Ethiopia Will Win!</span>
-          </div>
-          <div class="brand-img" style="display: inline-flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-star" style="font-size: 24px; color: #fff;"></i>
-            <span style="font-family: 'Abyssinica SIL', 'Nyala', 'Ethiopia Jiret', 'Noto Sans Ethiopic', sans-serif; font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap;">ኢትዮጵያ አሸንፋለች!</span>
-          </div>
-          <div class="brand-img" style="display: inline-flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-hand-fist" style="font-size: 24px; color: #fff;"></i>
-            <span style="font-family: 'Trebuchet MS', 'Lucida Grande', 'Helvetica Neue', Arial, sans-serif; font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap;">Itiyopiya Teyseh!</span>
-          </div>
-          <div class="brand-img" style="display: inline-flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-trophy" style="font-size: 24px; color: #fff;"></i>
-            <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 20px; font-weight: 700; color: #fff; white-space: nowrap;">Ethiopia Will Win!</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--===== BRAND / PILLARS SLIDER AREA ENDS =======-->
-
-<!--===== ABOUT AREA STARTS =======-->
-<div class="about3 sp1">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-xl-6">
-            <div class="about-images-area">
-                <img src="{{ asset('assets/img/elements/elements15.png') }}" alt="" class="elements10 aniamtion-key-2">
-                <div class="img1 text-end" data-aos="fade-right" data-aos-duration="1000">
-                    <img src="{{ asset('images/gallery/gallery-01.jpg') }}" alt="Gallery">
-                </div>
-                <div class="experiance-box">
-                  <h3><span class="counter">100</span>+</h3>
-                  <div class="space8"></div>
-                  <p>{{ $locale === 'aa' ? 'Rakaakayak Buxaaxih Oyti' : ($locale === 'am' ? 'የወረዳ እና ቀበሌ መዋቅሮች' : 'Woredas & Kebeles') }}</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-6">
-          <div class="heading2">
-            <h2 class="vl-section-title" data-aos="fade-left" data-aos-duration="1000">
-                {{ __('messages.about.title') }} <span style="color: #9b59b6;">{{ __('messages.about.titleHighlight') }}</span>
-            </h2>
-            <div class="space16"></div>
-            <p data-aos="fade-left" data-aos-duration="1100">
-                {{ __('messages.about.description') }}
-            </p>
-            <div class="space12"></div>
-            <div class="progress-bar-container">
-                <div class="progress-item" data-aos="fade-left" data-aos-duration="1000">
-                  <div class="label">
-                    <span>{{ __('messages.services.economicDev') }}</span>
-                    <span>95%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="bar red" style="width: 95%;"></div>
-                  </div>
-                </div>
-
-                <div class="progress-item" data-aos="fade-left" data-aos-duration="1100">
-                  <div class="label">
-                    <span>{{ __('messages.services.peaceBuilding') }}</span>
-                    <span>90%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="bar red" style="width: 90%;"></div>
-                  </div>
-                </div>
-
-                <div class="progress-item" data-aos="fade-left" data-aos-duration="1200">
-                  <div class="label">
-                    <span>{{ __('messages.services.goodGovernance') }}</span>
-                    <span>88%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="bar red" style="width: 88%;"></div>
-                  </div>
-                </div>
-              </div>
-            <div class="space38"></div>
-            <div class="btn-area1" data-aos="fade-left" data-aos-duration="1300">
-              <a href="{{ route('about.vision-mission', ['locale' => $locale]) }}" class="vl-btn1">
-                  {{ __('messages.nav.visionMission') }} <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-<!--===== ABOUT AREA ENDS =======-->
-
-<!--===== SERVICE / PILLARS AREA STARTS =======-->
-<div class="service3 sp1">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-7 m-auto">
-                <div class="heading2 text-center space-margin60">
-                  <h2 class="vl-section-title" data-aos="zoom-in-up" data-aos-duration="1000">
-                      {{ __('messages.services.title') }} <span style="color: #9b59b6;">{{ __('messages.services.titleHighlight') }}</span>
-                  </h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="service3-slider-widget" data-aos="zoom-in-up" data-aos-duration="1000">
-              
-              <div class="service3-slider-box">
-                <div class="img1">
-                  <img src="{{ asset('images/gallery/gallery-03.jpg') }}" alt="Gallery">
-                </div>
-                <div class="content-area">
-                  <div class="icons">
-                    <img src="{{ asset('assets/img/icons/s3-icons1.svg') }}" alt="">
-                  </div>
-                  <div class="space24"></div>
-                  <a href="{{ route('resources.manifesto', ['locale' => $locale]) }}" class="title">{{ __('messages.services.economicDev') }}</a>
-                  <div class="space12"></div>
-                  <p>{{ __('messages.services.economicDevDesc') }}</p>
-                  <div class="space24"></div>
-                  <a href="{{ route('resources.manifesto', ['locale' => $locale]) }}" class="readmore">{{ __('messages.nav.manifesto') }} <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-              </div>
-
-              <div class="service3-slider-box">
-                <div class="img1">
-                  <img src="{{ asset('images/gallery/gallery-04.jpg') }}" alt="Gallery">
-                </div>
-                <div class="content-area">
-                  <div class="icons">
-                    <img src="{{ asset('assets/img/icons/s3-icons2.svg') }}" alt="">
-                  </div>
-                  <div class="space24"></div>
-                  <a href="{{ route('resources.party-program', ['locale' => $locale]) }}" class="title">{{ __('messages.services.socialInclusion') }}</a>
-                  <div class="space12"></div>
-                  <p>{{ __('messages.services.socialInclusionDesc') }}</p>
-                  <div class="space24"></div>
-                  <a href="{{ route('resources.party-program', ['locale' => $locale]) }}" class="readmore">{{ __('messages.nav.partyProgram') }} <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-              </div>
-
-              <div class="service3-slider-box">
-                <div class="img1">
-                  <img src="{{ asset('images/gallery/gallery-05.jpg') }}" alt="Gallery">
-                </div>
-                <div class="content-area">
-                  <div class="icons">
-                    <img src="{{ asset('assets/img/icons/s3-icons3.svg') }}" alt="">
-                  </div>
-                  <div class="space24"></div>
-                  <a href="{{ route('about.structure', ['locale' => $locale]) }}" class="title">{{ __('messages.services.goodGovernance') }}</a>
-                  <div class="space12"></div>
-                  <p>{{ __('messages.services.goodGovernanceDesc') }}</p>
-                  <div class="space24"></div>
-                  <a href="{{ route('about.structure', ['locale' => $locale]) }}" class="readmore">{{ __('messages.nav.structure') }} <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-              </div>
-
-              <div class="service3-slider-box">
-                <div class="img1">
-                  <img src="{{ asset('images/gallery/gallery-03.jpg') }}" alt="Gallery">
-                </div>
-                <div class="content-area">
-                  <div class="icons">
-                    <img src="{{ asset('assets/img/icons/s3-icons1.svg') }}" alt="">
-                  </div>
-                  <div class="space24"></div>
-                  <a href="{{ route('about.vision-mission', ['locale' => $locale]) }}" class="title">{{ __('messages.services.peaceBuilding') }}</a>
-                  <div class="space12"></div>
-                  <p>{{ __('messages.services.peaceBuildingDesc') }}</p>
-                  <div class="space24"></div>
-                  <a href="{{ route('about.vision-mission', ['locale' => $locale]) }}" class="readmore">{{ __('messages.nav.visionMission') }} <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-    </div>
-</div>
-<!--===== SERVICE / PILLARS AREA ENDS =======-->
-
-<!--===== CHOOSE AREA STARTS =======-->
-<div class="choose3 sp1">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-6">
-                <div class="choose-heading heading2">
-                  <h2 class="vl-section-title" data-aos="fade-left" data-aos-duration="1000">
-                      {{ __('messages.pages.visionMission.visionTitle') }}
-                  </h2>
-                  <div class="space16"></div>
-                  <p data-aos="fade-left" data-aos-duration="1000">
-                      {{ __('messages.pages.visionMission.visionText') }}
-                  </p>
-                  <div class="row">
-                    <div class="col-xl-6 col-md-6">
-                      <div class="choose-boxarea" data-aos="fade-left" data-aos-duration="1100">
-                        <div class="icons">
-                            <img src="{{ asset('assets/img/icons/ch-icons3.svg') }}" alt="">
-                        </div>
-                        <div class="space16"></div>
-                        <div class="content-area">
-                            <a href="{{ route('about.vision-mission', ['locale' => $locale]) }}">{{ __('messages.services.peaceBuilding') }}</a>
-                            <div class="space16"></div>
-                            <p>{{ __('messages.services.peaceBuildingDesc') }}</p>
-                        </div>
-                      </div>
-                    </div>
-                  
-                    <div class="col-xl-6 col-md-6">
-                      <div class="choose-boxarea" data-aos="fade-left" data-aos-duration="1200">
-                        <div class="icons">
-                            <img src="{{ asset('assets/img/icons/ch-icons4.svg') }}" alt="">
-                        </div>
-                        <div class="space16"></div>
-                        <div class="content-area">
-                            <a href="{{ route('about.vision-mission', ['locale' => $locale]) }}">{{ __('messages.services.goodGovernance') }}</a>
-                            <div class="space16"></div>
-                            <p>{{ __('messages.services.goodGovernanceDesc') }}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="space38"></div>
-                  <div class="btn-area1">
-                      <a href="{{ route('about.formation', ['locale' => $locale]) }}" class="vl-btn1">
-                          {{ __('messages.nav.formation') }} <i class="fa-solid fa-arrow-right"></i>
-                      </a>
-                  </div>
-                </div>
-            </div>
-
-            <div class="col-xl-6">
-                <div class="choose-images-area">
-                    <img src="{{ asset('assets/img/elements/elements15.png') }}" alt="" class="elements10 aniamtion-key-2">
-                    <div class="img1" data-aos="fade-right" data-aos-duration="1000">
-                        <img src="{{ asset('images/gallery/gallery-06.jpg') }}" alt="Gallery">
-                    </div>
-                    <div class="img2 text-end" data-aos="fade-left" data-aos-duration="1000">
-                        <img src="{{ asset('images/gallery/gallery-07.jpg') }}" alt="Gallery">
-                    </div>
-                    <div class="experiance-box">
-                      <h3><span class="counter">500</span>k+</h3>
-                      <div class="space8"></div>
-                      <p>{{ $locale === 'aa' ? 'Xisbaqoh Cindam' : ($locale === 'am' ? 'አባላትና ደጋፊዎች' : 'Members & Supporters') }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--===== CHOOSE AREA ENDS =======-->
-
-<!--===== TEAM / LEADERSHIP AREA STARTS =======-->
-<div class="team3 sp2">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8 m-auto">
-                <div class="heading2 text-center space-margin60">
-                    <h2 class="vl-section-title" data-aos="zoom-in" data-aos-duration="1000">
-                        {{ __('messages.leaders.title') }} <span style="color: #9b59b6;">{{ __('messages.leaders.titleHighlight') }}</span>
-                    </h2>
-                </div> 
-            </div>
-        </div>
-
-        <div class="row">
-            @php
-            $leaders = [
-                [
-                    'name' => 'messages.leaders.leader1Name',
-                    'pos' => 'messages.leaders.leader1Position',
-                    'img' => '/images/leaders/mohammed-hussen-alisa.jpg',
-                    'delay' => '900',
-                    'offset' => '100'
-                ],
-                [
-                    'name' => 'messages.leaders.leader2Name',
-                    'pos' => 'messages.leaders.leader2Position',
-                    'img' => '/images/leaders/weleo-aytile-hussen.jpg',
-                    'delay' => '900',
-                    'offset' => '120'
-                ],
-                [
-                    'name' => 'messages.leaders.leader3Name',
-                    'pos' => 'messages.leaders.leader3Position',
-                    'img' => '/images/leaders/mohammed-aden-mohammed.jpg',
-                    'delay' => '900',
-                    'offset' => '140'
-                ],
-            ];
-            @endphp
-
-            @foreach ($leaders as $l)
-                <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="{{ $l['delay'] }}" data-aos-offset="{{ $l['offset'] }}">
-                    <div class="team3-widget-boxarea">
-                        <div class="team-images">
-                            <div class="img1" style="height: 320px; overflow: hidden; border-radius: 16px;">
-                                <img src="{{ $l['img'] }}" alt="{{ __($l['name']) }}" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="slide" style="background-image: url({{ asset('counsel/images/main-slider/image-1.jpg') }})">
+                <div class="auto-container">
+                    <div class="content-column">
+                        <div class="inner-column">
+                            <div class="title">{{ __('messages.hero.badge') }}</div>
+                            <h1>{{ __('messages.hero.title') }} <br> {{ __('messages.hero.titleHighlight') }}</h1>
+                            <div class="text">{{ __('messages.hero.description') }}</div>
+                            <div class="btns-box">
+                                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="theme-btn btn-style-one">
+                                    <span class="txt">{{ __('messages.hero.cta') }} <i class="arrow flaticon-right"></i></span>
+                                </a>
                             </div>
                         </div>
-                        <div class="text-share-area">
-                            <div class="text">
-                                <a href="{{ route('about.leadership', ['locale' => $locale]) }}">{{ __($l['name']) }}</a>
-                                <div class="space14"></div>
-                                <p style="color: #9b59b6; font-weight: 500;">{{ __($l['pos']) }}</p>
-                            </div>
-                            <div class="share">
-                                <a href="mailto:prosperityafarbranch@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: url({{ asset('counsel/images/main-slider/banner-7.jpg') }})">
+                <div class="auto-container">
+                    <div class="content-column">
+                        <div class="inner-column">
+                            <div class="title">{{ __('messages.hero.badge') }}</div>
+                            <h1>{{ __('messages.about.title') }} <br> {{ __('messages.about.titleHighlight') }}</h1>
+                            <div class="text">{{ __('messages.about.description') }}</div>
+                            <div class="btns-box">
+                                <a href="{{ route('about.vision-mission', ['locale' => app()->getLocale()]) }}" class="theme-btn btn-style-one">
+                                    <span class="txt">{{ __('messages.hero.secondaryCta') }} <i class="arrow flaticon-right"></i></span>
+                                </a>
                             </div>
                         </div>
-                        <ul>
-                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: url({{ asset('counsel/images/main-slider/banner-8.jpg') }})">
+                <div class="auto-container">
+                    <div class="content-column">
+                        <div class="inner-column">
+                            <div class="title">{{ __('messages.hero.badge') }}</div>
+                            <h1>{{ __('messages.services.title') }} <br> {{ __('messages.services.titleHighlight') }}</h1>
+                            <div class="text">{{ __('messages.cta.description') }}</div>
+                            <div class="btns-box">
+                                <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}" class="theme-btn btn-style-one">
+                                    <span class="txt">{{ __('messages.news.viewAll') }} <i class="arrow flaticon-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Banner Section -->
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="auto-container">
+            <div class="inner-container">
+                <div class="row clearfix">
+
+                    <!-- Services Block -->
+                    <div class="services-block col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="icon flaticon-file"></div>
+                                <h4><a href="{{ route('initiatives.transitional-justice', ['locale' => app()->getLocale()]) }}">{{ __('messages.services.politicalEducation') }}</a></h4>
+                                <div class="text">{{ __('messages.services.politicalEducationDesc') }}</div>
+                            </div>
+                            <a href="{{ route('initiatives.transitional-justice', ['locale' => app()->getLocale()]) }}" class="arrow flaticon-right"></a>
+                        </div>
+                    </div>
+
+                    <!-- Services Block -->
+                    <div class="services-block col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="icon flaticon-file-1"></div>
+                                <h4><a href="{{ route('initiatives.legal-institutional-reform', ['locale' => app()->getLocale()]) }}">{{ __('messages.services.youthEngagement') }}</a></h4>
+                                <div class="text">{{ __('messages.services.youthEngagementDesc') }}</div>
+                            </div>
+                            <a href="{{ route('initiatives.legal-institutional-reform', ['locale' => app()->getLocale()]) }}" class="arrow flaticon-right"></a>
+                        </div>
+                    </div>
+
+                    <!-- Services Block -->
+                    <div class="services-block col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-box wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="icon flaticon-umbrella-1"></div>
+                                <h4><a href="{{ route('initiatives.justice-sector-transformation', ['locale' => app()->getLocale()]) }}">{{ __('messages.services.communityDev') }}</a></h4>
+                                <div class="text">{{ __('messages.services.communityDevDesc') }}</div>
+                            </div>
+                            <a href="{{ route('initiatives.justice-sector-transformation', ['locale' => app()->getLocale()]) }}" class="arrow flaticon-right"></a>
+                        </div>
+                    </div>
+
+                    <!-- Services Block -->
+                    <div class="services-block col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-box wow fadeInRight" data-wow-delay="150ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="icon flaticon-group"></div>
+                                <h4><a href="#">{{ __('messages.services.womenEmpowerment') }}</a></h4>
+                                <div class="text">{{ __('messages.services.womenEmpowermentDesc') }}</div>
+                            </div>
+                            <a href="#" class="arrow flaticon-right"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Services Section -->
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="auto-container">
+            <div class="row clearfix">
+
+                <!-- Image Column -->
+                <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image" data-tilt data-tilt-max="3">
+                            <img src="{{ asset('counsel/images/resource/welcome.jpg') }}" alt="">
+                        </div>
+                        <div class="experience">
+                            <div class="inner">
+                                <span class="count">{{ __('messages.about.stats.years') }}</span>
+                                {{ __('messages.about.stats.yearsLabel') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <!-- Sec Title -->
+                        <div class="sec-title">
+                            <h2>{{ __('messages.about.title') }} <br> {{ __('messages.about.titleHighlight') }}</h2>
+                        </div>
+                        <div class="text">{{ __('messages.about.description') }}</div>
+                        <ul class="list-style-one">
+                            <li>{{ __('messages.services.goodGovernance') }}</li>
+                            <li>{{ __('messages.services.peaceBuilding') }}</li>
+                            <li>{{ __('messages.services.communityDev') }}</li>
+                            <li>{{ __('messages.services.womenEmpowerment') }}</li>
                         </ul>
+                        <div class="btns-box">
+                            <a href="{{ route('about.vision-mission', ['locale' => app()->getLocale()]) }}" class="theme-btn btn-style-two">
+                                <span class="txt">{{ __('messages.about.learnMore') }} <i class="arrow flaticon-right"></i></span>
+                            </a>
+                            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="theme-btn btn-style-three">
+                                <span class="txt">{{ __('messages.nav.contact') }} <i class="arrow flaticon-right"></i></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            @endforeach
-        </div>
-    </div>
-</div>
-<!--===== TEAM / LEADERSHIP AREA END =======-->
 
-<!--===== BLOG / NEWS AREA STARTS =======-->
-<div class="vl-blog-3-area sp2">
-  <div class="container">
-     <div class="row">
-        <div class="col-xl-6 m-auto">
-           <div class="heading2 text-center space-margin60">
-            <h2 class="vl-section-title" data-aos="zoom-in-up" data-aos-duration="1000">
-                {{ __('messages.news.title') }} <span style="color: #9b59b6;">{{ __('messages.news.titleHighlight') }}</span>
-            </h2>
-          </div>
-        </div>
-     </div>
-     <div class="row">
-      <div class="col-xl-6 col-md-6" data-aos="fade-left" data-aos-duration="900">
-        <div class="vl-blog-1-item">
-           <div class="vl-blog-1-thumb image-anime">
-              <img src="{{ asset('images/gallery/gallery-08.jpg') }}" alt="Gallery">
-           </div>
-           <div class="vl-blog-1-content">
-            <div class="vl-blog-meta">
-               <ul>
-                <li>
-                  <a href="#">
-                      <i class="fa-solid fa-calendar-days me-1"></i>
-                      {{ __('messages.news.item1Date') }}
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                      <i class="fa-solid fa-tag me-1"></i>
-                      {{ __('messages.news.item1Category') }}
-                  </a>
-                </li>
-               </ul>
             </div>
-            <div class="space16"></div>
-            <h4 class="vl-blog-1-title">
-                <a href="{{ route('briefing.news', ['locale' => $locale]) }}">{{ __('messages.news.item1Title') }}</a>
-            </h4>
-            <div class="space12"></div>
-            <p>{{ __('messages.news.item1Excerpt') }}</p>
-            <div class="space24"></div>
-            <div class="vl-blog-1-icon">
-              <a href="{{ route('briefing.news', ['locale' => $locale]) }}" class="readmore">
-                  {{ __('messages.news.readMore') }} <i class="fa-solid fa-arrow-right"></i>
-              </a>
-           </div>
-         </div>
         </div>
-     </div>
+    </section>
+    <!-- End Welcome Section -->
 
-     <div class="col-xl-6 col-md-6" data-aos="fade-left" data-aos-duration="1000">
-        <div class="vl-blog-1-item">
-           <div class="vl-blog-1-thumb image-anime">
-              <img src="{{ asset('images/gallery/gallery-09.jpg') }}" alt="Gallery">
-           </div>
-           <div class="vl-blog-1-content">
-            <div class="vl-blog-meta">
-              <ul>
-                <li>
-                  <a href="#">
-                      <i class="fa-solid fa-calendar-days me-1"></i>
-                      {{ __('messages.news.item2Date') }}
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                      <i class="fa-solid fa-tag me-1"></i>
-                      {{ __('messages.news.item2Category') }}
-                  </a>
-                </li>
-              </ul>
+    <!-- Counter Section -->
+    <section class="counter-section">
+        <div class="image-layer" style="background-image: url({{ asset('counsel/images/background/1.jpg') }})"></div>
+        <div class="auto-container">
+            <!-- Sec Title -->
+            <div class="sec-title light centered">
+                <h2>{{ __('messages.about.title') }} {{ __('messages.about.titleHighlight') }}</h2>
+                <div class="text">{{ __('messages.about.description') }}</div>
             </div>
-            <div class="space16"></div>
-            <h4 class="vl-blog-1-title">
-                <a href="{{ route('briefing.news', ['locale' => $locale]) }}">{{ __('messages.news.item2Title') }}</a>
-            </h4>
-            <div class="space12"></div>
-            <p>{{ __('messages.news.item2Excerpt') }}</p>
-            <div class="space24"></div>
-            <div class="vl-blog-1-icon">
-              <a href="{{ route('briefing.news', ['locale' => $locale]) }}" class="readmore">
-                  {{ __('messages.news.readMore') }} <i class="fa-solid fa-arrow-right"></i>
-              </a>
-           </div>
-         </div>
-        </div>
-     </div>
-     </div>
-  </div>
-</div>
-<!--===== BLOG / NEWS AREA ENDS =======-->
 
-<!--===== CTA AREA STARTS =======-->
-<div class="cta1-aection-area">
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-12">
-        <div class="cta-bg-area">
-          <img src="{{ asset('assets/img/elements/elements4.png') }}" alt="" class="elements4">
-          <div class="row align-items-center">
-            <div class="col-xl-7">
-              <div class="cta-heading">
-                <h2 data-aos="zoom-in" data-aos-duration="800">
-                    {{ __('messages.cta.title') }} <span style="color: #9b59b6;">{{ __('messages.cta.titleHighlight') }}</span>
-                </h2>
-                <div class="space16"></div>
-                <p data-aos="zoom-in" data-aos-duration="900">
-                    {{ __('messages.cta.description') }}
-                </p>
-                <div class="space32"></div>
-                <div class="form-area" data-aos="zoom-in" data-aos-duration="1100">
-                  <form action="mailto:prosperityafarbranch@gmail.com" method="GET">
-                    <input type="email" placeholder="{{ __('messages.footer.email') }}..." required>
-                    <button class="vl-btn1" type="submit">{{ __('messages.cta.button') }} <i class="fa-solid fa-arrow-right"></i></button>
-                  </form>
+            <div class="fact-counter">
+                <div class="row clearfix">
+
+                    <!-- Column -->
+                    <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="icon flaticon-briefcase"></div>
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="2500" data-stop="250">0</span><sup>+</sup>
+                                </div>
+                                <h6 class="counter-title">{{ __('messages.about.stats.membersLabel') }}</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column -->
+                    <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="icon flaticon-balance"></div>
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="3000" data-stop="5">0</span><sup>+</sup>
+                                </div>
+                                <h6 class="counter-title">{{ __('messages.about.stats.officesLabel') }}</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column -->
+                    <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="icon flaticon-marketing"></div>
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="3000" data-stop="6">0</span><sup>+</sup>
+                                </div>
+                                <h6 class="counter-title">{{ __('messages.services.sectionTag') }}</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column -->
+                    <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="icon flaticon-trophy-2"></div>
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="3000" data-stop="5">0</span>
+                                </div>
+                                <h6 class="counter-title">{{ __('messages.about.stats.yearsLabel') }}</h6>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-              </div>
             </div>
-            <div class="col-xl-5" data-aos="zoom-in" data-aos-duration="1000">
-              <div class="cta-images-area text-end d-none d-xl-block">
-                <img src="{{ asset('images/gallery/gallery-10.jpg') }}" alt="Prosperity Afar">
-              </div>
-            </div>
-          </div>
+
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--===== CTA AREA ENDS =======-->
+    </section>
+    <!-- End Counter Section -->
+
+    <!-- Practice Section -->
+    <section class="practice-section" style="background-image: url({{ asset('counsel/images/background/pattern-2.png') }})">
+        <div class="auto-container">
+            <!-- Sec Title -->
+            <div class="sec-title centered">
+                <h2>{{ __('messages.services.title') }} {{ __('messages.services.titleHighlight') }}</h2>
+            </div>
+            <div class="inner-container">
+                <div class="clearfix">
+
+                    <!-- Practice Block -->
+                    <div class="practice-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="icon flaticon-file"></div>
+                            <h5><a href="#">{{ __('messages.services.politicalEducation') }}</a></h5>
+                            <div class="text">{{ Str::limit(__('messages.services.politicalEducationDesc'), 60) }}</div>
+                            <a class="arrow flaticon-right-arrow-3" href="#"></a>
+                        </div>
+                    </div>
+
+                    <!-- Practice Block -->
+                    <div class="practice-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="icon flaticon-briefcase"></div>
+                            <h5><a href="#">{{ __('messages.services.youthEngagement') }}</a></h5>
+                            <div class="text">{{ Str::limit(__('messages.services.youthEngagementDesc'), 60) }}</div>
+                            <a class="arrow flaticon-right-arrow-3" href="#"></a>
+                        </div>
+                    </div>
+
+                    <!-- Practice Block -->
+                    <div class="practice-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="icon flaticon-handcuffs-1"></div>
+                            <h5><a href="#">{{ __('messages.services.communityDev') }}</a></h5>
+                            <div class="text">{{ Str::limit(__('messages.services.communityDevDesc'), 60) }}</div>
+                            <a class="arrow flaticon-right-arrow-3" href="#"></a>
+                        </div>
+                    </div>
+
+                    <!-- Practice Block -->
+                    <div class="practice-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="icon flaticon-save-money"></div>
+                            <h5><a href="#">{{ __('messages.services.womenEmpowerment') }}</a></h5>
+                            <div class="text">{{ Str::limit(__('messages.services.womenEmpowermentDesc'), 60) }}</div>
+                            <a class="arrow flaticon-right-arrow-3" href="#"></a>
+                        </div>
+                    </div>
+
+                    <!-- Practice Block -->
+                    <div class="practice-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="icon flaticon-injury"></div>
+                            <h5><a href="#">{{ __('messages.services.goodGovernance') }}</a></h5>
+                            <div class="text">{{ Str::limit(__('messages.services.goodGovernanceDesc'), 60) }}</div>
+                            <a class="arrow flaticon-right-arrow-3" href="#"></a>
+                        </div>
+                    </div>
+
+                    <!-- Practice Block -->
+                    <div class="practice-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="icon flaticon-law"></div>
+                            <h5><a href="#">{{ __('messages.services.peaceBuilding') }}</a></h5>
+                            <div class="text">{{ Str::limit(__('messages.services.peaceBuildingDesc'), 60) }}</div>
+                            <a class="arrow flaticon-right-arrow-3" href="#"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Practice Section -->
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="auto-container">
+            <!-- Sec Title -->
+            <div class="sec-title centered">
+                <h2>{{ __('messages.leaders.title') }} {{ __('messages.leaders.titleHighlight') }}</h2>
+            </div>
+            <div class="inner-container">
+                <div class="row clearfix">
+
+                    <!-- Team Block -->
+                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <img src="{{ asset('counsel/images/resource/team-1.jpg') }}" alt="">
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#">{{ __('messages.leaders.leader1Name') }}</a></h4>
+                                <div class="designation">{{ __('messages.leaders.leader1Position') }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Block -->
+                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <img src="{{ asset('counsel/images/resource/team-2.jpg') }}" alt="">
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#">{{ __('messages.leaders.leader2Name') }}</a></h4>
+                                <div class="designation">{{ __('messages.leaders.leader2Position') }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Block -->
+                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <img src="{{ asset('counsel/images/resource/team-3.jpg') }}" alt="">
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#">{{ __('messages.leaders.leader3Name') }}</a></h4>
+                                <div class="designation">{{ __('messages.leaders.leader3Position') }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Team Section -->
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="auto-container">
+            <!-- Sec Title -->
+            <div class="sec-title centered">
+                <h2>{{ __('messages.news.title') }} {{ __('messages.news.titleHighlight') }}</h2>
+            </div>
+            <div class="row clearfix">
+
+                <!-- News Block -->
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">
+                                <img src="{{ asset('counsel/images/resource/news-1.jpg') }}" alt="">
+                            </a>
+                        </div>
+                        <div class="lower-content">
+                            <ul class="post-meta">
+                                <li><span class="icon flaticon-calendar-1"></span> {{ now()->format('M d, Y') }}</li>
+                            </ul>
+                            <h4><a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">{{ __('messages.news.item1Title') }}</a></h4>
+                            <div class="text">{{ Str::limit(__('messages.news.item1Desc'), 120) }}</div>
+                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}" class="read-more">{{ __('messages.news.readMore') }} <span class="arrow flaticon-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Block -->
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">
+                                <img src="{{ asset('counsel/images/resource/news-2.jpg') }}" alt="">
+                            </a>
+                        </div>
+                        <div class="lower-content">
+                            <ul class="post-meta">
+                                <li><span class="icon flaticon-calendar-1"></span> {{ now()->subDays(3)->format('M d, Y') }}</li>
+                            </ul>
+                            <h4><a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">{{ __('messages.news.item2Title') }}</a></h4>
+                            <div class="text">{{ Str::limit(__('messages.news.item2Desc'), 120) }}</div>
+                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}" class="read-more">{{ __('messages.news.readMore') }} <span class="arrow flaticon-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Block -->
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">
+                                <img src="{{ asset('counsel/images/resource/news-3.jpg') }}" alt="">
+                            </a>
+                        </div>
+                        <div class="lower-content">
+                            <ul class="post-meta">
+                                <li><span class="icon flaticon-calendar-1"></span> {{ now()->subDays(7)->format('M d, Y') }}</li>
+                            </ul>
+                            <h4><a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">{{ __('messages.news.item3Title') }}</a></h4>
+                            <div class="text">{{ Str::limit(__('messages.news.item3Desc'), 120) }}</div>
+                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}" class="read-more">{{ __('messages.news.readMore') }} <span class="arrow flaticon-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End News Section -->
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="auto-container">
+            <div class="inner-container">
+                <div class="image">
+                    <img src="{{ asset('counsel/images/resource/cta.jpg') }}" alt="">
+                </div>
+                <div class="content">
+                    <h2>{{ __('messages.cta.title') }} <br> {{ __('messages.cta.titleHighlight') }}</h2>
+                    <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="theme-btn btn-style-two">
+                        <span class="txt">{{ __('messages.cta.button') }} <i class="arrow flaticon-right"></i></span>
+                    </a>
+                </div>
+                <div class="hammer-image">
+                    <img src="{{ asset('counsel/images/resource/hammer.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End CTA Section -->
 
 @endsection

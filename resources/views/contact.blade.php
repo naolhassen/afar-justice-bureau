@@ -35,7 +35,7 @@
                                     <div class="space24"></div>
                                     <h5>{{ __('messages.contact.emailLabel') }}</h5>
                                     <div class="space12"></div>
-                                    <a href="mailto:prosperityafarbranch@gmail.com">prosperityafarbranch@gmail.com</a>
+                                    <a href="mailto:{{ __('messages.contact.emailValue') }}">{{ __('messages.contact.emailValue') }}</a>
                                 </div>
                             </div>
 

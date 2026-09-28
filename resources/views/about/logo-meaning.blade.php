@@ -12,7 +12,7 @@
             <div class="row align-items-center g-5">
                 <div class="col-xl-5 text-center" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="p-4 bg-white shadow-lg" style="border-radius: 24px; border: 1px solid #eef0f3; display: inline-block;">
-                        <img src="{{ asset('images/logo.jpg') }}" alt="Prosperity Party Emblem" style="max-width: 320px; width: 100%; border-radius: 16px;">
+                        <img src="{{ asset('logo.png') }}" alt="{{ __('messages.metadata.title') }}" style="max-width: 320px; width: 100%; border-radius: 16px;">
                     </div>
                 </div>
 
