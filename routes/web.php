@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 $locales = ['aa', 'am', 'en'];
-$adminModules = 'news|announcement|vacancy|document|page|service|about|setting';
+$adminModules = 'news|announcement|vacancy|document|page|service|about|setting|initiative|publication|video';
 
 Route::get('/', function () {
     return redirect('/aa');
@@ -37,12 +37,16 @@ Route::prefix('{locale}')
         Route::get('/about/formation', fn () => view('about.formation'))->name('about.formation');
         Route::get('/about/structure', fn () => view('about.structure'))->name('about.structure');
         Route::get('/about/logo-meaning', fn () => view('about.logo-meaning'))->name('about.logo-meaning');
+        Route::get('/departments/minister', fn () => view('departments.minister'))->name('departments.minister');
+        Route::get('/initiatives/transitional-justice', fn () => view('initiatives.transitional-justice'))->name('initiatives.transitional-justice');
+        Route::get('/initiatives/legal-institutional-reform', fn () => view('initiatives.legal-institutional-reform'))->name('initiatives.legal-institutional-reform');
+        Route::get('/initiatives/justice-sector-transformation', fn () => view('initiatives.justice-sector-transformation'))->name('initiatives.justice-sector-transformation');
+        Route::get('/publications/strategy', fn () => view('publications.strategy'))->name('publications.strategy');
         Route::get('/briefing/news', fn () => view('briefing.news'))->name('briefing.news');
         Route::get('/briefing/articles', fn () => view('briefing.articles'))->name('briefing.articles');
         Route::get('/briefing/events', fn () => view('briefing.events'))->name('briefing.events');
         Route::get('/briefing/press-release', fn () => view('briefing.press-release'))->name('briefing.press-release');
-        Route::get('/resources/manifesto', fn () => view('resources.manifesto'))->name('resources.manifesto');
-        Route::get('/resources/party-program', fn () => view('resources.party-program'))->name('resources.party-program');
-        Route::get('/resources/rules-of-procedure', fn () => view('resources.rules-of-procedure'))->name('resources.rules-of-procedure');
+        Route::get('/resources/laws', fn () => view('resources.laws'))->name('resources.laws');
+        Route::get('/resources/services', fn () => view('resources.services'))->name('resources.services');
         Route::get('/contact', fn () => view('contact'))->name('contact');
     });
