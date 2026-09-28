@@ -1,0 +1,29 @@
+services:
+  app:
+    build: .
+    container_name: afar-prosperity-app
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "8000:8000"
+    command: php artisan serve --host=0.0.0.0 --port=8000
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+
+  composer:
+    build: .
+    container_name: afar-prosperity-composer
+    volumes:
+      - .:/app
+    working_dir: /app
+    entrypoint: ["composer"]
+
+  npm:
+    build: .
+    container_name: afar-prosperity-npm
+    volumes:
+      - .:/app
+    working_dir: /app
+    entrypoint: ["npm"]

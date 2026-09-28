@@ -1,0 +1,44 @@
+FROM php:8.2-cli
+
+# Install system dependencies and PHP extensions (including PostgreSQL)
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    curl \
+    libzip-dev \
+    libonig-dev \
+    libxml2-dev \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    libwebp-dev \
+    libicu-dev \
+    libssl-dev \
+    libpq-dev \
+    pkg-config \
+    ca-certificates \
+    && docker-php-ext-install -j$(nproc) pdo pdo_pgsql pdo_mysql mbstring exif pcntl bcmath gd zip intl \
+    && docker-php-ext-enable pdo_pgsql pdo_mysql
+
+# Install Composer
+COPY --from=composer:2.8 /usr/bin/composer /usr/bin/composer
+
+# Install Node.js 22 and npm
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+    && apt-get install -y nodejs \
+    && npm install -g npm@10.9.2
+
+WORKDIR /app
+
+COPY . .
+
+# Build the app and generate an APP_KEY
+RUN composer install --no-dev --no-interaction --optimize-autoloader \
+    && if [ -f package-lock.json ]; then npm ci; else npm install; fi \
+    && npm run build \
+    && cp .env.example .env \
+    && php artisan key:generate --force
+
+EXPOSE 8000
+
+CMD ["bash", "-c", "php artisan migrate --force && php artisan db:seed --force && php artisan serve --host=0.0.0.0 --port=${PORT:-8000}"]
