@@ -48,7 +48,6 @@ jobs:
             -x "storage/*" \
             -x "bootstrap/cache/*" \
             -x ".env" \
-            -x ".env.*" \
             -x "tests/*" \
             -x "phpunit.xml*" \
             -x ".devin/*" \
