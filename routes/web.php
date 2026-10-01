@@ -9,7 +9,7 @@ $locales = ['aa', 'am', 'en'];
 $adminModules = 'news|announcement|vacancy|document|page|service|about|setting|initiative|publication|video';
 
 Route::get('/', function () {
-    return redirect('/aa');
+    return redirect('/en');
 });
 
 Route::get('/admin/login', [AuthController::class, 'loginForm'])->name('admin.login')->middleware('web');

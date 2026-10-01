@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Admin Login - Afar Prosperity Party</title>
+    <title>Admin Login - Afar Regional State Justice Bureau</title>
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/fontawesome.css') }}">
     <style>
@@ -75,7 +75,7 @@
     <div class="login-card">
         <div class="login-header">
             <i class="fa-solid fa-shield-halved"></i>
-            <h4 class="mb-0">Afar Prosperity Party</h4>
+            <h4 class="mb-0">Afar Regional State Justice Bureau</h4>
             <small>Content Management System</small>
         </div>
         <div class="p-4 p-md-5">
