@@ -110,6 +110,66 @@
     </section>
     <!-- ====== END HERO SECTION ====== -->
 
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="auto-container flex justify-center">
+            <!-- Sec Title -->
+            <div class="sec-title centered">
+                <h2>{{ __('messages.leaders.title') }} {{ __('messages.leaders.titleHighlight') }}</h2>
+            </div>
+            <div class="inner-container">
+                <div class="row clearfix">
+
+                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <a href="{{ route('departments.minister', ['locale' => app()->getLocale()]) }}">
+                                    <img src="{{ asset('images/leaders/asker-mahammad.jpg') }}" alt="{{ __('messages.leaders.leader1Name') }}">
+                                </a>
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="{{ route('departments.minister', ['locale' => app()->getLocale()]) }}">{{ __('messages.leaders.leader1Name') }}</a></h4>
+                                <div class="designation">{{ __('messages.leaders.leader1Position') }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Block -->
+                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">
+                                    <img src="{{ asset('images/leaders/mahammad-ali-helem.jpg') }}" alt="{{ __('messages.leaders.leader2Name') }}">
+                                </a>
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">{{ __('messages.leaders.leader2Name') }}</a></h4>
+                                <div class="designation">{{ __('messages.leaders.leader2Position') }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Block -->
+                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">
+                                    <img src="{{ asset('images/leaders/abdusalih-humo.jpg') }}" alt="{{ __('messages.leaders.leader3Name') }}">
+                                </a>
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">{{ __('messages.leaders.leader3Name') }}</a></h4>
+                                <div class="designation">{{ __('messages.leaders.leader3Position') }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Team Section -->
+
     @push('scripts')
     <script>
     (function(){
@@ -398,66 +458,6 @@
         </div>
     </section>
     <!-- End Practice Section -->
-
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="auto-container">
-            <!-- Sec Title -->
-            <div class="sec-title centered">
-                <h2>{{ __('messages.leaders.title') }} {{ __('messages.leaders.titleHighlight') }}</h2>
-            </div>
-            <div class="inner-container">
-                <div class="row clearfix">
-
-                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="image">
-                                <a href="{{ route('departments.minister', ['locale' => app()->getLocale()]) }}">
-                                    <img src="{{ asset('images/leaders/asker-mahammad.jpg') }}" alt="{{ __('messages.leaders.leader1Name') }}">
-                                </a>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="{{ route('departments.minister', ['locale' => app()->getLocale()]) }}">{{ __('messages.leaders.leader1Name') }}</a></h4>
-                                <div class="designation">{{ __('messages.leaders.leader1Position') }}</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Team Block -->
-                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="image">
-                                <a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">
-                                    <img src="{{ asset('images/leaders/mahammad-ali-helem.jpg') }}" alt="{{ __('messages.leaders.leader2Name') }}">
-                                </a>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">{{ __('messages.leaders.leader2Name') }}</a></h4>
-                                <div class="designation">{{ __('messages.leaders.leader2Position') }}</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Team Block -->
-                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="image">
-                                <a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">
-                                    <img src="{{ asset('images/leaders/abdusalih-humo.jpg') }}" alt="{{ __('messages.leaders.leader3Name') }}">
-                                </a>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">{{ __('messages.leaders.leader3Name') }}</a></h4>
-                                <div class="designation">{{ __('messages.leaders.leader3Position') }}</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Team Section -->
 
     <!-- News Section -->
     <section class="news-section">

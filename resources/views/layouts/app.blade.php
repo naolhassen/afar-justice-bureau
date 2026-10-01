@@ -235,6 +235,15 @@
             visibility: hidden;
             transform: translateY(8px);
             transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+            z-index: 1001;
+            pointer-events: none;
+        }
+        .has-dropdown:hover .nav-dropdown,
+        .has-dropdown.open .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
         }
         .nav-dropdown li a {
             display: block;
@@ -298,11 +307,14 @@
             visibility: hidden;
             transform: translateY(8px);
             transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+            z-index: 1002;
+            pointer-events: none;
         }
         .lang-dropdown-menu.open {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
+            pointer-events: auto;
         }
         .lang-dropdown-item {
             display: block;
@@ -1004,7 +1016,8 @@
         /* ── Team Section ── */
         .team-section {
             padding: var(--space-2xl) 0 var(--space-xl);
-            background: var(--sand-light);
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
         }
         .team-block .inner-box {
             border-radius: 12px;
@@ -1016,7 +1029,7 @@
         }
         .team-block .inner-box:hover {
             transform: translateY(-4px);
-            border-color: rgba(196, 113, 43, 0.35);
+            border-color: rgba(247, 181, 0, 0.35);
             box-shadow: var(--shadow-deep);
         }
         .team-block .image {
@@ -1034,7 +1047,8 @@
             transform: scale(1.04);
         }
         .team-block .lower-content {
-            padding: var(--space-md) var(--space-md) var(--space-lg);
+            padding: var(--space-lg) var(--space-md) var(--space-lg);
+            background: var(--sand-light);
         }
         .team-block .lower-content h4 {
             margin: 0 0 8px;
