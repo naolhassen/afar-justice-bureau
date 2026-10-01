@@ -1013,6 +1013,65 @@
             line-height: 1.7;
         }
 
+        /* ── Bureau Head Message Section ── */
+        .bureau-message-section {
+            padding: var(--space-xl) 0;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+        }
+        .bureau-message-section .inner-box {
+            background: linear-gradient(135deg, var(--afar-deep) 0%, var(--afar-blue) 100%);
+            border-radius: 16px;
+            padding: var(--space-xl) var(--space-xl);
+            color: #fff;
+            box-shadow: var(--shadow-deep);
+        }
+        .message-header {
+            margin-bottom: var(--space-md);
+        }
+        .message-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(247, 181, 0, 0.20);
+            color: var(--afar-gold-light);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            border-radius: 4px;
+            margin-bottom: var(--space-md);
+        }
+        .message-header h2 {
+            font-family: 'Merriweather', serif;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 var(--space-sm);
+            line-height: 1.2;
+        }
+        .message-position {
+            font-size: var(--text-sm);
+            color: var(--afar-gold-light);
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .message-body p {
+            font-size: var(--text-lg);
+            line-height: 1.8;
+            color: rgba(255,255,255,0.90);
+            margin-bottom: var(--space-lg);
+        }
+        .message-footer .theme-btn .txt {
+            background: var(--afar-gold);
+            color: var(--afar-deep);
+            border: 2px solid var(--afar-gold);
+        }
+        .message-footer .theme-btn .txt:hover {
+            background: var(--afar-gold-dark);
+            border-color: var(--afar-gold-dark);
+        }
+
         /* ── Team Section ── */
         .team-section {
             padding: var(--space-2xl) 0 var(--space-xl);

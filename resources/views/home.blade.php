@@ -2,74 +2,57 @@
 
 @section('content')
 
+    @php
+        $latestNews = \App\Models\News::published()->orderBy('published_at', 'desc')->take(4)->get();
+    @endphp
+
     <!-- ====== HERO SECTION – Cinematic Full-Viewport ====== -->
     <section class="hero-cinematic" id="hero" aria-label="Hero banner">
 
         <!-- Slide track -->
         <div class="hero-slides" id="heroSlides">
 
-            <!-- Slide 1 -->
-            <div class="hero-slide active" style="--hero-bg: url('{{ asset('images/gallery/gallery-11.jpg') }}')">
-                <div class="hero-slide-inner auto-container">
-                    <div class="hero-pillar" aria-hidden="true"></div>
-                    <div class="hero-content">
-                        <span class="hero-eyebrow">{{ __('messages.hero.badge') }}</span>
-                        <h1 class="hero-headline">
-                            {{ __('messages.hero.title') }}<br>
-                            <em>{{ __('messages.hero.titleHighlight') }}</em>
-                        </h1>
-                        <p class="hero-sub">{{ __('messages.hero.description') }}</p>
-                        <div class="hero-actions">
-                            <a href="{{ route('resources.services', ['locale' => app()->getLocale()]) }}" class="hero-btn hero-btn--primary">
-                                {{ __('messages.hero.cta') }} <i class="fa fa-arrow-right"></i>
-                            </a>
-                            <a href="{{ route('about.vision-mission', ['locale' => app()->getLocale()]) }}" class="hero-btn hero-btn--ghost">
-                                {{ __('messages.hero.secondaryCta') }}
-                            </a>
+            @if($latestNews->count() > 0)
+                @foreach($latestNews as $index => $news)
+                    <div class="hero-slide {{ $index === 0 ? 'active' : '' }}" style="--hero-bg: url('{{ $news->image ? asset('storage/' . $news->image) : asset('images/gallery/gallery-11.jpg') }}')">
+                        <div class="hero-slide-inner auto-container">
+                            <div class="hero-pillar" aria-hidden="true"></div>
+                            <div class="hero-content">
+                                <span class="hero-eyebrow">{{ __('messages.news.sectionTag') }}</span>
+                                <h1 class="hero-headline">
+                                    {{ Str::limit($news->title, 60) }}
+                                </h1>
+                                <p class="hero-sub">{{ Str::limit($news->excerpt ?? $news->body, 150) }}</p>
+                                <div class="hero-actions">
+                                    <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}" class="hero-btn hero-btn--primary">
+                                        {{ __('messages.news.readMore') }} <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @else
+                <!-- Fallback slide if no news -->
+                <div class="hero-slide active" style="--hero-bg: url('{{ asset('images/gallery/gallery-11.jpg') }}')">
+                    <div class="hero-slide-inner auto-container">
+                        <div class="hero-pillar" aria-hidden="true"></div>
+                        <div class="hero-content">
+                            <span class="hero-eyebrow">{{ __('messages.hero.badge') }}</span>
+                            <h1 class="hero-headline">
+                                {{ __('messages.hero.title') }}<br>
+                                <em>{{ __('messages.hero.titleHighlight') }}</em>
+                            </h1>
+                            <p class="hero-sub">{{ __('messages.hero.description') }}</p>
+                            <div class="hero-actions">
+                                <a href="{{ route('resources.services', ['locale' => app()->getLocale()]) }}" class="hero-btn hero-btn--primary">
+                                    {{ __('messages.hero.cta') }} <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="hero-slide" style="--hero-bg: url('{{ asset('images/gallery/gallery-19.jpg') }}')">
-                <div class="hero-slide-inner auto-container">
-                    <div class="hero-pillar" aria-hidden="true"></div>
-                    <div class="hero-content">
-                        <span class="hero-eyebrow">{{ __('messages.about.sectionTag') }}</span>
-                        <h1 class="hero-headline">
-                            {{ __('messages.about.title') }}<br>
-                            <em>{{ __('messages.about.titleHighlight') }}</em>
-                        </h1>
-                        <p class="hero-sub">{{ __('messages.about.description') }}</p>
-                        <div class="hero-actions">
-                            <a href="{{ route('about.vision-mission', ['locale' => app()->getLocale()]) }}" class="hero-btn hero-btn--primary">
-                                {{ __('messages.about.learnMore') }} <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="hero-slide" style="--hero-bg: url('{{ asset('images/gallery/gallery-25.jpg') }}')">
-                <div class="hero-slide-inner auto-container">
-                    <div class="hero-pillar" aria-hidden="true"></div>
-                    <div class="hero-content">
-                        <span class="hero-eyebrow">{{ __('messages.news.sectionTag') }}</span>
-                        <h1 class="hero-headline">
-                            {{ __('messages.news.title') }}<br>
-                            <em>{{ __('messages.news.titleHighlight') }}</em>
-                        </h1>
-                        <p class="hero-sub">{{ __('messages.cta.description') }}</p>
-                        <div class="hero-actions">
-                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}" class="hero-btn hero-btn--primary">
-                                {{ __('messages.news.viewAll') }} <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endif
 
         </div><!-- /.hero-slides -->
 
@@ -77,9 +60,13 @@
         <div class="hero-controls" aria-label="Slide controls">
             <button class="hero-ctrl" id="heroPrev" aria-label="Previous slide"><i class="fa fa-chevron-left"></i></button>
             <div class="hero-dots" id="heroDots" role="tablist">
-                <button class="hero-dot active" aria-selected="true" data-slide="0"></button>
-                <button class="hero-dot" aria-selected="false" data-slide="1"></button>
-                <button class="hero-dot" aria-selected="false" data-slide="2"></button>
+                @if($latestNews->count() > 0)
+                    @foreach($latestNews as $index => $news)
+                        <button class="hero-dot {{ $index === 0 ? 'active' : '' }}" aria-selected="{{ $index === 0 ? 'true' : 'false' }}" data-slide="{{ $index }}"></button>
+                    @endforeach
+                @else
+                    <button class="hero-dot active" aria-selected="true" data-slide="0"></button>
+                @endif
             </div>
             <button class="hero-ctrl" id="heroNext" aria-label="Next slide"><i class="fa fa-chevron-right"></i></button>
         </div>
@@ -110,65 +97,31 @@
     </section>
     <!-- ====== END HERO SECTION ====== -->
 
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="auto-container flex justify-center">
-            <!-- Sec Title -->
-            <div class="sec-title centered">
-                <h2>{{ __('messages.leaders.title') }} {{ __('messages.leaders.titleHighlight') }}</h2>
-            </div>
-            <div class="inner-container">
-                <div class="row clearfix">
-
-                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="image">
-                                <a href="{{ route('departments.minister', ['locale' => app()->getLocale()]) }}">
-                                    <img src="{{ asset('images/leaders/asker-mahammad.jpg') }}" alt="{{ __('messages.leaders.leader1Name') }}">
-                                </a>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="{{ route('departments.minister', ['locale' => app()->getLocale()]) }}">{{ __('messages.leaders.leader1Name') }}</a></h4>
-                                <div class="designation">{{ __('messages.leaders.leader1Position') }}</div>
-                            </div>
+    <!-- Bureau Head Message Section -->
+    <section class="bureau-message-section">
+        <div class="auto-container">
+            <div class="row clearfix">
+                <div class="message-content col-lg-12 col-md-12 col-sm-12">
+                    <div class="inner-box">
+                        <div class="message-header">
+                            <span class="message-badge">{{ __('messages.leaders.title') }}</span>
+                            <h2>{{ __('messages.leaders.leader1Name') }}</h2>
+                            <div class="message-position">{{ __('messages.leaders.leader1Position') }}</div>
+                        </div>
+                        <div class="message-body">
+                            <p>{{ __('messages.about.description') }}</p>
+                        </div>
+                        <div class="message-footer">
+                            <a href="{{ route('departments.minister', ['locale' => app()->getLocale()]) }}" class="theme-btn btn-style-one">
+                                <span class="txt">{{ __('messages.about.learnMore') }} <i class="arrow flaticon-right"></i></span>
+                            </a>
                         </div>
                     </div>
-
-                    <!-- Team Block -->
-                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="image">
-                                <a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">
-                                    <img src="{{ asset('images/leaders/mahammad-ali-helem.jpg') }}" alt="{{ __('messages.leaders.leader2Name') }}">
-                                </a>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">{{ __('messages.leaders.leader2Name') }}</a></h4>
-                                <div class="designation">{{ __('messages.leaders.leader2Position') }}</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Team Block -->
-                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="image">
-                                <a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">
-                                    <img src="{{ asset('images/leaders/abdusalih-humo.jpg') }}" alt="{{ __('messages.leaders.leader3Name') }}">
-                                </a>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">{{ __('messages.leaders.leader3Name') }}</a></h4>
-                                <div class="designation">{{ __('messages.leaders.leader3Position') }}</div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Team Section -->
+    <!-- End Bureau Head Message Section -->
 
     @push('scripts')
     <script>
@@ -530,25 +483,64 @@
     </section>
     <!-- End News Section -->
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- Team Section -->
+    <section class="team-section">
         <div class="auto-container">
+            <!-- Sec Title -->
+            <div class="sec-title centered">
+                <h2>{{ __('messages.leaders.title') }} {{ __('messages.leaders.titleHighlight') }}</h2>
+            </div>
             <div class="inner-container">
-                <div class="image">
-                    <img src="{{ asset('images/gallery/gallery-09.jpg') }}" alt="{{ __('messages.cta.title') }}">
-                </div>
-                <div class="content">
-                    <h2>{{ __('messages.cta.title') }} <br> {{ __('messages.cta.titleHighlight') }}</h2>
-                    <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="theme-btn btn-style-two">
-                        <span class="txt">{{ __('messages.cta.button') }} <i class="arrow flaticon-right"></i></span>
-                    </a>
-                </div>
-                <div class="hammer-image">
-                    <img src="{{ asset('counsel/images/resource/hammer.png') }}" alt="">
+                <div class="row clearfix">
+
+                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <a href="{{ route('departments.minister', ['locale' => app()->getLocale()]) }}">
+                                    <img src="{{ asset('images/leaders/asker-mahammad.jpg') }}" alt="{{ __('messages.leaders.leader1Name') }}">
+                                </a>
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="{{ route('departments.minister', ['locale' => app()->getLocale()]) }}">{{ __('messages.leaders.leader1Name') }}</a></h4>
+                                <div class="designation">{{ __('messages.leaders.leader1Position') }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Block -->
+                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">
+                                    <img src="{{ asset('images/leaders/mahammad-ali-helem.jpg') }}" alt="{{ __('messages.leaders.leader2Name') }}">
+                                </a>
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">{{ __('messages.leaders.leader2Name') }}</a></h4>
+                                <div class="designation">{{ __('messages.leaders.leader2Position') }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Block -->
+                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">
+                                    <img src="{{ asset('images/leaders/abdusalih-humo.jpg') }}" alt="{{ __('messages.leaders.leader3Name') }}">
+                                </a>
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="{{ route('about.leadership', ['locale' => app()->getLocale()]) }}">{{ __('messages.leaders.leader3Name') }}</a></h4>
+                                <div class="designation">{{ __('messages.leaders.leader3Position') }}</div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
-    <!-- End CTA Section -->
+    <!-- End Team Section -->
 
 @endsection

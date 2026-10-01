@@ -256,12 +256,19 @@
     var langMenu = document.getElementById('lang-dropdown-menu');
     
     if (langToggle && langMenu) {
-        langToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
+        langToggle.addEventListener('mousedown', function(e) {
             e.preventDefault();
             var isExpanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !isExpanded);
             langMenu.classList.toggle('open', !isExpanded);
+        });
+        
+        // Close when clicking a language option
+        langMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                langToggle.setAttribute('aria-expanded', 'false');
+                langMenu.classList.remove('open');
+            });
         });
     }
     
@@ -274,7 +281,7 @@
             });
         }
         
-        // Close language dropdown
+        // Close language dropdown if clicking outside
         if (langToggle && langMenu && !langToggle.contains(e.target) && !langMenu.contains(e.target)) {
             langToggle.setAttribute('aria-expanded', 'false');
             langMenu.classList.remove('open');
