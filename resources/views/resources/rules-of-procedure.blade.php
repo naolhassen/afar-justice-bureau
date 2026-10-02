@@ -2,9 +2,9 @@
 
 @section('content')
     <x-page-hero
-        title="{{ __('messages.pages.rulesOfProcedure.title') }}"
-        titleHighlight="{{ __('messages.pages.rulesOfProcedure.titleHighlight') }}"
-        description="{{ __('messages.pages.rulesOfProcedure.description') }}"
+        :title="__('messages.pages.rulesOfProcedure.title')"
+        :titleHighlight="__('messages.pages.rulesOfProcedure.titleHighlight')"
+        :description="__('messages.pages.rulesOfProcedure.description')"
     />
 
     <section class="civic-section">

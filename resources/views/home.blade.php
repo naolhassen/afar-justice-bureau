@@ -54,22 +54,22 @@
                 </div>
             @endif
 
-        </div><!-- /.hero-slides -->
-
-        <!-- Slide controls -->
-        <div class="hero-controls" aria-label="Slide controls">
-            <button class="hero-ctrl" id="heroPrev" aria-label="Previous slide"><i class="fa fa-chevron-left"></i></button>
-            <div class="hero-dots" id="heroDots" role="tablist">
-                @if($latestNews->count() > 0)
-                    @foreach($latestNews as $index => $news)
-                        <button class="hero-dot {{ $index === 0 ? 'active' : '' }}" aria-selected="{{ $index === 0 ? 'true' : 'false' }}" data-slide="{{ $index }}"></button>
-                    @endforeach
-                @else
-                    <button class="hero-dot active" aria-selected="true" data-slide="0"></button>
-                @endif
+            <!-- Slide controls -->
+            <div class="hero-controls" aria-label="Slide controls">
+                <button class="hero-ctrl" id="heroPrev" aria-label="Previous slide"><i class="fa fa-chevron-left"></i></button>
+                <div class="hero-dots" id="heroDots" role="tablist">
+                    @if($latestNews->count() > 0)
+                        @foreach($latestNews as $index => $news)
+                            <button class="hero-dot {{ $index === 0 ? 'active' : '' }}" aria-selected="{{ $index === 0 ? 'true' : 'false' }}" data-slide="{{ $index }}"></button>
+                        @endforeach
+                    @else
+                        <button class="hero-dot active" aria-selected="true" data-slide="0"></button>
+                    @endif
+                </div>
+                <button class="hero-ctrl" id="heroNext" aria-label="Next slide"><i class="fa fa-chevron-right"></i></button>
             </div>
-            <button class="hero-ctrl" id="heroNext" aria-label="Next slide"><i class="fa fa-chevron-right"></i></button>
-        </div>
+
+        </div><!-- /.hero-slides -->
 
         <!-- Stat strip -->
         <div class="hero-stats">

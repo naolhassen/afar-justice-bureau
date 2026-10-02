@@ -29,7 +29,7 @@
 
                 <ul class="page-breadcrumb">
                     <li><a href="{{ route('home', ['locale' => $currentLocale]) }}"><i class="fa fa-home"></i> {{ __('messages.nav.home') }}</a></li>
-                    <li><span>{{ $title }}</span></li>
+                    <li><span>{{ trim($title . ' ' . $titleHighlight) }}</span></li>
                 </ul>
             </div>
 

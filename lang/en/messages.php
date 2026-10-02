@@ -172,6 +172,7 @@ return array (
       'missionText' => 'To deliver high-caliber, ethical, and impartial public prosecution; provide sound legal counsel to regional government organs; harmonize customary legal systems with the constitution; and ensure comprehensive access to justice and legal aid for all citizens.',
       'values' => 'Core Values',
       'valuesItems' => 'Integrity, Impartiality, Rule of Law, Transparency, Accessibility, Human Dignity, Community Collaboration',
+      'description' => 'The institutional compass, guiding principles, and public commitments of the Afar National Regional State Justice Bureau.',
     ),
     'formation' => 
     array (
@@ -224,16 +225,19 @@ return array (
     array (
       'title' => 'Legal Studies &',
       'titleHighlight' => 'Articles',
+      'description' => 'Legal analysis, explainers, and research from the Bureau on regional law, justice reform, and citizens\' rights.',
     ),
     'events' => 
     array (
       'title' => 'Programs &',
       'titleHighlight' => 'Events',
+      'description' => 'Public forums, consultative sessions, and professional training programs organized by the Afar Justice Bureau.',
     ),
     'pressRelease' => 
     array (
       'title' => 'Official Press',
       'titleHighlight' => 'Releases',
+      'description' => 'Official statements and announcements issued by the Afar National Regional State Justice Bureau.',
     ),
     'comingSoon' => 'Content currently being compiled by the Bureau communication team...',
   ),

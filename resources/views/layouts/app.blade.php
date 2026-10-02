@@ -42,7 +42,7 @@
            Signature: Ethiopian-inspired gold accents + professional institutional feel
         ============================================================ */
 
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Ethiopic:wght@400;600;700&display=swap');
 
         :root {
             --afar-deep:      #1E3A5F;
@@ -63,6 +63,14 @@
             --border:         rgba(61, 61, 61, 0.12);
             --shadow:         0 4px 20px rgba(26, 26, 26, 0.08);
             --shadow-deep:    0 12px 40px rgba(26, 26, 26, 0.12);
+
+            /* Aliases used by page templates */
+            --afar-navy:      var(--afar-deep);
+            --afar-navy-2:    var(--afar-blue);
+            --afar-ink:       var(--ink);
+            --afar-muted:     var(--muted);
+            --afar-border:    var(--border);
+            --afar-gold-soft: rgba(247, 181, 0, 0.12);
 
             /* Spacing scale */
             --space-xs: 8px;
@@ -88,7 +96,7 @@
         body {
             background: var(--sand-light);
             color: var(--ink);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', 'Noto Sans Ethiopic', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: var(--text-base);
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
@@ -98,6 +106,24 @@
         .page-wrapper { background: var(--sand-light); }
 
         a { transition: color 0.2s ease, opacity 0.2s ease; }
+
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible,
+        [tabindex]:focus-visible {
+            outline: 3px solid var(--afar-gold) !important;
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
 
         /* ── Auto-container ── */
         .auto-container {
@@ -473,15 +499,15 @@
             overflow: hidden;
             min-height: 85vh;
             display: flex;
-            align-items: center;
+            flex-direction: column;
         }
 
         /* Slide track */
         .hero-slides {
             position: relative;
             width: 100%;
-            height: 100%;
-            min-height: 85vh;
+            flex: 1;
+            min-height: 640px;
         }
 
         /* Individual slide */
@@ -519,7 +545,8 @@
             display: flex;
             align-items: center;
             height: 100%;
-            padding: var(--space-2xl) 0;
+            padding-top: var(--space-xl);
+            padding-bottom: calc(var(--space-xl) + 44px);
             gap: 0;
         }
 
@@ -621,7 +648,7 @@
         /* Slide controls */
         .hero-controls {
             position: absolute;
-            bottom: var(--space-xl);
+            bottom: var(--space-md);
             right: var(--space-lg);
             z-index: 10;
             display: flex;
@@ -664,10 +691,7 @@
 
         /* Stat strip */
         .hero-stats {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            position: relative;
             z-index: 10;
             display: flex;
             align-items: center;
@@ -707,14 +731,16 @@
         }
 
         @media (max-width: 768px) {
-            .hero-slides { height: auto; min-height: 75vh; }
+            .hero-slides { min-height: 560px; }
             .hero-pillar { height: 80px; margin-right: var(--space-md); }
-            .hero-headline { font-size: clamp(2.2rem, 7vw, 3.5rem); }
+            .hero-headline { font-size: clamp(2rem, 7vw, 3.5rem); }
             .hero-sub { font-size: var(--text-base); }
-            .hero-controls { bottom: var(--space-lg); right: var(--space-md); }
-            .hero-stat span { display: none; }
+            .hero-controls { bottom: var(--space-sm); right: var(--space-md); }
+            .hero-stats { flex-wrap: wrap; }
+            .hero-stat { flex: 1 1 50%; }
+            .hero-stat-sep { display: none; }
             .hero-stat strong { font-size: 1.4rem; }
-            .hero-slide-inner { padding: var(--space-xl) 0; }
+            .hero-slide-inner { padding-top: var(--space-lg); padding-bottom: calc(var(--space-lg) + 44px); }
         }
         @media (max-width: 480px) {
             .hero-content { max-width: 100%; }
