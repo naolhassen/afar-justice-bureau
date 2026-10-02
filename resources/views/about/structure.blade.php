@@ -22,12 +22,12 @@
             <!-- Top Executive Branch -->
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-6 col-md-8">
-                    <div class="civic-card text-center" style="border-top: 5px solid var(--afar-gold); padding: 32px 24px;">
+                    <div class="civic-card text-center" style="border-top: 5px solid var(--afar-accent); padding: 32px 24px;">
                         <span class="civic-badge civic-badge-gold mb-2">Executive Apex</span>
                         <h4 style="font-weight: 800; color: var(--afar-navy); font-size: 1.35rem; margin-bottom: 6px;">
                             {{ __('messages.leaders.leader1Position') }}
                         </h4>
-                        <div style="font-size: 1rem; font-weight: 700; color: var(--afar-gold-dark); margin-bottom: 12px;">
+                        <div style="font-size: 1rem; font-weight: 700; color: var(--afar-accent-dark); margin-bottom: 12px;">
                             {{ __('messages.leaders.leader1Name') }}
                         </div>
                         <p style="font-size: 0.9rem; color: var(--afar-muted); line-height: 1.6; margin-bottom: 16px;">
@@ -48,16 +48,16 @@
                         <h5 style="font-weight: 800; color: var(--afar-navy); font-size: 1.2rem; margin-bottom: 6px;">
                             {{ __('messages.leaders.leader2Position') }}
                         </h5>
-                        <div style="font-size: 0.95rem; font-weight: 700; color: var(--afar-gold-dark); margin-bottom: 12px;">
+                        <div style="font-size: 0.95rem; font-weight: 700; color: var(--afar-accent-dark); margin-bottom: 12px;">
                             {{ __('messages.leaders.leader2Name') }}
                         </div>
                         <p style="font-size: 0.88rem; color: var(--afar-muted); line-height: 1.6; margin-bottom: 16px;">
                             Supervising legislative drafting, legal research, customary Mad'aa reconciliation alignment, and regional civil representations.
                         </p>
                         <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; line-height: 1.9; color: var(--afar-ink);">
-                            <li><i class="fa fa-chevron-right me-2" style="color: var(--afar-gold); font-size: 10px;"></i> Legislative Drafting Directorate</li>
-                            <li><i class="fa fa-chevron-right me-2" style="color: var(--afar-gold); font-size: 10px;"></i> Civil Affairs & State Representation</li>
-                            <li><i class="fa fa-chevron-right me-2" style="color: var(--afar-gold); font-size: 10px;"></i> Customary Justice & Legal Aid Desk</li>
+                            <li><i class="fa fa-chevron-right me-2" style="color: var(--afar-accent); font-size: 10px;"></i> Legislative Drafting Directorate</li>
+                            <li><i class="fa fa-chevron-right me-2" style="color: var(--afar-accent); font-size: 10px;"></i> Civil Affairs & State Representation</li>
+                            <li><i class="fa fa-chevron-right me-2" style="color: var(--afar-accent); font-size: 10px;"></i> Customary Justice & Legal Aid Desk</li>
                         </ul>
                     </div>
                 </div>
@@ -68,16 +68,16 @@
                         <h5 style="font-weight: 800; color: var(--afar-navy); font-size: 1.2rem; margin-bottom: 6px;">
                             {{ __('messages.leaders.leader3Position') }}
                         </h5>
-                        <div style="font-size: 0.95rem; font-weight: 700; color: var(--afar-gold-dark); margin-bottom: 12px;">
+                        <div style="font-size: 0.95rem; font-weight: 700; color: var(--afar-accent-dark); margin-bottom: 12px;">
                             {{ __('messages.leaders.leader3Name') }}
                         </div>
                         <p style="font-size: 0.88rem; color: var(--afar-muted); line-height: 1.6; margin-bottom: 16px;">
                             Coordinating regional public prosecutions, criminal investigations, custodial rights monitoring, and zone justice offices.
                         </p>
                         <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; line-height: 1.9; color: var(--afar-ink);">
-                            <li><i class="fa fa-chevron-right me-2" style="color: var(--afar-gold); font-size: 10px;"></i> Criminal Prosecution Directorate</li>
-                            <li><i class="fa fa-chevron-right me-2" style="color: var(--afar-gold); font-size: 10px;"></i> Human Rights & Detention Inspection</li>
-                            <li><i class="fa fa-chevron-right me-2" style="color: var(--afar-gold); font-size: 10px;"></i> Zone & Woreda Prosecution Branches</li>
+                            <li><i class="fa fa-chevron-right me-2" style="color: var(--afar-accent); font-size: 10px;"></i> Criminal Prosecution Directorate</li>
+                            <li><i class="fa fa-chevron-right me-2" style="color: var(--afar-accent); font-size: 10px;"></i> Human Rights & Detention Inspection</li>
+                            <li><i class="fa fa-chevron-right me-2" style="color: var(--afar-accent); font-size: 10px;"></i> Zone & Woreda Prosecution Branches</li>
                         </ul>
                     </div>
                 </div>

@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-lg-4 d-none d-lg-flex justify-content-end">
                     <div style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(201, 151, 56, 0.4); border-radius: 20px; padding: 20px 24px; backdrop-filter: blur(8px); text-align: center;">
-                        <span style="display: block; font-size: 11px; font-weight: 700; color: var(--afar-gold); letter-spacing: 0.14em; text-transform: uppercase;">
+                        <span style="display: block; font-size: 11px; font-weight: 700; color: var(--afar-accent); letter-spacing: 0.14em; text-transform: uppercase;">
                             Guiding Principle
                         </span>
                         <div style="font-family: 'Bellefair', serif; font-size: 1.6rem; font-weight: 700; color: #fff; margin: 4px 0;">
@@ -60,7 +60,7 @@
 
                         <!-- Four Pillars Grid -->
                         <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--afar-navy); margin: 32px 0 18px; display: flex; align-items: center; gap: 10px;">
-                            <span style="width: 4px; height: 22px; background: var(--afar-gold); border-radius: 2px;"></span>
+                            <span style="width: 4px; height: 22px; background: var(--afar-accent); border-radius: 2px;"></span>
                             Four Cornerstones of the Policy
                         </h4>
 
@@ -78,8 +78,8 @@
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <div style="background: #fdfdfe; border: 1px solid var(--afar-border); border-left: 5px solid var(--afar-gold); border-radius: 14px; padding: 22px; height: 100%;">
-                                    <div style="font-size: 1.6rem; color: var(--afar-gold); margin-bottom: 12px;">
+                                <div style="background: #fdfdfe; border: 1px solid var(--afar-border); border-left: 5px solid var(--afar-accent); border-radius: 14px; padding: 22px; height: 100%;">
+                                    <div style="font-size: 1.6rem; color: var(--afar-accent); margin-bottom: 12px;">
                                         <i class="fa fa-users"></i>
                                     </div>
                                     <h5 style="font-size: 1.05rem; font-weight: 800; color: var(--afar-navy); margin-bottom: 8px;">2. Customary Reconciliation (Mad'aa)</h5>
@@ -117,7 +117,7 @@
                         <!-- Special Focus Callout -->
                         <div style="margin-top: 30px; background: rgba(10, 34, 54, 0.03); border: 1px solid var(--afar-border); border-radius: 16px; padding: 26px;">
                             <h5 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 12px; font-size: 1.1rem;">
-                                <i class="fa fa-info-circle me-1" style="color: var(--afar-gold);"></i> Public Participation & Submissions
+                                <i class="fa fa-info-circle me-1" style="color: var(--afar-accent);"></i> Public Participation & Submissions
                             </h5>
                             <p style="font-size: 0.95rem; color: var(--afar-muted); line-height: 1.7; margin-bottom: 0;">
                                 Pastoral communities, civil society representatives, and community elders are encouraged to participate in woreda consultations or submit official documentation to the Regional Transitional Justice Secretariat in Semera.
@@ -133,7 +133,7 @@
                         <ul class="civic-menu-list">
                             <li>
                                 <a href="{{ route('initiatives.transitional-justice', ['locale' => app()->getLocale()]) }}" class="active">
-                                    <span><i class="fa fa-angle-right me-2" style="color: var(--afar-gold);"></i> {{ __('messages.nav.transitionalJustice') }}</span>
+                                    <span><i class="fa fa-angle-right me-2" style="color: var(--afar-accent);"></i> {{ __('messages.nav.transitionalJustice') }}</span>
                                     <span class="civic-badge civic-badge-gold" style="font-size: 10px; padding: 3px 8px;">Active</span>
                                 </a>
                             </li>

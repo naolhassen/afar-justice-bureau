@@ -88,22 +88,19 @@
                 </nav>
 
                 <!-- Language switcher dropdown -->
-                <div class="lang-dropdown-wrapper">
-                    <button class="lang-dropdown-toggle" id="lang-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                <div class="lang-switcher">
+                    <button class="lang-current" onclick="document.getElementById('lang-menu').classList.toggle('show')">
+                        <i class="fa fa-globe"></i>
                         <span>{{ strtoupper($locale) }}</span>
-                        <i class="fa fa-angle-down"></i>
+                        <i class="fa fa-chevron-down"></i>
                     </button>
-                    <ul class="lang-dropdown-menu" id="lang-dropdown-menu" role="menu" aria-labelledby="lang-dropdown-toggle">
+                    <div class="lang-menu" id="lang-menu">
                         @foreach ($locales as $code => $label)
-                            <li role="none">
-                                <a href="{{ switchLocaleUrl($code) }}"
-                                   role="menuitem"
-                                   class="lang-dropdown-item {{ $locale === $code ? 'lang-dropdown-item--active' : '' }}"
-                                   hreflang="{{ $code }}"
-                                >{{ strtoupper($code) }} · {{ $label }}</a>
-                            </li>
+                            <a href="{{ switchLocaleUrl($code) }}" class="lang-option {{ $locale === $code ? 'active' : '' }}">
+                                {{ strtoupper($code) }} - {{ $label }}
+                            </a>
                         @endforeach
-                    </ul>
+                    </div>
                 </div>
 
                 <!-- Mobile toggle -->
@@ -250,41 +247,13 @@
             });
         }
     });
-    
-    // Language dropdown toggle
-    var langToggle = document.getElementById('lang-dropdown-toggle');
-    var langMenu = document.getElementById('lang-dropdown-menu');
-    
-    if (langToggle && langMenu) {
-        langToggle.addEventListener('mousedown', function(e) {
-            e.preventDefault();
-            var isExpanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !isExpanded);
-            langMenu.classList.toggle('open', !isExpanded);
-        });
-        
-        // Close when clicking a language option
-        langMenu.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                langToggle.setAttribute('aria-expanded', 'false');
-                langMenu.classList.remove('open');
-            });
-        });
-    }
-    
-    // Close dropdowns when clicking outside
+
+    // Close language menu when clicking outside
     document.addEventListener('click', function(e) {
-        // Close nav dropdowns
-        if (!e.target.closest('.has-dropdown')) {
-            document.querySelectorAll('.has-dropdown.open').forEach(function(item) {
-                item.classList.remove('open');
-            });
-        }
-        
-        // Close language dropdown if clicking outside
-        if (langToggle && langMenu && !langToggle.contains(e.target) && !langMenu.contains(e.target)) {
-            langToggle.setAttribute('aria-expanded', 'false');
-            langMenu.classList.remove('open');
+        var langMenu = document.getElementById('lang-menu');
+        var langSwitcher = document.querySelector('.lang-switcher');
+        if (langMenu && langSwitcher && !langSwitcher.contains(e.target)) {
+            langMenu.classList.remove('show');
         }
     });
 })();

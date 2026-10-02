@@ -12,9 +12,9 @@
             <!-- Vision & Mission Side-by-Side Cards -->
             <div class="row g-4 mb-5">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="civic-card h-100" style="border-top: 4px solid var(--afar-gold);">
+                    <div class="civic-card h-100" style="border-top: 4px solid var(--afar-accent);">
                         <div class="d-flex align-items-center gap-3 mb-3">
-                            <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(201, 151, 56, 0.15); color: var(--afar-gold); display: flex; align-items: center; justify-content: center; font-size: 22px;">
+                            <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(201, 151, 56, 0.15); color: var(--afar-accent); display: flex; align-items: center; justify-content: center; font-size: 22px;">
                                 <i class="fa fa-eye"></i>
                             </div>
                             <div>
@@ -69,7 +69,7 @@
                             'title' => 'We Work as Servants',
                             'desc' => 'Approaching our public mandate with humility, dedicated civic service, and responsive assistance to every citizen.',
                             'icon' => 'fa-users',
-                            'accent' => 'var(--afar-gold)',
+                            'accent' => 'var(--afar-accent)',
                         ],
                         [
                             'amharic' => 'በቅንነት እንፈጽማለን!',
@@ -97,7 +97,7 @@
                             'title' => 'We Advance Together in Unity',
                             'desc' => 'Strengthening harmonious collaboration between statutory courts, regional police, and customary Mad\'aa arbiters.',
                             'icon' => 'fa-handshake-o',
-                            'accent' => 'var(--afar-gold-dark)',
+                            'accent' => 'var(--afar-accent-dark)',
                         ],
                     ];
                 @endphp

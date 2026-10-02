@@ -69,7 +69,7 @@
                             </div>
                             <div style="padding: 26px 22px; display: flex; flex-direction: column; flex-grow: 1;">
                                 <div style="font-size: 12px; color: var(--afar-muted); font-weight: 600; margin-bottom: 10px;">
-                                    <i class="fa fa-calendar me-1" style="color: var(--afar-gold);"></i> {{ $item['date'] }} &bull; Semera
+                                    <i class="fa fa-calendar me-1" style="color: var(--afar-accent);"></i> {{ $item['date'] }} &bull; Semera
                                 </div>
                                 <h4 style="font-weight: 800; color: var(--afar-navy); font-size: 1.15rem; line-height: 1.35; margin-bottom: 12px;">
                                     {{ __($item['title']) }}
@@ -80,7 +80,7 @@
                                 <div class="pt-3 border-top mt-auto">
                                     <a href="{{ route('contact', ['locale' => $locale]) }}" style="color: var(--afar-navy); font-weight: 700; font-size: 13px; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
                                         <span>{{ __('messages.news.readMore') }}</span>
-                                        <i class="fa fa-arrow-right" style="color: var(--afar-gold);"></i>
+                                        <i class="fa fa-arrow-right" style="color: var(--afar-accent);"></i>
                                     </a>
                                 </div>
                             </div>

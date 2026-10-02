@@ -31,9 +31,9 @@
 
                         <div class="row g-3">
                             <div class="col-md-6 mb-3">
-                                <div style="background: #fdfdfe; border: 1px solid var(--afar-border); border-left: 4px solid var(--afar-gold); border-radius: 12px; padding: 20px; height: 100%;">
+                                <div style="background: #fdfdfe; border: 1px solid var(--afar-border); border-left: 4px solid var(--afar-accent); border-radius: 12px; padding: 20px; height: 100%;">
                                     <h6 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 6px; font-size: 1rem;">
-                                        <i class="fa fa-balance-scale" style="color: var(--afar-gold); margin-right: 6px;"></i> The Scales of Justice
+                                        <i class="fa fa-balance-scale" style="color: var(--afar-accent); margin-right: 6px;"></i> The Scales of Justice
                                     </h6>
                                     <p style="font-size: 0.88rem; color: var(--afar-muted); line-height: 1.6; margin: 0;">
                                         Symbolizes absolute impartiality, equality of all citizens before the law, and truth-guided adjudication without prejudice.

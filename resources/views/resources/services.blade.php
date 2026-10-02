@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-lg-4 d-none d-lg-flex justify-content-end">
                     <div style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(201, 151, 56, 0.4); border-radius: 20px; padding: 20px 24px; backdrop-filter: blur(8px); text-align: center;">
-                        <span style="display: block; font-size: 11px; font-weight: 700; color: var(--afar-gold); letter-spacing: 0.14em; text-transform: uppercase;">
+                        <span style="display: block; font-size: 11px; font-weight: 700; color: var(--afar-accent); letter-spacing: 0.14em; text-transform: uppercase;">
                             Citizen Access
                         </span>
                         <div style="font-family: 'Bellefair', serif; font-size: 1.6rem; font-weight: 700; color: #fff; margin: 4px 0;">
@@ -38,7 +38,7 @@
     <section class="civic-section">
         <div class="auto-container">
             <div class="sec-title text-center mb-5">
-                <div class="title" style="color: var(--afar-gold); font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; font-size: 12px; margin-bottom: 8px;">
+                <div class="title" style="color: var(--afar-accent); font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; font-size: 12px; margin-bottom: 8px;">
                     Citizen-Centered Mandates
                 </div>
                 <h2 style="font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 800; color: var(--afar-navy);">
@@ -54,7 +54,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="civic-card h-100 d-flex flex-column" style="padding: 32px 26px;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(201, 151, 56, 0.12); color: var(--afar-gold); display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                            <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(201, 151, 56, 0.12); color: var(--afar-accent); display: flex; align-items: center; justify-content: center; font-size: 24px;">
                                 <i class="fa fa-balance-scale"></i>
                             </div>
                             <span class="civic-badge civic-badge-gold" style="font-size: 10px;">Free Citizen Aid</span>
@@ -68,7 +68,7 @@
                         <div class="pt-3 border-top mt-3">
                             <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" style="color: var(--afar-navy); font-weight: 700; font-size: 13px; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
                                 <span>Request Legal Counsel</span>
-                                <i class="fa fa-arrow-right" style="color: var(--afar-gold);"></i>
+                                <i class="fa fa-arrow-right" style="color: var(--afar-accent);"></i>
                             </a>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                         <div class="pt-3 border-top mt-3">
                             <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" style="color: var(--afar-navy); font-weight: 700; font-size: 13px; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
                                 <span>Prosecutorial Inquiry</span>
-                                <i class="fa fa-arrow-right" style="color: var(--afar-gold);"></i>
+                                <i class="fa fa-arrow-right" style="color: var(--afar-accent);"></i>
                             </a>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                         <div class="pt-3 border-top mt-3">
                             <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" style="color: var(--afar-navy); font-weight: 700; font-size: 13px; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
                                 <span>Authentication Guidelines</span>
-                                <i class="fa fa-arrow-right" style="color: var(--afar-gold);"></i>
+                                <i class="fa fa-arrow-right" style="color: var(--afar-accent);"></i>
                             </a>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="civic-card h-100 d-flex flex-column" style="padding: 32px 26px;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(201, 151, 56, 0.12); color: var(--afar-gold); display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                            <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(201, 151, 56, 0.12); color: var(--afar-accent); display: flex; align-items: center; justify-content: center; font-size: 24px;">
                                 <i class="fa fa-id-card-o"></i>
                             </div>
                             <span class="civic-badge civic-badge-gold" style="font-size: 10px;">Licensing & Bar</span>
@@ -140,7 +140,7 @@
                         <div class="pt-3 border-top mt-3">
                             <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" style="color: var(--afar-navy); font-weight: 700; font-size: 13px; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
                                 <span>Licensing Portal</span>
-                                <i class="fa fa-arrow-right" style="color: var(--afar-gold);"></i>
+                                <i class="fa fa-arrow-right" style="color: var(--afar-accent);"></i>
                             </a>
                         </div>
                     </div>
@@ -164,7 +164,7 @@
                         <div class="pt-3 border-top mt-3">
                             <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" style="color: var(--afar-navy); font-weight: 700; font-size: 13px; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
                                 <span>Government Advisory</span>
-                                <i class="fa fa-arrow-right" style="color: var(--afar-gold);"></i>
+                                <i class="fa fa-arrow-right" style="color: var(--afar-accent);"></i>
                             </a>
                         </div>
                     </div>
@@ -188,7 +188,7 @@
                         <div class="pt-3 border-top mt-3">
                             <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" style="color: var(--afar-navy); font-weight: 700; font-size: 13px; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
                                 <span>File Rights Grievance</span>
-                                <i class="fa fa-arrow-right" style="color: var(--afar-gold);"></i>
+                                <i class="fa fa-arrow-right" style="color: var(--afar-accent);"></i>
                             </a>
                         </div>
                     </div>
@@ -199,7 +199,7 @@
             <div style="margin-top: 20px; background: linear-gradient(135deg, var(--afar-navy) 0%, var(--afar-navy-2) 60%, var(--afar-green) 100%); border-radius: 24px; padding: 40px; color: #ffffff; box-shadow: 0 20px 48px rgba(10, 34, 54, 0.2);">
                 <div class="row align-items-center">
                     <div class="col-lg-8 col-md-12 mb-3 mb-lg-0">
-                        <span style="display: inline-block; padding: 4px 12px; background: rgba(201, 151, 56, 0.2); border: 1px solid rgba(201, 151, 56, 0.6); color: var(--afar-gold-soft); border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px;">
+                        <span style="display: inline-block; padding: 4px 12px; background: rgba(201, 151, 56, 0.2); border: 1px solid rgba(201, 151, 56, 0.6); color: var(--afar-accent-soft); border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px;">
                             Fast Assistance
                         </span>
                         <h3 style="color: #ffffff; font-weight: 800; font-size: 1.75rem; margin-bottom: 8px;">

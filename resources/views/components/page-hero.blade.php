@@ -36,7 +36,7 @@
             <div class="col-lg-4 d-none d-lg-flex justify-content-end align-items-center">
                 <div class="hero-crest-emblem text-center" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(201, 151, 56, 0.4); border-radius: 24px; padding: 22px 28px; backdrop-filter: blur(10px); box-shadow: 0 16px 36px rgba(0,0,0,0.25);">
                     <img src="{{ asset('logo.png') }}" alt="{{ __('messages.metadata.title') }}" style="max-height: 80px; width: auto; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));">
-                    <div style="margin-top: 10px; font-size: 11px; font-weight: 700; color: var(--afar-gold); letter-spacing: 0.12em; text-transform: uppercase;">
+                    <div style="margin-top: 10px; font-size: 11px; font-weight: 700; color: var(--afar-accent); letter-spacing: 0.12em; text-transform: uppercase;">
                         Semera Headquarters
                     </div>
                 </div>

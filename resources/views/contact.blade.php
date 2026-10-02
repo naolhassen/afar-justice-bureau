@@ -25,7 +25,7 @@
                         <div style="display: flex; flex-direction: column; gap: 20px;">
                             <!-- Address -->
                             <div style="display: flex; gap: 16px; align-items: flex-start;">
-                                <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(201, 151, 56, 0.14); color: var(--afar-gold); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">
+                                <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(201, 151, 56, 0.14); color: var(--afar-accent); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">
                                     <i class="fa fa-map-marker"></i>
                                 </div>
                                 <div>
@@ -64,7 +64,7 @@
 
                             <!-- Working Hours -->
                             <div style="display: flex; gap: 16px; align-items: flex-start;">
-                                <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(201, 151, 56, 0.14); color: var(--afar-gold); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">
+                                <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(201, 151, 56, 0.14); color: var(--afar-accent); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">
                                     <i class="fa fa-clock-o"></i>
                                 </div>
                                 <div>

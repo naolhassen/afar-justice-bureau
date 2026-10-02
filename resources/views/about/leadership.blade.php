@@ -66,7 +66,7 @@
                             <h4 style="font-weight: 800; color: var(--afar-navy); font-size: 1.25rem; margin-bottom: 6px;">
                                 {{ __($leader['name']) }}
                             </h4>
-                            <div style="color: var(--afar-gold-dark); font-weight: 700; font-size: 0.9rem; line-height: 1.4; margin-bottom: 12px;">
+                            <div style="color: var(--afar-accent-dark); font-weight: 700; font-size: 0.9rem; line-height: 1.4; margin-bottom: 12px;">
                                 {{ __($leader['position']) }}
                             </div>
                             <p style="color: var(--afar-muted); font-size: 0.85rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">

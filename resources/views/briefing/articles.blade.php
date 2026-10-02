@@ -53,7 +53,7 @@
                             </div>
                             <div style="padding: 28px 24px; display: flex; flex-direction: column; flex-grow: 1;">
                                 <div style="font-size: 12px; color: var(--afar-muted); font-weight: 600; margin-bottom: 10px;">
-                                    <i class="fa fa-user me-1" style="color: var(--afar-gold);"></i> {{ __($item['author']) }} &bull; {{ $item['date'] }}
+                                    <i class="fa fa-user me-1" style="color: var(--afar-accent);"></i> {{ __($item['author']) }} &bull; {{ $item['date'] }}
                                 </div>
                                 <h4 style="font-weight: 800; color: var(--afar-navy); font-size: 1.25rem; line-height: 1.35; margin-bottom: 12px;">
                                     {{ $item['title'] }}
@@ -64,7 +64,7 @@
                                 <div class="pt-3 border-top mt-auto">
                                     <a href="{{ route('contact', ['locale' => $locale]) }}" style="color: var(--afar-navy); font-weight: 700; font-size: 13px; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
                                         <span>Request Full Research Paper</span>
-                                        <i class="fa fa-arrow-right" style="color: var(--afar-gold);"></i>
+                                        <i class="fa fa-arrow-right" style="color: var(--afar-accent);"></i>
                                     </a>
                                 </div>
                             </div>

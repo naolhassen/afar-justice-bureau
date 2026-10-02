@@ -54,7 +54,7 @@
                             </div>
                             <div style="padding: 28px 24px; display: flex; flex-direction: column; flex-grow: 1;">
                                 <div style="display: flex; gap: 14px; font-size: 12px; color: var(--afar-muted); font-weight: 600; margin-bottom: 12px; flex-wrap: wrap;">
-                                    <span><i class="fa fa-calendar me-1" style="color: var(--afar-gold);"></i> {{ $item['date'] }}</span>
+                                    <span><i class="fa fa-calendar me-1" style="color: var(--afar-accent);"></i> {{ $item['date'] }}</span>
                                     <span>&bull;</span>
                                     <span><i class="fa fa-map-marker me-1" style="color: var(--afar-navy);"></i> {{ $item['location'] }}</span>
                                 </div>
@@ -67,7 +67,7 @@
                                 <div class="pt-3 border-top mt-auto">
                                     <a href="{{ route('contact', ['locale' => $locale]) }}" style="color: var(--afar-navy); font-weight: 700; font-size: 13px; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
                                         <span>Inquire Attendance / Registration</span>
-                                        <i class="fa fa-arrow-right" style="color: var(--afar-gold);"></i>
+                                        <i class="fa fa-arrow-right" style="color: var(--afar-accent);"></i>
                                     </a>
                                 </div>
                             </div>

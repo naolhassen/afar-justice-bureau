@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CrudController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Models\Announcement;
+use App\Models\News;
 use Illuminate\Support\Facades\Route;
 
 $locales = ['aa', 'am', 'en'];
@@ -31,7 +33,23 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'role:admin,editor,vi
 Route::prefix('{locale}')
     ->whereIn('locale', $locales)
     ->group(function () {
-        Route::get('/', fn () => view('home'))->name('home');
+        Route::get('/', function () {
+            $latestNews = News::published()
+                ->where(fn ($q) => $q->whereNull('published_at')->orWhere('published_at', '<=', now()))
+                ->orderByDesc('published_at')
+                ->orderByDesc('id')
+                ->take(4)
+                ->get();
+
+            $latestAnnouncements = Announcement::published()
+                ->where(fn ($q) => $q->whereNull('published_at')->orWhere('published_at', '<=', now()))
+                ->orderByDesc('published_at')
+                ->orderByDesc('id')
+                ->take(4)
+                ->get();
+
+            return view('home', compact('latestNews', 'latestAnnouncements'));
+        })->name('home');
         Route::get('/about/vision-mission', fn () => view('about.vision-mission'))->name('about.vision-mission');
         Route::get('/about/leadership', fn () => view('about.leadership'))->name('about.leadership');
         Route::get('/about/formation', fn () => view('about.formation'))->name('about.formation');

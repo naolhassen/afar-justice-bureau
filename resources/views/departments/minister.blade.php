@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-lg-4 d-none d-lg-flex justify-content-end">
                     <div style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(201, 151, 56, 0.4); border-radius: 20px; padding: 20px 24px; backdrop-filter: blur(8px); text-align: center;">
-                        <span style="display: block; font-size: 11px; font-weight: 700; color: var(--afar-gold); letter-spacing: 0.14em; text-transform: uppercase;">
+                        <span style="display: block; font-size: 11px; font-weight: 700; color: var(--afar-accent); letter-spacing: 0.14em; text-transform: uppercase;">
                             Office Status
                         </span>
                         <div style="font-family: 'Bellefair', serif; font-size: 1.5rem; font-weight: 700; color: #fff; margin: 4px 0;">
@@ -48,7 +48,7 @@
                                 <div style="position: relative; display: inline-block;">
                                     <img src="{{ asset('images/leaders/asker-mahammad.jpg') }}" alt="{{ __('messages.leaders.leader1Name') }}"
                                          style="width: 240px; height: 280px; object-fit: cover; object-position: center top; border-radius: 18px; box-shadow: 0 14px 32px rgba(10,34,54,0.18); border: 3px solid #ffffff;">
-                                    <div style="position: absolute; bottom: -10px; right: 10px; background: var(--afar-gold); color: var(--afar-navy); width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                                    <div style="position: absolute; bottom: -10px; right: 10px; background: var(--afar-accent); color: var(--afar-navy); width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
                                         <i class="fa fa-balance-scale"></i>
                                     </div>
                                 </div>
@@ -60,14 +60,14 @@
                                 <h2 style="font-size: 1.85rem; font-weight: 800; color: var(--afar-navy); margin: 8px 0 6px;">
                                     {{ __('messages.leaders.leader1Name') }}
                                 </h2>
-                                <div style="font-size: 1.05rem; font-weight: 700; color: var(--afar-gold); margin-bottom: 14px;">
+                                <div style="font-size: 1.05rem; font-weight: 700; color: var(--afar-accent); margin-bottom: 14px;">
                                     {{ __('messages.leaders.leader1Position') }}
                                 </div>
                                 <p style="font-size: 0.95rem; line-height: 1.7; color: var(--afar-ink); margin-bottom: 16px;">
                                     Leading the Afar National Regional State Justice Bureau with an unwavering dedication to the rule of law, institutional integrity, human rights protection, and harmonizing the pastoralist customary legal order with the Ethiopian constitutional framework.
                                 </p>
                                 <div class="d-flex align-items-center gap-3" style="font-size: 13px; color: var(--afar-muted); font-weight: 600;">
-                                    <span><i class="fa fa-map-marker me-1" style="color: var(--afar-gold);"></i> Semera, Afar</span>
+                                    <span><i class="fa fa-map-marker me-1" style="color: var(--afar-accent);"></i> Semera, Afar</span>
                                     <span>&bull;</span>
                                     <span><i class="fa fa-building-o me-1" style="color: var(--afar-green);"></i> Cabinet Member</span>
                                 </div>
@@ -89,7 +89,7 @@
 
                         <!-- Key Executive Responsibilities (Authentic from website contents.txt) -->
                         <h4 style="font-weight: 800; color: var(--afar-navy); margin-top: 28px; margin-bottom: 16px; font-size: 1.2rem;">
-                            <i class="fa fa-gavel" style="color: var(--afar-gold); margin-right: 8px;"></i> Statutory Responsibilities & Powers
+                            <i class="fa fa-gavel" style="color: var(--afar-accent); margin-right: 8px;"></i> Statutory Responsibilities & Powers
                         </h4>
                         <div class="row g-3">
                             <div class="col-md-6 mb-3">
@@ -99,7 +99,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <div style="background: #fdfdfe; border: 1px solid var(--afar-border); border-left: 4px solid var(--afar-gold); border-radius: 12px; padding: 18px; height: 100%;">
+                                <div style="background: #fdfdfe; border: 1px solid var(--afar-border); border-left: 4px solid var(--afar-accent); border-radius: 12px; padding: 18px; height: 100%;">
                                     <h6 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 6px;">Civil Representation & Contract Review</h6>
                                     <p style="font-size: 0.85rem; color: var(--afar-muted); line-height: 1.6; margin: 0;">Safeguarding public interest in civil litigation and negotiating major regional government project contracts.</p>
                                 </div>
@@ -186,7 +186,7 @@
                             <ul class="civic-menu-list">
                                 <li>
                                     <a href="{{ route('departments.minister', ['locale' => app()->getLocale()]) }}" class="active">
-                                        <span><i class="fa fa-angle-right me-2" style="color: var(--afar-gold);"></i> {{ __('messages.nav.bureauHead') }}</span>
+                                        <span><i class="fa fa-angle-right me-2" style="color: var(--afar-accent);"></i> {{ __('messages.nav.bureauHead') }}</span>
                                         <span class="civic-badge civic-badge-gold" style="font-size: 10px; padding: 3px 8px;">Office</span>
                                     </a>
                                 </li>

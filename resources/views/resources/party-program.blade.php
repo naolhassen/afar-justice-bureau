@@ -28,7 +28,7 @@
                             {{ __('messages.pages.partyProgram.description') }}
                         </p>
 
-                        <div style="background: rgba(10,34,54,0.03); border: 1px solid var(--afar-border); border-left: 4px solid var(--afar-gold); border-radius: 14px; padding: 22px; margin-bottom: 24px;">
+                        <div style="background: rgba(10,34,54,0.03); border: 1px solid var(--afar-border); border-left: 4px solid var(--afar-accent); border-radius: 14px; padding: 22px; margin-bottom: 24px;">
                             <h5 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 8px;">Justice & Rule of Law Institutional Program</h5>
                             <p style="font-size: 0.92rem; line-height: 1.7; color: var(--afar-muted); margin: 0;">
                                 Implementing strategic justice priorities, prosecutorial capacity-building, and expanding access to justice for vulnerable pastoral communities across the Afar Region.

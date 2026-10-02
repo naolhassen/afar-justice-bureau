@@ -24,11 +24,11 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     @foreach ($releases as $item)
-                        <div class="civic-card" style="border-top: 4px solid var(--afar-gold);">
+                        <div class="civic-card" style="border-top: 4px solid var(--afar-accent);">
                             <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
                                 <span class="civic-badge civic-badge-navy">{{ $item['ref'] }}</span>
                                 <span style="font-size: 12px; color: var(--afar-muted); font-weight: 600;">
-                                    <i class="fa fa-calendar me-1" style="color: var(--afar-gold);"></i> {{ $item['date'] }} &bull; Semera
+                                    <i class="fa fa-calendar me-1" style="color: var(--afar-accent);"></i> {{ $item['date'] }} &bull; Semera
                                 </span>
                             </div>
                             <h3 style="font-weight: 800; color: var(--afar-navy); font-size: 1.45rem; line-height: 1.35; margin-bottom: 14px;">
@@ -43,7 +43,7 @@
                                     Afar National Regional State Justice Bureau Headquarters, Semera, Ethiopia.
                                 </p>
                                 <p style="font-size: 0.9rem; margin: 0;">
-                                    Media Desk: <a href="mailto:{{ __('messages.contact.emailValue') }}" style="color: var(--afar-gold-dark); font-weight: 700;">{{ __('messages.contact.emailValue') }}</a>
+                                    Media Desk: <a href="mailto:{{ __('messages.contact.emailValue') }}" style="color: var(--afar-accent-dark); font-weight: 700;">{{ __('messages.contact.emailValue') }}</a>
                                 </p>
                             </div>
                             <a href="mailto:{{ __('messages.contact.emailValue') }}?subject=Press Inquiry - {{ $item['ref'] }}" class="theme-btn btn-style-one">

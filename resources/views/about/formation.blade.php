@@ -25,9 +25,9 @@
                         <p style="font-size: 1rem; line-height: 1.8; color: var(--afar-ink); margin-bottom: 20px;">
                             {{ __('messages.pages.formation.description') }}
                         </p>
-                        <div style="background: rgba(10,34,54,0.03); border: 1px solid var(--afar-border); border-left: 4px solid var(--afar-gold); border-radius: 12px; padding: 20px; margin-bottom: 24px;">
+                        <div style="background: rgba(10,34,54,0.03); border: 1px solid var(--afar-border); border-left: 4px solid var(--afar-accent); border-radius: 12px; padding: 20px; margin-bottom: 24px;">
                             <h5 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 6px; font-size: 1.05rem;">
-                                <i class="fa fa-institution me-1" style="color: var(--afar-gold);"></i> Foundational Purpose
+                                <i class="fa fa-institution me-1" style="color: var(--afar-accent);"></i> Foundational Purpose
                             </h5>
                             <p style="font-size: 0.9rem; line-height: 1.7; color: var(--afar-muted); margin: 0;">
                                 Established to provide structured institutional governance, enforce constitutional safeguards, and build bridges between formal jurisprudence and traditional Afar customary arbitration (<em>Mad'aa</em>).

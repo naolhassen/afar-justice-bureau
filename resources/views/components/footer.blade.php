@@ -3,7 +3,7 @@
 @endphp
 
 <!-- Main Footer -->
-<footer class="main-footer" style="background: linear-gradient(180deg, #0a2236 0%, #061623 100%); color: rgba(255,255,255,0.85); border-top: 3px solid var(--afar-gold); position: relative; padding-top: 60px;">
+<footer class="main-footer" style="background: linear-gradient(180deg, #0a2236 0%, #061623 100%); color: rgba(255,255,255,0.85); border-top: 3px solid var(--afar-accent); position: relative; padding-top: 60px;">
     <div class="auto-container">
         <!-- Widgets Section -->
         <div class="widgets-section" style="padding-bottom: 40px;">
@@ -21,7 +21,7 @@
                                     <span style="display: block; color: #ffffff; font-weight: 800; font-size: 15px; line-height: 1.25; letter-spacing: -0.01em;">
                                         {{ __('messages.metadata.title') }}
                                     </span>
-                                    <span style="display: block; color: var(--afar-gold); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px;">
+                                    <span style="display: block; color: var(--afar-accent); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px;">
                                         Semera Headquarters &bull; Afar Region
                                     </span>
                                 </div>
@@ -45,7 +45,7 @@
                     <div class="footer-widget links-widget">
                         <h5 style="color: #ffffff; font-weight: 800; font-size: 1rem; margin-bottom: 18px; position: relative; padding-bottom: 8px;">
                             {{ __('messages.nav.about') }}
-                            <span style="position: absolute; bottom: 0; left: 0; width: 28px; height: 2px; background: var(--afar-gold);"></span>
+                            <span style="position: absolute; bottom: 0; left: 0; width: 28px; height: 2px; background: var(--afar-accent);"></span>
                         </h5>
                         <ul class="footer-list" style="list-style: none; padding: 0; margin: 0; line-height: 2.1; font-size: 13.5px;">
                             <li><a href="{{ route('home', ['locale' => $locale]) }}">{{ __('messages.nav.home') }}</a></li>
@@ -63,7 +63,7 @@
                     <div class="footer-widget links-widget">
                         <h5 style="color: #ffffff; font-weight: 800; font-size: 1rem; margin-bottom: 18px; position: relative; padding-bottom: 8px;">
                             {{ __('messages.nav.resources') }} & Reforms
-                            <span style="position: absolute; bottom: 0; left: 0; width: 28px; height: 2px; background: var(--afar-gold);"></span>
+                            <span style="position: absolute; bottom: 0; left: 0; width: 28px; height: 2px; background: var(--afar-accent);"></span>
                         </h5>
                         <ul class="footer-list" style="list-style: none; padding: 0; margin: 0; line-height: 2.1; font-size: 13.5px;">
                             <li><a href="{{ route('initiatives.justice-sector-transformation', ['locale' => $locale]) }}">{{ __('messages.nav.transformationRoadmap') }}</a></li>
@@ -71,7 +71,7 @@
                             <li><a href="{{ route('initiatives.legal-institutional-reform', ['locale' => $locale]) }}">{{ __('messages.nav.institutionalReform') }}</a></li>
                             <li><a href="{{ route('resources.laws', ['locale' => $locale]) }}">{{ __('messages.nav.laws') }} & Directives</a></li>
                             <li><a href="{{ route('resources.services', ['locale' => $locale]) }}">{{ __('messages.nav.services') }}</a></li>
-                            <li><a href="https://justice.gov.et" target="_blank" rel="noopener" style="color: var(--afar-gold-soft);">Federal Ministry of Justice <i class="fa fa-external-link" style="font-size: 11px;"></i></a></li>
+                            <li><a href="https://justice.gov.et" target="_blank" rel="noopener" style="color: var(--afar-accent-soft);">Federal Ministry of Justice <i class="fa fa-external-link" style="font-size: 11px;"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -81,23 +81,23 @@
                     <div class="footer-widget contact-widget">
                         <h5 style="color: #ffffff; font-weight: 800; font-size: 1rem; margin-bottom: 18px; position: relative; padding-bottom: 8px;">
                             {{ __('messages.footer.contactInfo') }}
-                            <span style="position: absolute; bottom: 0; left: 0; width: 28px; height: 2px; background: var(--afar-gold);"></span>
+                            <span style="position: absolute; bottom: 0; left: 0; width: 28px; height: 2px; background: var(--afar-accent);"></span>
                         </h5>
                         <ul style="list-style: none; padding: 0; margin: 0; font-size: 13.5px; line-height: 1.8;">
                             <li style="display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start;">
-                                <span class="fa fa-map-marker" style="color: var(--afar-gold); font-size: 18px; margin-top: 3px;"></span>
+                                <span class="fa fa-map-marker" style="color: var(--afar-accent); font-size: 18px; margin-top: 3px;"></span>
                                 <span>{{ __('messages.footer.addressValue') }}</span>
                             </li>
                             <li style="display: flex; gap: 12px; margin-bottom: 14px; align-items: center;">
-                                <span class="fa fa-phone" style="color: var(--afar-gold); font-size: 16px;"></span>
+                                <span class="fa fa-phone" style="color: var(--afar-accent); font-size: 16px;"></span>
                                 <a href="tel:+251336660123" style="color: rgba(255,255,255,0.85); font-weight: 700;">{{ __('messages.contact.phoneValue') }}</a>
                             </li>
                             <li style="display: flex; gap: 12px; margin-bottom: 14px; align-items: center;">
-                                <span class="fa fa-envelope-o" style="color: var(--afar-gold); font-size: 16px;"></span>
+                                <span class="fa fa-envelope-o" style="color: var(--afar-accent); font-size: 16px;"></span>
                                 <a href="mailto:{{ __('messages.contact.emailValue') }}" style="color: rgba(255,255,255,0.85);">{{ __('messages.contact.emailValue') }}</a>
                             </li>
                             <li style="display: flex; gap: 12px; align-items: center;">
-                                <span class="fa fa-clock-o" style="color: var(--afar-gold); font-size: 16px;"></span>
+                                <span class="fa fa-clock-o" style="color: var(--afar-accent); font-size: 16px;"></span>
                                 <span>Mon &ndash; Fri: 8:30 AM &ndash; 5:30 PM</span>
                             </li>
                         </ul>

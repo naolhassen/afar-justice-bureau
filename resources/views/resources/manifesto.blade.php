@@ -11,9 +11,9 @@
         <div class="auto-container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
-                    <div class="civic-card" style="border-top: 4px solid var(--afar-gold);">
+                    <div class="civic-card" style="border-top: 4px solid var(--afar-accent);">
                         <div class="d-flex align-items-center gap-3 mb-4">
-                            <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(201, 151, 56, 0.14); color: var(--afar-gold); display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                            <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(201, 151, 56, 0.14); color: var(--afar-accent); display: flex; align-items: center; justify-content: center; font-size: 24px;">
                                 <i class="fa fa-book"></i>
                             </div>
                             <div>
