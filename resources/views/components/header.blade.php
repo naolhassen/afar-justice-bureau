@@ -42,7 +42,7 @@
                         </li>
 
                         <li class="has-dropdown {{ request()->is("$locale/about/*") ? 'active' : '' }}">
-                            <a href="#" class="nav-parent">{{ __('messages.nav.about') }}<i class="fa fa-angle-down nav-arrow"></i></a>
+                            <a href="#" class="nav-parent" role="button" aria-haspopup="true" aria-expanded="false">{{ __('messages.nav.about') }}<i class="fa fa-angle-down nav-arrow"></i></a>
                             <ul class="nav-dropdown">
                                 <li><a href="{{ route('about.vision-mission', ['locale' => $locale]) }}">{{ __('messages.nav.visionMission') }}</a></li>
                                 <li><a href="{{ route('about.leadership', ['locale' => $locale]) }}">{{ __('messages.nav.leadership') }}</a></li>
@@ -53,7 +53,7 @@
                         </li>
 
                         <li class="has-dropdown {{ request()->is("$locale/departments/*") || request()->is("$locale/initiatives/*") ? 'active' : '' }}">
-                            <a href="#" class="nav-parent">{{ __('messages.nav.initiatives') }}<i class="fa fa-angle-down nav-arrow"></i></a>
+                            <a href="#" class="nav-parent" role="button" aria-haspopup="true" aria-expanded="false">{{ __('messages.nav.initiatives') }}<i class="fa fa-angle-down nav-arrow"></i></a>
                             <ul class="nav-dropdown">
                                 <li><a href="{{ route('departments.minister', ['locale' => $locale]) }}">{{ __('messages.nav.bureauHead') }}</a></li>
                                 <li><a href="{{ route('initiatives.justice-sector-transformation', ['locale' => $locale]) }}">{{ __('messages.nav.transformationRoadmap') }}</a></li>
@@ -63,7 +63,7 @@
                         </li>
 
                         <li class="has-dropdown {{ request()->is("$locale/resources/*") || request()->is("$locale/publications/*") ? 'active' : '' }}">
-                            <a href="#" class="nav-parent">{{ __('messages.nav.resources') }}<i class="fa fa-angle-down nav-arrow"></i></a>
+                            <a href="#" class="nav-parent" role="button" aria-haspopup="true" aria-expanded="false">{{ __('messages.nav.resources') }}<i class="fa fa-angle-down nav-arrow"></i></a>
                             <ul class="nav-dropdown">
                                 <li><a href="{{ route('resources.laws', ['locale' => $locale]) }}">{{ __('messages.nav.laws') }}</a></li>
                                 <li><a href="{{ route('resources.services', ['locale' => $locale]) }}">{{ __('messages.nav.services') }}</a></li>
@@ -72,7 +72,7 @@
                         </li>
 
                         <li class="has-dropdown {{ request()->is("$locale/briefing/*") ? 'active' : '' }}">
-                            <a href="#" class="nav-parent">{{ __('messages.nav.briefing') }}<i class="fa fa-angle-down nav-arrow"></i></a>
+                            <a href="#" class="nav-parent" role="button" aria-haspopup="true" aria-expanded="false">{{ __('messages.nav.briefing') }}<i class="fa fa-angle-down nav-arrow"></i></a>
                             <ul class="nav-dropdown">
                                 <li><a href="{{ route('briefing.news', ['locale' => $locale]) }}">{{ __('messages.nav.news') }}</a></li>
                                 <li><a href="{{ route('briefing.articles', ['locale' => $locale]) }}">{{ __('messages.nav.articles') }}</a></li>
@@ -107,7 +107,7 @@
                 </div>
 
                 <!-- Mobile toggle -->
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
                     <span></span><span></span><span></span>
                 </button>
 
@@ -135,7 +135,7 @@
             <ul class="mobile-nav-list">
                 <li><a href="{{ route('home', ['locale' => $locale]) }}">{{ __('messages.nav.home') }}</a></li>
                 <li class="mobile-has-sub">
-                    <button class="mobile-sub-toggle">{{ __('messages.nav.about') }} <i class="fa fa-angle-down"></i></button>
+                    <button class="mobile-sub-toggle" aria-expanded="false">{{ __('messages.nav.about') }} <i class="fa fa-angle-down"></i></button>
                     <ul class="mobile-sub">
                         <li><a href="{{ route('about.vision-mission', ['locale' => $locale]) }}">{{ __('messages.nav.visionMission') }}</a></li>
                         <li><a href="{{ route('about.leadership', ['locale' => $locale]) }}">{{ __('messages.nav.leadership') }}</a></li>
@@ -145,7 +145,7 @@
                     </ul>
                 </li>
                 <li class="mobile-has-sub">
-                    <button class="mobile-sub-toggle">{{ __('messages.nav.initiatives') }} <i class="fa fa-angle-down"></i></button>
+                    <button class="mobile-sub-toggle" aria-expanded="false">{{ __('messages.nav.initiatives') }} <i class="fa fa-angle-down"></i></button>
                     <ul class="mobile-sub">
                         <li><a href="{{ route('departments.minister', ['locale' => $locale]) }}">{{ __('messages.nav.bureauHead') }}</a></li>
                         <li><a href="{{ route('initiatives.justice-sector-transformation', ['locale' => $locale]) }}">{{ __('messages.nav.transformationRoadmap') }}</a></li>
@@ -154,7 +154,7 @@
                     </ul>
                 </li>
                 <li class="mobile-has-sub">
-                    <button class="mobile-sub-toggle">{{ __('messages.nav.resources') }} <i class="fa fa-angle-down"></i></button>
+                    <button class="mobile-sub-toggle" aria-expanded="false">{{ __('messages.nav.resources') }} <i class="fa fa-angle-down"></i></button>
                     <ul class="mobile-sub">
                         <li><a href="{{ route('resources.laws', ['locale' => $locale]) }}">{{ __('messages.nav.laws') }}</a></li>
                         <li><a href="{{ route('resources.services', ['locale' => $locale]) }}">{{ __('messages.nav.services') }}</a></li>
@@ -162,7 +162,7 @@
                     </ul>
                 </li>
                 <li class="mobile-has-sub">
-                    <button class="mobile-sub-toggle">{{ __('messages.nav.briefing') }} <i class="fa fa-angle-down"></i></button>
+                    <button class="mobile-sub-toggle" aria-expanded="false">{{ __('messages.nav.briefing') }} <i class="fa fa-angle-down"></i></button>
                     <ul class="mobile-sub">
                         <li><a href="{{ route('briefing.news', ['locale' => $locale]) }}">{{ __('messages.nav.news') }}</a></li>
                         <li><a href="{{ route('briefing.articles', ['locale' => $locale]) }}">{{ __('messages.nav.articles') }}</a></li>
@@ -176,7 +176,7 @@
     </div>
 
 </header>
-<!-- ========== END SITE HEADER ==========
+<!-- ========== END SITE HEADER ========== -->
 
 <script>
 (function () {
@@ -189,14 +189,19 @@
     function openDrawer() {
         drawer.classList.add('open');
         overlay.classList.add('open');
+        drawer.setAttribute('aria-hidden', 'false');
         toggle.setAttribute('aria-expanded', 'true');
         document.body.style.overflow = 'hidden';
+        if (close) close.focus();
     }
     function closeDrawer() {
+        if (!drawer.classList.contains('open')) return;
         drawer.classList.remove('open');
         overlay.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
         toggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
+        toggle.focus();
     }
 
     if (toggle) toggle.addEventListener('click', openDrawer);
@@ -207,7 +212,8 @@
     document.querySelectorAll('.mobile-sub-toggle').forEach(function(btn) {
         btn.addEventListener('click', function() {
             var li = this.parentElement;
-            li.classList.toggle('open');
+            var isOpen = li.classList.toggle('open');
+            this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
     });
 
@@ -220,46 +226,50 @@
         }
     }, { passive: true });
 
-    // Desktop dropdowns - CSS-based hover with click fallback
+    function closeNavDropdowns(except) {
+        document.querySelectorAll('.has-dropdown.open').forEach(function(item) {
+            if (item === except) return;
+            item.classList.remove('open');
+            var parent = item.querySelector('.nav-parent');
+            if (parent) parent.setAttribute('aria-expanded', 'false');
+        });
+    }
+
+    // Desktop dropdowns - CSS-based hover with click/keyboard fallback
     document.querySelectorAll('.has-dropdown').forEach(function(item) {
-        var dropdown = item.querySelector('.nav-dropdown');
         var link = item.querySelector('.nav-parent');
-        
-        // Click support for touch devices and desktop
+
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            var isOpen = item.classList.contains('open');
-            
-            // Close all other dropdowns
-            document.querySelectorAll('.has-dropdown.open').forEach(function(other) {
-                if (other !== item) {
-                    other.classList.remove('open');
-                }
-            });
-            
-            // Toggle current dropdown
-            item.classList.toggle('open', !isOpen);
+            closeNavDropdowns(item);
+            var isOpen = item.classList.toggle('open');
+            link.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        link.addEventListener('keydown', function(e) {
+            if (e.key === ' ') {
+                e.preventDefault();
+                link.click();
+            }
+        });
+
+        item.addEventListener('focusout', function(e) {
+            if (!item.contains(e.relatedTarget)) {
+                item.classList.remove('open');
+                link.setAttribute('aria-expanded', 'false');
+            }
         });
     });
-    
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.has-dropdown')) {
-            document.querySelectorAll('.has-dropdown.open').forEach(function(item) {
-                item.classList.remove('open');
-            });
-        }
-    });
-    
+
     // Language dropdown toggle
     var langToggle = document.getElementById('lang-dropdown-toggle');
     var langMenu = document.getElementById('lang-dropdown-menu');
     
     if (langToggle && langMenu) {
-        langToggle.addEventListener('mousedown', function(e) {
+        langToggle.addEventListener('click', function(e) {
             e.preventDefault();
             var isExpanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !isExpanded);
+            this.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
             langMenu.classList.toggle('open', !isExpanded);
         });
         
@@ -274,17 +284,26 @@
     
     // Close dropdowns when clicking outside
     document.addEventListener('click', function(e) {
-        // Close nav dropdowns
         if (!e.target.closest('.has-dropdown')) {
-            document.querySelectorAll('.has-dropdown.open').forEach(function(item) {
-                item.classList.remove('open');
-            });
+            closeNavDropdowns();
         }
-        
+
+
         // Close language dropdown if clicking outside
         if (langToggle && langMenu && !langToggle.contains(e.target) && !langMenu.contains(e.target)) {
             langToggle.setAttribute('aria-expanded', 'false');
             langMenu.classList.remove('open');
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key !== 'Escape') return;
+        closeDrawer();
+        closeNavDropdowns();
+        if (langToggle && langMenu && langMenu.classList.contains('open')) {
+            langToggle.setAttribute('aria-expanded', 'false');
+            langMenu.classList.remove('open');
+            langToggle.focus();
         }
     });
 })();

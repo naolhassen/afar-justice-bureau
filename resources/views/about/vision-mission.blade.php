@@ -2,9 +2,9 @@
 
 @section('content')
     <x-page-hero
-        title="{{ __('messages.pages.visionMission.title') }}"
-        titleHighlight="{{ __('messages.pages.visionMission.titleHighlight') }}"
-        description="{{ __('messages.pages.visionMission.description') ?? 'The institutional compass, guiding principles, and public commitments of the Afar National Regional State Justice Bureau.' }}"
+        :title="__('messages.pages.visionMission.title')"
+        :titleHighlight="__('messages.pages.visionMission.titleHighlight')"
+        :description="__('messages.pages.visionMission.description')"
     />
 
     <section class="civic-section">

@@ -40,8 +40,8 @@
 @endphp
 
     <x-page-hero
-        title="{{ __('messages.news.title') }}"
-        titleHighlight="{{ __('messages.news.titleHighlight') }}"
+        :title="__('messages.news.title')"
+        :titleHighlight="__('messages.news.titleHighlight')"
         description="Official press bulletins, judicial conferences, and regional legal updates from the Afar National Regional State Justice Bureau."
     />
 

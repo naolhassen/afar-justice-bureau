@@ -18,6 +18,7 @@
             'desc' => 'Comprehensive 4-day intensive training curriculum on modern forensic criminal investigation, cyber evidence analysis, and judicial ethics.',
             'date' => now()->addDays(14)->format('M d, Y'),
             'location' => 'Afar Regional Management Institute, Semera',
+            'img' => asset('images/gallery/gallery-11.jpg'),
             'status' => 'Registration Open',
             'badge' => 'civic-badge-navy',
         ],
@@ -25,9 +26,9 @@
 @endphp
 
     <x-page-hero
-        title="{{ __('messages.pages.events.title') }}"
-        titleHighlight="{{ __('messages.pages.events.titleHighlight') }}"
-        description="{{ __('messages.pages.events.description') }}"
+        :title="__('messages.pages.events.title')"
+        :titleHighlight="__('messages.pages.events.titleHighlight')"
+        :description="__('messages.pages.events.description')"
     />
 
     <section class="civic-section">
@@ -47,7 +48,7 @@
                     <div class="col-lg-6 mb-4">
                         <div class="civic-card h-100 d-flex flex-column" style="padding: 0; overflow: hidden;">
                             <div style="height: 240px; width: 100%; overflow: hidden; position: relative;">
-                                <img src="{{ $item['img'] }}" alt="{{ $item['title'] }}" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="{{ $item['img'] ?? asset('images/gallery/gallery-11.jpg') }}" alt="{{ $item['title'] }}" style="width: 100%; height: 100%; object-fit: cover;">
                                 <span class="civic-badge {{ $item['badge'] }}" style="position: absolute; top: 14px; left: 14px; font-size: 11px;">
                                     {{ $item['status'] }}
                                 </span>

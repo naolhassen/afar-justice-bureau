@@ -14,9 +14,9 @@
 @endphp
 
     <x-page-hero
-        title="{{ __('messages.pages.pressRelease.title') }}"
-        titleHighlight="{{ __('messages.pages.pressRelease.titleHighlight') }}"
-        description="{{ __('messages.pages.pressRelease.description') }}"
+        :title="__('messages.pages.pressRelease.title')"
+        :titleHighlight="__('messages.pages.pressRelease.titleHighlight')"
+        :description="__('messages.pages.pressRelease.description')"
     />
 
     <section class="civic-section">

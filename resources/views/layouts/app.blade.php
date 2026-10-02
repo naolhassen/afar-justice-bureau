@@ -42,7 +42,7 @@
            Signature: Ethiopian-inspired gold accents + professional institutional feel
         ============================================================ */
 
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Ethiopic:wght@400;600;700&display=swap');
 
         :root {
             --afar-deep:      #1E3A5F;
@@ -63,6 +63,14 @@
             --border:         rgba(61, 61, 61, 0.12);
             --shadow:         0 4px 20px rgba(26, 26, 26, 0.08);
             --shadow-deep:    0 12px 40px rgba(26, 26, 26, 0.12);
+
+            /* Aliases used by page templates */
+            --afar-navy:      var(--afar-deep);
+            --afar-navy-2:    var(--afar-blue);
+            --afar-ink:       var(--ink);
+            --afar-muted:     var(--muted);
+            --afar-border:    var(--border);
+            --afar-gold-soft: var(--afar-gold-light);
 
             /* Spacing scale */
             --space-xs: 8px;
@@ -88,7 +96,7 @@
         body {
             background: var(--sand-light);
             color: var(--ink);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', 'Noto Sans Ethiopic', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: var(--text-base);
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
@@ -98,6 +106,24 @@
         .page-wrapper { background: var(--sand-light); }
 
         a { transition: color 0.2s ease, opacity 0.2s ease; }
+
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible,
+        [tabindex]:focus-visible {
+            outline: 3px solid var(--afar-gold) !important;
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
 
         /* ── Auto-container ── */
         .auto-container {
@@ -154,7 +180,7 @@
         }
         .site-logo-text strong {
             display: block;
-            font-family: 'Merriweather', Georgia, serif;
+            font-family: 'Merriweather', 'Noto Sans Ethiopic', Georgia, serif;
             font-size: 1.1rem;
             font-weight: 700;
             color: var(--afar-deep);
@@ -473,15 +499,15 @@
             overflow: hidden;
             min-height: 85vh;
             display: flex;
-            align-items: center;
+            flex-direction: column;
         }
 
         /* Slide track */
         .hero-slides {
             position: relative;
             width: 100%;
-            height: 100%;
-            min-height: 85vh;
+            flex: 1;
+            min-height: 640px;
         }
 
         /* Individual slide */
@@ -519,7 +545,8 @@
             display: flex;
             align-items: center;
             height: 100%;
-            padding: var(--space-2xl) 0;
+            padding-top: var(--space-xl);
+            padding-bottom: calc(var(--space-xl) + 44px);
             gap: 0;
         }
 
@@ -553,7 +580,7 @@
         }
 
         .hero-headline {
-            font-family: 'Merriweather', Georgia, serif;
+            font-family: 'Merriweather', 'Noto Sans Ethiopic', Georgia, serif;
             font-size: clamp(2.8rem, 5vw, 5.5rem);
             font-weight: 700;
             line-height: 1.08;
@@ -621,7 +648,7 @@
         /* Slide controls */
         .hero-controls {
             position: absolute;
-            bottom: var(--space-xl);
+            bottom: var(--space-md);
             right: var(--space-lg);
             z-index: 10;
             display: flex;
@@ -664,10 +691,7 @@
 
         /* Stat strip */
         .hero-stats {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            position: relative;
             z-index: 10;
             display: flex;
             align-items: center;
@@ -685,7 +709,7 @@
             text-align: center;
         }
         .hero-stat strong {
-            font-family: 'Merriweather', serif;
+            font-family: 'Merriweather', 'Noto Sans Ethiopic', serif;
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--afar-gold-light);
@@ -707,14 +731,16 @@
         }
 
         @media (max-width: 768px) {
-            .hero-slides { height: auto; min-height: 75vh; }
+            .hero-slides { min-height: 560px; }
             .hero-pillar { height: 80px; margin-right: var(--space-md); }
-            .hero-headline { font-size: clamp(2.2rem, 7vw, 3.5rem); }
+            .hero-headline { font-size: clamp(2rem, 7vw, 3.5rem); }
             .hero-sub { font-size: var(--text-base); }
-            .hero-controls { bottom: var(--space-lg); right: var(--space-md); }
-            .hero-stat span { display: none; }
+            .hero-controls { bottom: var(--space-sm); right: var(--space-md); }
+            .hero-stats { flex-wrap: wrap; }
+            .hero-stat { flex: 1 1 50%; }
+            .hero-stat-sep { display: none; }
             .hero-stat strong { font-size: 1.4rem; }
-            .hero-slide-inner { padding: var(--space-xl) 0; }
+            .hero-slide-inner { padding-top: var(--space-lg); padding-bottom: calc(var(--space-lg) + 44px); }
         }
         @media (max-width: 480px) {
             .hero-content { max-width: 100%; }
@@ -735,7 +761,7 @@
             margin-bottom: var(--space-xl);
         }
         .sec-title h2 {
-            font-family: 'Merriweather', serif;
+            font-family: 'Merriweather', 'Noto Sans Ethiopic', serif;
             font-size: clamp(2.2rem, 3.5vw, 3.5rem);
             font-weight: 700;
             color: var(--afar-deep);
@@ -878,7 +904,7 @@
             z-index: 2;
         }
         .welcome-section .experience .count {
-            font-family: 'Merriweather', serif;
+            font-family: 'Merriweather', 'Noto Sans Ethiopic', serif;
             font-size: 2.8rem;
             display: block;
             line-height: 1;
@@ -943,7 +969,7 @@
         }
         .counter-column .count-outer {
             color: #fff;
-            font-family: 'Merriweather', serif;
+            font-family: 'Merriweather', 'Noto Sans Ethiopic', serif;
             font-size: 2.6rem;
             font-weight: 700;
             line-height: 1;
@@ -1042,7 +1068,7 @@
             margin-bottom: var(--space-md);
         }
         .message-header h2 {
-            font-family: 'Merriweather', serif;
+            font-family: 'Merriweather', 'Noto Sans Ethiopic', serif;
             font-size: clamp(1.8rem, 3vw, 2.5rem);
             font-weight: 700;
             color: #fff;
@@ -1111,7 +1137,7 @@
         }
         .team-block .lower-content h4 {
             margin: 0 0 8px;
-            font-family: 'Merriweather', serif;
+            font-family: 'Merriweather', 'Noto Sans Ethiopic', serif;
             font-size: 1.3rem;
             font-weight: 700;
             color: var(--afar-deep);
@@ -1210,7 +1236,7 @@
             flex: 1;
         }
         .cta-section .content h2 {
-            font-family: 'Merriweather', serif;
+            font-family: 'Merriweather', 'Noto Sans Ethiopic', serif;
             color: #fff;
             font-size: clamp(2rem, 3vw, 2.8rem);
             font-weight: 700;
@@ -1229,7 +1255,7 @@
         }
         .main-footer .footer-widget h5 {
             color: #fff;
-            font-family: 'Merriweather', serif;
+            font-family: 'Merriweather', 'Noto Sans Ethiopic', serif;
             font-size: 1.2rem;
             font-weight: 700;
             border-bottom: 1px solid rgba(255,255,255,0.10);
@@ -1282,7 +1308,7 @@
             margin-bottom: var(--space-md);
         }
         .page-title h1 {
-            font-family: 'Merriweather', serif;
+            font-family: 'Merriweather', 'Noto Sans Ethiopic', serif;
             color: #fff;
             font-size: clamp(2.2rem, 3.5vw, 3.8rem);
             font-weight: 700;
@@ -1347,7 +1373,7 @@
         }
         .civic-sidebar-widget h4,
         .civic-sidebar-widget .widget-title h4 {
-            font-family: 'Merriweather', serif;
+            font-family: 'Merriweather', 'Noto Sans Ethiopic', serif;
             font-size: 1.2rem;
             font-weight: 700;
             color: var(--afar-deep);

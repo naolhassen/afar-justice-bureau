@@ -6,7 +6,7 @@
 <footer class="main-footer" style="background: linear-gradient(180deg, #0a2236 0%, #061623 100%); color: rgba(255,255,255,0.85); border-top: 3px solid var(--afar-gold); position: relative; padding-top: 60px;">
     <div class="auto-container">
         <!-- Widgets Section -->
-        <div class="widgets-section" style="padding-bottom: 40px;">
+        <div class="widgets-section" style="padding: 0 0 40px;">
             <div class="row clearfix">
 
                 <!-- Col 1: Bureau Identity & Mission -->
