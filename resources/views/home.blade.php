@@ -23,7 +23,7 @@
                                 </h1>
                                 <p class="hero-sub">{{ Str::limit(strip_tags($news->excerpt ?? $news->body), 160) }}</p>
                                 <div class="hero-actions">
-                                    <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}" class="hero-btn hero-btn--primary">
+                                    <a href="{{ route('briefing.news.show', ['locale' => app()->getLocale(), 'slug' => $news->slug]) }}" class="hero-btn hero-btn--primary">
                                         {{ __('messages.news.readMore') }} <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
@@ -186,10 +186,11 @@
             <div class="row clearfix">
 
                 @foreach($homeNews as $index => $newsItem)
+                    @php $newsUrl = route('briefing.news.show', ['locale' => app()->getLocale(), 'slug' => $newsItem->slug]); @endphp
                     <div class="news-block col-lg-4 col-md-6 col-sm-12">
                         <div class="inner-box wow {{ $index % 3 === 0 ? 'fadeInLeft' : ($index % 3 === 1 ? 'fadeInUp' : 'fadeInRight') }}" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div class="image">
-                                <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">
+                                <a href="{{ $newsUrl }}">
                                     <img src="{{ $newsItem->image ? asset('storage/' . $newsItem->image) : asset('images/news/news-' . (($index % 3) + 1) . '.jpg') }}" alt="{{ $newsItem->title }}">
                                 </a>
                             </div>
@@ -197,9 +198,9 @@
                                 <ul class="post-meta">
                                     <li><span class="icon flaticon-calendar-1"></span> {{ ($newsItem->published_at ?? $newsItem->created_at)->format('M d, Y') }}</li>
                                 </ul>
-                                <h4><a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">{{ Str::limit($newsItem->title, 70) }}</a></h4>
+                                <h4><a href="{{ $newsUrl }}">{{ Str::limit($newsItem->title, 70) }}</a></h4>
                                 <div class="text">{{ Str::limit(strip_tags($newsItem->excerpt ?? $newsItem->body), 120) }}</div>
-                                <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}" class="read-more">{{ __('messages.news.readMore') }} <span class="arrow flaticon-right"></span></a>
+                                <a href="{{ $newsUrl }}" class="read-more">{{ __('messages.news.readMore') }} <span class="arrow flaticon-right"></span></a>
                             </div>
                         </div>
                     </div>

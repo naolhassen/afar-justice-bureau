@@ -83,7 +83,27 @@ Route::prefix('{locale}')
         Route::get('/initiatives/legal-institutional-reform', fn () => view('initiatives.legal-institutional-reform'))->name('initiatives.legal-institutional-reform');
         Route::get('/initiatives/justice-sector-transformation', fn () => view('initiatives.justice-sector-transformation'))->name('initiatives.justice-sector-transformation');
         Route::get('/publications/strategy', fn () => view('publications.strategy'))->name('publications.strategy');
-        Route::get('/briefing/news', fn () => view('briefing.news'))->name('briefing.news');
+        Route::get('/briefing/news', function () {
+            $news = \App\Models\News::published()
+                ->where(fn ($q) => $q->whereNull('published_at')->orWhere('published_at', '<=', now()))
+                ->orderByDesc('published_at')
+                ->orderByDesc('id')
+                ->paginate(9)
+                ->withQueryString();
+
+            return view('briefing.news', compact('news'));
+        })->name('briefing.news');
+        Route::get('/briefing/news/{slug}', function (string $locale, string $slug) {
+            $article = \App\Models\News::published()->where('slug', $slug)->firstOrFail();
+            $related = \App\Models\News::published()
+                ->where('id', '!=', $article->id)
+                ->where(fn ($q) => $q->whereNull('published_at')->orWhere('published_at', '<=', now()))
+                ->orderByDesc('published_at')
+                ->take(3)
+                ->get();
+
+            return view('briefing.news-detail', compact('article', 'related'));
+        })->name('briefing.news.show');
         Route::get('/briefing/articles', fn () => view('briefing.articles'))->name('briefing.articles');
         Route::get('/briefing/events', fn () => view('briefing.events'))->name('briefing.events');
         Route::get('/briefing/press-release', fn () => view('briefing.press-release'))->name('briefing.press-release');
