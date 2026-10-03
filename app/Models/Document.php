@@ -2,15 +2,18 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\HasTranslations;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Document extends Model
 {
-    use HasFactory;
+    use HasFactory, HasTranslations;
+
+    protected array $translatable = ['title', 'description'];
 
     protected $fillable = [
-        'title', 'slug', 'description', 'file_path', 'file_url',
+        'title', 'slug', 'description', 'category', 'file_path', 'file_url',
         'file_size', 'disk', 'status', 'author_id',
     ];
 

@@ -2,12 +2,15 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\HasTranslations;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Vacancy extends Model
 {
-    use HasFactory;
+    use HasFactory, HasTranslations;
+
+    protected array $translatable = ['title', 'description', 'requirements', 'location'];
 
     protected $fillable = [
         'title', 'slug', 'description', 'requirements', 'location',

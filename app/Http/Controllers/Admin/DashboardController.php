@@ -20,11 +20,15 @@ class DashboardController extends Controller
         $counts = [
             'news' => News::count(),
             'announcements' => Announcement::count(),
+            'initiatives' => \App\Models\Initiative::count(),
+            'publications' => \App\Models\Publication::count(),
+            'videos' => \App\Models\Video::count(),
             'vacancies' => Vacancy::count(),
             'documents' => Document::count(),
             'pages' => Page::count(),
             'services' => Service::count(),
-            'abouts' => About::count(),
+            'about' => About::count(),
+            'users' => \App\Models\User::count(),
             'settings' => Setting::count(),
         ];
 

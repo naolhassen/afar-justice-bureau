@@ -2,12 +2,15 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\HasTranslations;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Announcement extends Model
 {
-    use HasFactory;
+    use HasFactory, HasTranslations;
+
+    protected array $translatable = ['title', 'excerpt', 'body'];
 
     protected $fillable = [
         'title', 'slug', 'excerpt', 'body', 'image',

@@ -175,37 +175,41 @@
     </script>
     @endpush
 
-    <!-- Announcements Section -->
-    @if($latestAnnouncements->count() > 0)
-    <section class="services-section announcements-section">
+    <!-- News Section (DB-driven, 6 items) -->
+    @if($homeNews->count() > 0)
+    <section class="news-section">
         <div class="auto-container">
             <!-- Sec Title -->
             <div class="sec-title centered">
-                <h2>{{ __('messages.announcements.title') }} {{ __('messages.announcements.titleHighlight') }}</h2>
+                <h2>{{ __('messages.news.title') }} {{ __('messages.news.titleHighlight') }}</h2>
             </div>
-            <div class="inner-container">
-                <div class="row clearfix">
+            <div class="row clearfix">
 
-                    @foreach($latestAnnouncements as $index => $announcement)
-                        <div class="services-block col-lg-6 col-md-12 col-sm-12">
-                            <div class="inner-box wow {{ $index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight' }}" data-wow-delay="{{ ($index % 2) * 150 }}ms" data-wow-duration="1500ms">
-                                <div class="content">
-                                    <div class="icon flaticon-marketing"></div>
-                                    <h4><a href="{{ route('briefing.press-release', ['locale' => app()->getLocale()]) }}">{{ Str::limit($announcement->title, 60) }}</a></h4>
-                                    <div class="announcement-date"><i class="fa fa-calendar"></i> {{ ($announcement->published_at ?? $announcement->created_at)->format('M d, Y') }}</div>
-                                    <div class="text">{{ Str::limit(strip_tags($announcement->excerpt ?? $announcement->body), 110) }}</div>
-                                </div>
-                                <a href="{{ route('briefing.press-release', ['locale' => app()->getLocale()]) }}" class="arrow flaticon-right"></a>
+                @foreach($homeNews as $index => $newsItem)
+                    <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box wow {{ $index % 3 === 0 ? 'fadeInLeft' : ($index % 3 === 1 ? 'fadeInUp' : 'fadeInRight') }}" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">
+                                    <img src="{{ $newsItem->image ? asset('storage/' . $newsItem->image) : asset('images/news/news-' . (($index % 3) + 1) . '.jpg') }}" alt="{{ $newsItem->title }}">
+                                </a>
+                            </div>
+                            <div class="lower-content">
+                                <ul class="post-meta">
+                                    <li><span class="icon flaticon-calendar-1"></span> {{ ($newsItem->published_at ?? $newsItem->created_at)->format('M d, Y') }}</li>
+                                </ul>
+                                <h4><a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">{{ Str::limit($newsItem->title, 70) }}</a></h4>
+                                <div class="text">{{ Str::limit(strip_tags($newsItem->excerpt ?? $newsItem->body), 120) }}</div>
+                                <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}" class="read-more">{{ __('messages.news.readMore') }} <span class="arrow flaticon-right"></span></a>
                             </div>
                         </div>
-                    @endforeach
+                    </div>
+                @endforeach
 
-                </div>
             </div>
         </div>
     </section>
     @endif
-    <!-- End Announcements Section -->
+    <!-- End News Section -->
 
     <!-- Welcome Section -->
     <section class="welcome-section">
@@ -392,76 +396,37 @@
     </section>
     <!-- End Practice Section -->
 
-    <!-- News Section -->
-    <section class="news-section">
+    <!-- Announcements Section -->
+    @if($latestAnnouncements->count() > 0)
+    <section class="services-section announcements-section">
         <div class="auto-container">
             <!-- Sec Title -->
             <div class="sec-title centered">
-                <h2>{{ __('messages.news.title') }} {{ __('messages.news.titleHighlight') }}</h2>
+                <h2>{{ __('messages.announcements.title') }} {{ __('messages.announcements.titleHighlight') }}</h2>
             </div>
-            <div class="row clearfix">
+            <div class="inner-container">
+                <div class="row clearfix">
 
-                <!-- News Block -->
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="image">
-                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">
-                                <img src="{{ asset('images/news/news-1.jpg') }}" alt="{{ __('messages.news.item1Title') }}">
-                            </a>
+                    @foreach($latestAnnouncements as $index => $announcement)
+                        <div class="services-block col-lg-6 col-md-12 col-sm-12">
+                            <div class="inner-box wow {{ $index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight' }}" data-wow-delay="{{ ($index % 2) * 150 }}ms" data-wow-duration="1500ms">
+                                <div class="content">
+                                    <div class="icon flaticon-marketing"></div>
+                                    <h4><a href="{{ route('briefing.press-release', ['locale' => app()->getLocale()]) }}">{{ Str::limit($announcement->title, 60) }}</a></h4>
+                                    <div class="announcement-date"><i class="fa fa-calendar"></i> {{ ($announcement->published_at ?? $announcement->created_at)->format('M d, Y') }}</div>
+                                    <div class="text">{{ Str::limit(strip_tags($announcement->excerpt ?? $announcement->body), 110) }}</div>
+                                </div>
+                                <a href="{{ route('briefing.press-release', ['locale' => app()->getLocale()]) }}" class="arrow flaticon-right"></a>
+                            </div>
                         </div>
-                        <div class="lower-content">
-                            <ul class="post-meta">
-                                <li><span class="icon flaticon-calendar-1"></span> {{ now()->format('M d, Y') }}</li>
-                            </ul>
-                            <h4><a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">{{ __('messages.news.item1Title') }}</a></h4>
-                            <div class="text">{{ Str::limit(__('messages.news.item1Desc'), 120) }}</div>
-                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}" class="read-more">{{ __('messages.news.readMore') }} <span class="arrow flaticon-right"></span></a>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
-
-                <!-- News Block -->
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="image">
-                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">
-                                <img src="{{ asset('images/news/news-2.jpg') }}" alt="{{ __('messages.news.item2Title') }}">
-                            </a>
-                        </div>
-                        <div class="lower-content">
-                            <ul class="post-meta">
-                                <li><span class="icon flaticon-calendar-1"></span> {{ now()->subDays(3)->format('M d, Y') }}</li>
-                            </ul>
-                            <h4><a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">{{ __('messages.news.item2Title') }}</a></h4>
-                            <div class="text">{{ Str::limit(__('messages.news.item2Desc'), 120) }}</div>
-                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}" class="read-more">{{ __('messages.news.readMore') }} <span class="arrow flaticon-right"></span></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Block -->
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="image">
-                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">
-                                <img src="{{ asset('images/news/news-3.jpg') }}" alt="{{ __('messages.news.item3Title') }}">
-                            </a>
-                        </div>
-                        <div class="lower-content">
-                            <ul class="post-meta">
-                                <li><span class="icon flaticon-calendar-1"></span> {{ now()->subDays(7)->format('M d, Y') }}</li>
-                            </ul>
-                            <h4><a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}">{{ __('messages.news.item3Title') }}</a></h4>
-                            <div class="text">{{ Str::limit(__('messages.news.item3Desc'), 120) }}</div>
-                            <a href="{{ route('briefing.news', ['locale' => app()->getLocale()]) }}" class="read-more">{{ __('messages.news.readMore') }} <span class="arrow flaticon-right"></span></a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
-    <!-- End News Section -->
+    @endif
+    <!-- End Announcements Section -->
 
     <!-- Team Section -->
     <section class="team-section">

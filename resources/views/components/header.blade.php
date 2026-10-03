@@ -45,29 +45,23 @@
                             <a href="#" class="nav-parent">{{ __('messages.nav.about') }}<i class="fa fa-angle-down nav-arrow"></i></a>
                             <ul class="nav-dropdown">
                                 <li><a href="{{ route('about.vision-mission', ['locale' => $locale]) }}">{{ __('messages.nav.visionMission') }}</a></li>
-                                <li><a href="{{ route('about.leadership', ['locale' => $locale]) }}">{{ __('messages.nav.leadership') }}</a></li>
+                                <li><a href="{{ route('about.departments', ['locale' => $locale]) }}">{{ __('messages.nav.departments') }}</a></li>
                                 <li><a href="{{ route('about.formation', ['locale' => $locale]) }}">{{ __('messages.nav.formation') }}</a></li>
                                 <li><a href="{{ route('about.structure', ['locale' => $locale]) }}">{{ __('messages.nav.structure') }}</a></li>
                                 <li><a href="{{ route('about.logo-meaning', ['locale' => $locale]) }}">{{ __('messages.nav.logoMeaning') }}</a></li>
                             </ul>
                         </li>
 
-                        <li class="has-dropdown {{ request()->is("$locale/departments/*") || request()->is("$locale/initiatives/*") ? 'active' : '' }}">
-                            <a href="#" class="nav-parent">{{ __('messages.nav.initiatives') }}<i class="fa fa-angle-down nav-arrow"></i></a>
-                            <ul class="nav-dropdown">
-                                <li><a href="{{ route('departments.minister', ['locale' => $locale]) }}">{{ __('messages.nav.bureauHead') }}</a></li>
-                                <li><a href="{{ route('initiatives.justice-sector-transformation', ['locale' => $locale]) }}">{{ __('messages.nav.transformationRoadmap') }}</a></li>
-                                <li><a href="{{ route('initiatives.transitional-justice', ['locale' => $locale]) }}">{{ __('messages.nav.transitionalJustice') }}</a></li>
-                                <li><a href="{{ route('initiatives.legal-institutional-reform', ['locale' => $locale]) }}">{{ __('messages.nav.institutionalReform') }}</a></li>
-                            </ul>
+                        <li class="{{ request()->is("$locale/initiatives/*") ? 'active' : '' }}">
+                            <a href="{{ route('initiatives.justice-sector-transformation', ['locale' => $locale]) }}">{{ __('messages.nav.initiatives') }}</a>
                         </li>
 
-                        <li class="has-dropdown {{ request()->is("$locale/resources/*") || request()->is("$locale/publications/*") ? 'active' : '' }}">
+                        <li class="has-dropdown {{ request()->is("$locale/resources/*") ? 'active' : '' }}">
                             <a href="#" class="nav-parent">{{ __('messages.nav.resources') }}<i class="fa fa-angle-down nav-arrow"></i></a>
                             <ul class="nav-dropdown">
                                 <li><a href="{{ route('resources.laws', ['locale' => $locale]) }}">{{ __('messages.nav.laws') }}</a></li>
-                                <li><a href="{{ route('resources.services', ['locale' => $locale]) }}">{{ __('messages.nav.services') }}</a></li>
-                                <li><a href="{{ route('publications.strategy', ['locale' => $locale]) }}">{{ __('messages.nav.strategy') }}</a></li>
+                                <li><a href="{{ route('resources.proclamations', ['locale' => $locale]) }}">{{ __('messages.nav.proclamations') }}</a></li>
+                                <li><a href="{{ route('resources.regulations', ['locale' => $locale]) }}">{{ __('messages.nav.regulations') }}</a></li>
                             </ul>
                         </li>
 
@@ -75,8 +69,6 @@
                             <a href="#" class="nav-parent">{{ __('messages.nav.briefing') }}<i class="fa fa-angle-down nav-arrow"></i></a>
                             <ul class="nav-dropdown">
                                 <li><a href="{{ route('briefing.news', ['locale' => $locale]) }}">{{ __('messages.nav.news') }}</a></li>
-                                <li><a href="{{ route('briefing.articles', ['locale' => $locale]) }}">{{ __('messages.nav.articles') }}</a></li>
-                                <li><a href="{{ route('briefing.events', ['locale' => $locale]) }}">{{ __('messages.nav.events') }}</a></li>
                                 <li><a href="{{ route('briefing.press-release', ['locale' => $locale]) }}">{{ __('messages.nav.pressRelease') }}</a></li>
                             </ul>
                         </li>
@@ -135,35 +127,25 @@
                     <button class="mobile-sub-toggle">{{ __('messages.nav.about') }} <i class="fa fa-angle-down"></i></button>
                     <ul class="mobile-sub">
                         <li><a href="{{ route('about.vision-mission', ['locale' => $locale]) }}">{{ __('messages.nav.visionMission') }}</a></li>
-                        <li><a href="{{ route('about.leadership', ['locale' => $locale]) }}">{{ __('messages.nav.leadership') }}</a></li>
+                        <li><a href="{{ route('about.departments', ['locale' => $locale]) }}">{{ __('messages.nav.departments') }}</a></li>
                         <li><a href="{{ route('about.formation', ['locale' => $locale]) }}">{{ __('messages.nav.formation') }}</a></li>
                         <li><a href="{{ route('about.structure', ['locale' => $locale]) }}">{{ __('messages.nav.structure') }}</a></li>
                         <li><a href="{{ route('about.logo-meaning', ['locale' => $locale]) }}">{{ __('messages.nav.logoMeaning') }}</a></li>
                     </ul>
                 </li>
-                <li class="mobile-has-sub">
-                    <button class="mobile-sub-toggle">{{ __('messages.nav.initiatives') }} <i class="fa fa-angle-down"></i></button>
-                    <ul class="mobile-sub">
-                        <li><a href="{{ route('departments.minister', ['locale' => $locale]) }}">{{ __('messages.nav.bureauHead') }}</a></li>
-                        <li><a href="{{ route('initiatives.justice-sector-transformation', ['locale' => $locale]) }}">{{ __('messages.nav.transformationRoadmap') }}</a></li>
-                        <li><a href="{{ route('initiatives.transitional-justice', ['locale' => $locale]) }}">{{ __('messages.nav.transitionalJustice') }}</a></li>
-                        <li><a href="{{ route('initiatives.legal-institutional-reform', ['locale' => $locale]) }}">{{ __('messages.nav.institutionalReform') }}</a></li>
-                    </ul>
-                </li>
+                <li><a href="{{ route('initiatives.justice-sector-transformation', ['locale' => $locale]) }}">{{ __('messages.nav.initiatives') }}</a></li>
                 <li class="mobile-has-sub">
                     <button class="mobile-sub-toggle">{{ __('messages.nav.resources') }} <i class="fa fa-angle-down"></i></button>
                     <ul class="mobile-sub">
                         <li><a href="{{ route('resources.laws', ['locale' => $locale]) }}">{{ __('messages.nav.laws') }}</a></li>
-                        <li><a href="{{ route('resources.services', ['locale' => $locale]) }}">{{ __('messages.nav.services') }}</a></li>
-                        <li><a href="{{ route('publications.strategy', ['locale' => $locale]) }}">{{ __('messages.nav.strategy') }}</a></li>
+                        <li><a href="{{ route('resources.proclamations', ['locale' => $locale]) }}">{{ __('messages.nav.proclamations') }}</a></li>
+                        <li><a href="{{ route('resources.regulations', ['locale' => $locale]) }}">{{ __('messages.nav.regulations') }}</a></li>
                     </ul>
                 </li>
                 <li class="mobile-has-sub">
                     <button class="mobile-sub-toggle">{{ __('messages.nav.briefing') }} <i class="fa fa-angle-down"></i></button>
                     <ul class="mobile-sub">
                         <li><a href="{{ route('briefing.news', ['locale' => $locale]) }}">{{ __('messages.nav.news') }}</a></li>
-                        <li><a href="{{ route('briefing.articles', ['locale' => $locale]) }}">{{ __('messages.nav.articles') }}</a></li>
-                        <li><a href="{{ route('briefing.events', ['locale' => $locale]) }}">{{ __('messages.nav.events') }}</a></li>
                         <li><a href="{{ route('briefing.press-release', ['locale' => $locale]) }}">{{ __('messages.nav.pressRelease') }}</a></li>
                     </ul>
                 </li>
