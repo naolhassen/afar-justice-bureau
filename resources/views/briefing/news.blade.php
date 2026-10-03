@@ -25,7 +25,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="civic-card h-100 d-flex flex-column" style="padding: 0; overflow: hidden;">
                             <a href="{{ route('briefing.news.show', ['locale' => app()->getLocale(), 'id' => $item->id]) }}" style="display: block; height: 220px; width: 100%; overflow: hidden; position: relative;">
-                                <img src="{{ $item->image ? asset('storage/' . $item->image) : asset('images/news/news-' . (($index % 4) + 1) . '.jpg') }}"
+                                <img src="{{ $item->image ? (Str::startsWith($item->image, 'uploads/') ? asset('storage/' . $item->image) : asset($item->image)) : asset('images/news/news-' . (($index % 4) + 1) . '.jpg') }}"
                                      alt="{{ $item->title }}"
                                      style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
                                 <span class="civic-badge {{ $badge }}" style="position: absolute; top: 14px; left: 14px; font-size: 11px;">

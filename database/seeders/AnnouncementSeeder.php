@@ -45,8 +45,10 @@ class AnnouncementSeeder extends Seeder
         ];
 
         foreach ($items as $item) {
-            Announcement::firstOrCreate(
-                ['slug' => $item['slug']],
+            $slug = $item['slug'];
+            unset($item['slug']);
+            Announcement::updateOrCreate(
+                ['slug' => $slug],
                 $item
             );
         }

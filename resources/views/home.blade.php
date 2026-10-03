@@ -10,7 +10,7 @@
 
             @if($latestNews->count() > 0)
                 @foreach($latestNews as $index => $news)
-                    <div class="hero-slide {{ $index === 0 ? 'active' : '' }}" style="--hero-bg: url('{{ $news->image ? asset('storage/' . $news->image) : asset('images/gallery/gallery-11.jpg') }}')">
+                    <div class="hero-slide {{ $index === 0 ? 'active' : '' }}" style="--hero-bg: url('{{ $news->image ? (Str::startsWith($news->image, 'uploads/') ? asset('storage/' . $news->image) : asset($news->image)) : asset('images/gallery/gallery-11.jpg') }}')">
                         <div class="hero-slide-inner auto-container">
                             <div class="hero-pillar" aria-hidden="true"><div class="hero-pillar-center"></div></div>
                             <div class="hero-content">
@@ -191,7 +191,7 @@
                         <div class="inner-box wow {{ $index % 3 === 0 ? 'fadeInLeft' : ($index % 3 === 1 ? 'fadeInUp' : 'fadeInRight') }}" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div class="image">
                                 <a href="{{ $newsUrl }}">
-                                    <img src="{{ $newsItem->image ? asset('storage/' . $newsItem->image) : asset('images/news/news-' . (($index % 3) + 1) . '.jpg') }}" alt="{{ $newsItem->title }}">
+                                    <img src="{{ $newsItem->image ? (Str::startsWith($newsItem->image, 'uploads/') ? asset('storage/' . $newsItem->image) : asset($newsItem->image)) : asset('images/news/news-' . (($index % 3) + 1) . '.jpg') }}" alt="{{ $newsItem->title }}">
                                 </a>
                             </div>
                             <div class="lower-content">

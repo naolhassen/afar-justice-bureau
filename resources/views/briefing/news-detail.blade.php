@@ -1,8 +1,14 @@
 @extends('layouts.app')
 
+@php
+    $imgUrl = $article->image
+        ? (Str::startsWith($article->image, 'uploads/') ? asset('storage/' . $article->image) : asset($article->image))
+        : asset('counsel/images/background/1.jpg');
+@endphp
+
 @section('content')
     <!-- Page Title -->
-    <section class="page-title" style="background-image: url('{{ $article->image ? asset('storage/' . $article->image) : asset('counsel/images/background/1.jpg') }}');">
+    <section class="page-title" style="background-image: url('{{ $imgUrl }}');">
         <div class="auto-container">
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-12">
@@ -34,7 +40,7 @@
                     <!-- Featured Image -->
                     @if($article->image)
                         <div style="border-radius: 16px; overflow: hidden; margin-bottom: 32px; box-shadow: 0 8px 32px rgba(15,41,66,0.10);">
-                            <img src="{{ asset('storage/' . $article->image) }}" alt="{{ $article->title }}"
+                            <img src="{{ $imgUrl }}" alt="{{ $article->title }}"
                                  style="width: 100%; height: auto; display: block;">
                         </div>
                     @endif
@@ -87,7 +93,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="civic-card h-100 d-flex flex-column" style="padding: 0; overflow: hidden;">
                             <a href="{{ route('briefing.news.show', ['locale' => app()->getLocale(), 'id' => $relItem->id]) }}" style="display: block; height: 180px; width: 100%; overflow: hidden;">
-                                <img src="{{ $relItem->image ? asset('storage/' . $relItem->image) : asset('images/news/news-' . (($index % 4) + 1) . '.jpg') }}"
+                                <img src="{{ $relItem->image ? (Str::startsWith($relItem->image, 'uploads/') ? asset('storage/' . $relItem->image) : asset($relItem->image)) : asset('images/news/news-' . (($index % 4) + 1) . '.jpg') }}"
                                      alt="{{ $relItem->title }}"
                                      style="width: 100%; height: 100%; object-fit: cover;">
                             </a>
