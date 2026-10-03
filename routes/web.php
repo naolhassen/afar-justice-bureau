@@ -93,8 +93,8 @@ Route::prefix('{locale}')
 
             return view('briefing.news', compact('news'));
         })->name('briefing.news');
-        Route::get('/briefing/news/{slug}', function (string $locale, string $slug) {
-            $article = \App\Models\News::published()->where('slug', $slug)->firstOrFail();
+        Route::get('/briefing/news/{id}', function (string $locale, int $id) {
+            $article = \App\Models\News::published()->findOrFail($id);
             $related = \App\Models\News::published()
                 ->where('id', '!=', $article->id)
                 ->where(fn ($q) => $q->whereNull('published_at')->orWhere('published_at', '<=', now()))

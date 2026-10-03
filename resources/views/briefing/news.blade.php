@@ -24,7 +24,7 @@
                     @endphp
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="civic-card h-100 d-flex flex-column" style="padding: 0; overflow: hidden;">
-                            <a href="{{ route('briefing.news.show', ['locale' => app()->getLocale(), 'slug' => $item->slug]) }}" style="display: block; height: 220px; width: 100%; overflow: hidden; position: relative;">
+                            <a href="{{ route('briefing.news.show', ['locale' => app()->getLocale(), 'id' => $item->id]) }}" style="display: block; height: 220px; width: 100%; overflow: hidden; position: relative;">
                                 <img src="{{ $item->image ? asset('storage/' . $item->image) : asset('images/news/news-' . (($index % 4) + 1) . '.jpg') }}"
                                      alt="{{ $item->title }}"
                                      style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
@@ -38,7 +38,7 @@
                                     {{ ($item->published_at ?? $item->created_at)->format('M d, Y') }}
                                 </div>
                                 <h4 style="font-weight: 800; color: var(--afar-navy); font-size: 1.15rem; line-height: 1.35; margin-bottom: 12px;">
-                                    <a href="{{ route('briefing.news.show', ['locale' => app()->getLocale(), 'slug' => $item->slug]) }}" style="color: inherit; text-decoration: none;">
+                                    <a href="{{ route('briefing.news.show', ['locale' => app()->getLocale(), 'id' => $item->id]) }}" style="color: inherit; text-decoration: none;">
                                         {{ $item->title }}
                                     </a>
                                 </h4>
@@ -46,7 +46,7 @@
                                     {{ Str::limit(strip_tags($item->excerpt ?? $item->body), 140) }}
                                 </p>
                                 <div class="pt-3 border-top mt-auto">
-                                    <a href="{{ route('briefing.news.show', ['locale' => app()->getLocale(), 'slug' => $item->slug]) }}" style="color: var(--afar-navy); font-weight: 700; font-size: 13px; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
+                                    <a href="{{ route('briefing.news.show', ['locale' => app()->getLocale(), 'id' => $item->id]) }}" style="color: var(--afar-navy); font-weight: 700; font-size: 13px; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
                                         <span>{{ __('messages.news.readMore') }}</span>
                                         <i class="fa fa-arrow-right" style="color: var(--afar-accent);"></i>
                                     </a>

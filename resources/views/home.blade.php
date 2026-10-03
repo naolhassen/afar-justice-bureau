@@ -23,7 +23,7 @@
                                 </h1>
                                 <p class="hero-sub">{{ Str::limit(strip_tags($news->excerpt ?? $news->body), 160) }}</p>
                                 <div class="hero-actions">
-                                    <a href="{{ route('briefing.news.show', ['locale' => app()->getLocale(), 'slug' => $news->slug]) }}" class="hero-btn hero-btn--primary">
+                                    <a href="{{ route('briefing.news.show', ['locale' => app()->getLocale(), 'id' => $news->id]) }}" class="hero-btn hero-btn--primary">
                                         {{ __('messages.news.readMore') }} <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
@@ -186,7 +186,7 @@
             <div class="row clearfix">
 
                 @foreach($homeNews as $index => $newsItem)
-                    @php $newsUrl = route('briefing.news.show', ['locale' => app()->getLocale(), 'slug' => $newsItem->slug]); @endphp
+                    @php $newsUrl = route('briefing.news.show', ['locale' => app()->getLocale(), 'id' => $newsItem->id]); @endphp
                     <div class="news-block col-lg-4 col-md-6 col-sm-12">
                         <div class="inner-box wow {{ $index % 3 === 0 ? 'fadeInLeft' : ($index % 3 === 1 ? 'fadeInUp' : 'fadeInRight') }}" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div class="image">
