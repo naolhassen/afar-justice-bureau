@@ -260,56 +260,49 @@
             </div>
 
             <div class="fact-counter">
-                <div class="row clearfix">
+                <div class="row clearfix justify-content-center">
 
-                    <!-- Column -->
-                    <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                    <!-- Column: Zone Justice Departments -->
+                    <div class="column counter-column col-lg-4 col-md-6 col-sm-12">
                         <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div class="content">
                                 <div class="icon flaticon-briefcase"></div>
                                 <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="2500" data-stop="250">0</span><sup>+</sup>
+                                    <span class="count-text" data-speed="2000" data-stop="7">0</span>
                                 </div>
-                                <h6 class="counter-title">{{ __('messages.about.stats.membersLabel') }}</h6>
+                                <h6 class="counter-title">
+                                    {{ app()->getLocale() === 'am' ? 'ዞን ፍትህ መምሪያዎች' : 'Zone Justice Departments' }}
+                                </h6>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Column -->
-                    <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                    <!-- Column: Woreda Justice Offices -->
+                    <div class="column counter-column col-lg-4 col-md-6 col-sm-12">
                         <div class="inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div class="content">
                                 <div class="icon flaticon-balance"></div>
                                 <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="3000" data-stop="5">0</span><sup>+</sup>
+                                    <span class="count-text" data-speed="2500" data-stop="42">0</span>
                                 </div>
-                                <h6 class="counter-title">{{ __('messages.about.stats.officesLabel') }}</h6>
+                                <h6 class="counter-title">
+                                    {{ app()->getLocale() === 'am' ? 'ወረዳ ፍትህ ጽ/ቤቶች' : 'Wereda Justice Offices' }}
+                                </h6>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Column -->
-                    <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <!-- Column: Kentiba Justice Offices -->
+                    <div class="column counter-column col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div class="content">
                                 <div class="icon flaticon-marketing"></div>
                                 <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="3000" data-stop="6">0</span><sup>+</sup>
+                                    <span class="count-text" data-speed="2000" data-stop="7">0</span>
                                 </div>
-                                <h6 class="counter-title">{{ __('messages.services.sectionTag') }}</h6>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Column -->
-                    <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="content">
-                                <div class="icon flaticon-trophy-2"></div>
-                                <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="3000" data-stop="5">0</span>
-                                </div>
-                                <h6 class="counter-title">{{ __('messages.about.stats.yearsLabel') }}</h6>
+                                <h6 class="counter-title">
+                                    {{ app()->getLocale() === 'am' ? 'ከንቲባ ፍትህ ጽ/ቤቶች' : 'Kentiba Justice Offices' }}
+                                </h6>
                             </div>
                         </div>
                     </div>
