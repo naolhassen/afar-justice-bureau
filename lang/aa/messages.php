@@ -31,6 +31,7 @@ return array (
     'briefing' => 'Odob',
     'news' => 'Nagaayat',
     'articles' => 'Maqaalah',
+    'gallery' => 'Foto kee Viidiyow Galeriy',
     'events' => 'Qaadokaayih',
     'pressRelease' => 'Nagaayat Gufne',
     'resources' => 'Seeritte kee Kitooba',

@@ -11,6 +11,7 @@
             ['key' => 'initiatives', 'route' => 'admin.initiatives.index', 'label' => 'Initiatives', 'icon' => 'fa-lightbulb'],
             ['key' => 'publications', 'route' => 'admin.publications.index', 'label' => 'Articles', 'icon' => 'fa-book-open'],
             ['key' => 'videos', 'route' => 'admin.videos.index', 'label' => 'Videos', 'icon' => 'fa-video'],
+            ['key' => 'galleries', 'route' => 'admin.galleries.index', 'label' => 'Gallery', 'icon' => 'fa-images'],
             ['key' => 'vacancies', 'route' => 'admin.vacancies.index', 'label' => 'Vacancies', 'icon' => 'fa-briefcase'],
             ['key' => 'documents', 'route' => 'admin.documents.index', 'label' => 'Documents', 'icon' => 'fa-file-pdf'],
             ['key' => 'pages', 'route' => 'admin.pages.index', 'label' => 'Pages', 'icon' => 'fa-file-lines'],

@@ -364,6 +364,7 @@ $menu = [
         ['route' => 'admin.initiatives',   'label' => 'Initiatives',   'icon' => 'fa-lightbulb'],
         ['route' => 'admin.publications',  'label' => 'Articles',  'icon' => 'fa-book-open'],
         ['route' => 'admin.videos',        'label' => 'Videos',        'icon' => 'fa-video'],
+        ['route' => 'admin.galleries',     'label' => 'Gallery',       'icon' => 'fa-images'],
         ['route' => 'admin.vacancies',     'label' => 'Vacancies',     'icon' => 'fa-briefcase'],
         ['route' => 'admin.documents',     'label' => 'Documents',     'icon' => 'fa-file-pdf'],
         ['route' => 'admin.pages',         'label' => 'Pages',         'icon' => 'fa-file-lines'],

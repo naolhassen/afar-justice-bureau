@@ -26,6 +26,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'role:admin,editor,vi
         'initiatives' => Admin\InitiativeController::class,
         'publications' => Admin\PublicationController::class,
         'videos' => Admin\VideoController::class,
+        'galleries' => Admin\GalleryController::class,
         'vacancies' => Admin\VacancyController::class,
         'documents' => Admin\DocumentController::class,
         'pages' => Admin\PageController::class,
@@ -83,6 +84,21 @@ Route::prefix('{locale}')
         Route::get('/initiatives/legal-institutional-reform', fn () => view('initiatives.legal-institutional-reform'))->name('initiatives.legal-institutional-reform');
         Route::get('/initiatives/justice-sector-transformation', fn () => view('initiatives.justice-sector-transformation'))->name('initiatives.justice-sector-transformation');
         Route::get('/publications/strategy', fn () => view('publications.strategy'))->name('publications.strategy');
+        Route::get('/briefing/gallery', function () {
+            $images = \App\Models\Gallery::published()
+                ->where(fn ($q) => $q->whereNull('published_at')->orWhere('published_at', '<=', now()))
+                ->orderBy('order')
+                ->orderByDesc('id')
+                ->paginate(12, ['*'], 'images_page');
+
+            $videos = \App\Models\Video::published()
+                ->where(fn ($q) => $q->whereNull('published_at')->orWhere('published_at', '<=', now()))
+                ->orderByDesc('published_at')
+                ->orderByDesc('id')
+                ->paginate(9, ['*'], 'videos_page');
+
+            return view('briefing.gallery', compact('images', 'videos'));
+        })->name('briefing.gallery');
         Route::get('/briefing/news', function () {
             $news = \App\Models\News::published()
                 ->where(fn ($q) => $q->whereNull('published_at')->orWhere('published_at', '<=', now()))

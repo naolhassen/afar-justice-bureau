@@ -31,6 +31,7 @@ return array (
     'briefing' => 'Newsroom',
     'news' => 'News Updates',
     'articles' => 'Articles',
+    'gallery' => 'Gallery',
     'events' => 'Events',
     'pressRelease' => 'Press Releases',
     'resources' => 'Laws & Resources',

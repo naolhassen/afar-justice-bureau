@@ -70,6 +70,7 @@
                             <ul class="nav-dropdown">
                                 <li><a href="{{ route('briefing.news', ['locale' => $locale]) }}">{{ __('messages.nav.news') }}</a></li>
                                 <li><a href="{{ route('briefing.articles', ['locale' => $locale]) }}">{{ __('messages.nav.articles') }}</a></li>
+                                <li><a href="{{ route('briefing.gallery', ['locale' => $locale]) }}">{{ __('messages.nav.gallery') }}</a></li>
                                 <li><a href="{{ route('briefing.press-release', ['locale' => $locale]) }}">{{ __('messages.nav.pressRelease') }}</a></li>
                             </ul>
                         </li>
@@ -148,6 +149,7 @@
                     <ul class="mobile-sub">
                         <li><a href="{{ route('briefing.news', ['locale' => $locale]) }}">{{ __('messages.nav.news') }}</a></li>
                         <li><a href="{{ route('briefing.articles', ['locale' => $locale]) }}">{{ __('messages.nav.articles') }}</a></li>
+                        <li><a href="{{ route('briefing.gallery', ['locale' => $locale]) }}">{{ __('messages.nav.gallery') }}</a></li>
                         <li><a href="{{ route('briefing.press-release', ['locale' => $locale]) }}">{{ __('messages.nav.pressRelease') }}</a></li>
                     </ul>
                 </li>

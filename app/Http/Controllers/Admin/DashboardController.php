@@ -23,6 +23,7 @@ class DashboardController extends Controller
             'initiatives' => \App\Models\Initiative::count(),
             'publications' => \App\Models\Publication::count(),
             'videos' => \App\Models\Video::count(),
+            'galleries' => \App\Models\Gallery::count(),
             'vacancies' => Vacancy::count(),
             'documents' => Document::count(),
             'pages' => Page::count(),

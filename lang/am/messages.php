@@ -31,6 +31,7 @@ return array (
     'briefing' => 'መረጃ ማዕከል',
     'news' => 'ዜናዎች',
     'articles' => 'ጽሑፎች',
+    'gallery' => 'ፎቶ እና ቪዲዮ ጋለሪ',
     'events' => 'ዝግጅቶች',
     'pressRelease' => 'ጋዜጣዊ መግለጫ',
     'resources' => 'ሕጎችና ሰነዶች',
