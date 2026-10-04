@@ -70,22 +70,21 @@
             <button class="hero-ctrl" id="heroNext" aria-label="Next slide"><i class="fa fa-chevron-right"></i></button>
         </div>
 
-        <!-- Strategic Initiatives strip -->
+        <!-- Hero stat strip -->
         @php
-            $heroInitiatives = [
-                ['route' => 'initiatives.justice-sector-transformation', 'title_en' => 'Justice Sector Transformation', 'title_am' => 'የፍትህ ዘርፍ ትራንስፎርሜሽን'],
-                ['route' => 'initiatives.transitional-justice', 'title_en' => 'Transitional Justice', 'title_am' => 'ትንሳሕተኛ ፍትህ'],
-                ['route' => 'initiatives.legal-institutional-reform', 'title_en' => 'Legal & Institutional Reform', 'title_am' => 'የሕግና የተቋማዊ ማሻሻያ'],
-                ['route' => 'publications.strategy', 'title_en' => '5-Year Strategic Plan', 'title_am' => 'የ5 ዓመት ስትራቴጂክ ዕቅድ'],
+            $heroStats = [
+                ['number' => '7', 'label_en' => 'Zone Justice Departments', 'label_am' => 'ዞን ፍትህ መምሪያዎች'],
+                ['number' => '42', 'label_en' => 'Wereda Justice Offices', 'label_am' => 'ወረዳ ፍትህ ጽ/ቤቶች'],
+                ['number' => '7', 'label_en' => 'Kentiba Justice Offices', 'label_am' => 'ከንቲባ ፍትህ ጽ/ቤቶች'],
             ];
         @endphp
         <div class="hero-stats">
-            @foreach($heroInitiatives as $index => $init)
-                <a href="{{ route($init['route'], ['locale' => app()->getLocale()]) }}" class="hero-stat" style="text-decoration: none;">
-                    <strong><i class="fa fa-angle-right"></i></strong>
-                    <span>{{ app()->getLocale() === 'am' ? $init['title_am'] : $init['title_en'] }}</span>
-                </a>
-                @if($index < count($heroInitiatives) - 1)
+            @foreach($heroStats as $index => $stat)
+                <div class="hero-stat">
+                    <strong>{{ $stat['number'] }}</strong>
+                    <span>{{ app()->getLocale() === 'am' ? $stat['label_am'] : $stat['label_en'] }}</span>
+                </div>
+                @if($index < count($heroStats) - 1)
                     <div class="hero-stat-sep" aria-hidden="true"></div>
                 @endif
             @endforeach
@@ -272,10 +271,7 @@
                     @foreach($initiatives as $index => $init)
                         <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
                             <a href="{{ route($init['route'], ['locale' => app()->getLocale()]) }}" class="inner wow {{ $index % 4 === 0 ? 'fadeInLeft' : ($index % 4 === 3 ? 'fadeInRight' : 'fadeInUp') }}" data-wow-delay="0ms" data-wow-duration="1500ms" style="display: block; text-decoration: none;">
-                                <div class="content" style="position: relative;">
-                                    @if($index === 0)
-                                        <span style="position: absolute; top: -12px; right: 10px; background: var(--afar-red); color: #fff; font-size: 10px; font-weight: 700; text-transform: uppercase; padding: 4px 10px; border-radius: 20px;">{{ app()->getLocale() === 'am' ? 'ንቁ' : 'Active' }}</span>
-                                    @endif
+                                <div class="content">
                                     <div class="icon {{ $init['icon'] }}"></div>
                                     <h6 class="counter-title" style="font-size: 0.95rem; margin-top: 12px; line-height: 1.45;">
                                         {{ app()->getLocale() === 'am' ? $init['title_am'] : $init['title_en'] }}
