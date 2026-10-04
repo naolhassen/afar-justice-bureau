@@ -12,7 +12,7 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="civic-card" style="padding: 16px;">
-                        <img src="{{ asset('images/gallery/gallery-07.jpg') }}" alt="Afar Regional Justice Bureau History" style="border-radius: 16px; width: 100%; height: 380px; object-fit: cover;">
+                        <img src="{{ asset('images/gallery/bureau-welcome.jpg') }}" alt="Afar Regional Justice Bureau Building" style="border-radius: 16px; width: 100%; height: 380px; object-fit: cover;">
                     </div>
                 </div>
 

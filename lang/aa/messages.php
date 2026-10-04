@@ -103,11 +103,11 @@ return array (
     'title' => 'Taamah',
     'titleHighlight' => 'Saqol',
     'leader1Name' => 'Qasker Macammad',
-    'leader1Position' => 'Qadli Biiroh Saqal',
+    'leader1Position' => 'Biiroh Saqal',
     'leader2Name' => 'Macammad Qali Celem',
-    'leader2Position' => 'Qadli Biiroh Madqah ayfaafayih ludda C/Saqal',
+    'leader2Position' => 'Madqah ayfaafayih ludda C/Saqal',
     'leader3Name' => 'Qabdusalic Cummo',
-    'leader3Position' => 'Qadli Biiroh Madqa Dacrissa Ludda C/Saqal',
+    'leader3Position' => 'Madqa Dacrissa Ludda C/Saqal',
   ),
   'news' => 
   array (

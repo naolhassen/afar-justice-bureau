@@ -103,11 +103,11 @@ return array (
     'title' => 'የሥራ',
     'titleHighlight' => 'አመራሮች',
     'leader1Name' => 'አስኬር መሀመድ በካሬ',
-    'leader1Position' => 'የፍትህ ቢሮ ሀላፊ',
+    'leader1Position' => 'ቢሮ ኃላፊ',
     'leader2Name' => 'መሀመድ አሊ ሄሌም',
-    'leader2Position' => 'የፍትህ ቢሮ የህግ አገልግሎት ዘርፍ ም/ቢሮ ኃላፊ',
+    'leader2Position' => 'የህግ አገልግሎት ዘርፍ ም/ቢሮ ኃላፊ',
     'leader3Name' => 'አብዱሳሊህ ሁሞ',
-    'leader3Position' => 'የፍትህ ቢሮ የህግ ማስፈፀም ዘርፍ ም/ቢሮ ኃላፊ',
+    'leader3Position' => 'የህግ ማስፈፀም ዘርፍ ም/ቢሮ ኃላፊ',
   ),
   'news' => 
   array (

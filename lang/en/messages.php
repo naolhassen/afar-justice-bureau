@@ -109,11 +109,11 @@ return array (
     'title' => 'Executive',
     'titleHighlight' => 'Leadership',
     'leader1Name' => 'Asker Mahammad',
-    'leader1Position' => 'Justice Bureau Head',
+    'leader1Position' => 'Bureau Head',
     'leader2Name' => 'Mahammad Ali Helem',
-    'leader2Position' => 'Justice Bureau Legal Services Sector Deputy Head',
+    'leader2Position' => 'Legal Services Sector Deputy Head',
     'leader3Name' => 'Abdusalih Humo',
-    'leader3Position' => 'Justice Bureau Law Enforcement Sector Deputy Head',
+    'leader3Position' => 'Law Enforcement Sector Deputy Head',
   ),
   'news' => 
   array (
