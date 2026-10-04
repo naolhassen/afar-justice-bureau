@@ -70,27 +70,25 @@
             <button class="hero-ctrl" id="heroNext" aria-label="Next slide"><i class="fa fa-chevron-right"></i></button>
         </div>
 
-        <!-- Stat strip -->
+        <!-- Strategic Initiatives strip -->
+        @php
+            $heroInitiatives = [
+                ['route' => 'initiatives.justice-sector-transformation', 'title_en' => 'Justice Sector Transformation', 'title_am' => 'የፍትህ ዘርፍ ትራንስፎርሜሽን'],
+                ['route' => 'initiatives.transitional-justice', 'title_en' => 'Transitional Justice', 'title_am' => 'ትንሳሕተኛ ፍትህ'],
+                ['route' => 'initiatives.legal-institutional-reform', 'title_en' => 'Legal & Institutional Reform', 'title_am' => 'የሕግና የተቋማዊ ማሻሻያ'],
+                ['route' => 'publications.strategy', 'title_en' => '5-Year Strategic Plan', 'title_am' => 'የ5 ዓመት ስትራቴጂክ ዕቅድ'],
+            ];
+        @endphp
         <div class="hero-stats">
-            <div class="hero-stat">
-                <strong>30+</strong>
-                <span>{{ __('messages.about.stats.yearsLabel') }}</span>
-            </div>
-            <div class="hero-stat-sep" aria-hidden="true"></div>
-            <div class="hero-stat">
-                <strong>250+</strong>
-                <span>{{ __('messages.about.stats.membersLabel') }}</span>
-            </div>
-            <div class="hero-stat-sep" aria-hidden="true"></div>
-            <div class="hero-stat">
-                <strong>6</strong>
-                <span>{{ __('messages.about.stats.officesLabel') }}</span>
-            </div>
-            <div class="hero-stat-sep" aria-hidden="true"></div>
-            <div class="hero-stat">
-                <strong>{{ __('messages.services.sectionTag') }}</strong>
-                <span>{{ __('messages.hero.badge') }}</span>
-            </div>
+            @foreach($heroInitiatives as $index => $init)
+                <a href="{{ route($init['route'], ['locale' => app()->getLocale()]) }}" class="hero-stat" style="text-decoration: none;">
+                    <strong><i class="fa fa-angle-right"></i></strong>
+                    <span>{{ app()->getLocale() === 'am' ? $init['title_am'] : $init['title_en'] }}</span>
+                </a>
+                @if($index < count($heroInitiatives) - 1)
+                    <div class="hero-stat-sep" aria-hidden="true"></div>
+                @endif
+            @endforeach
         </div>
 
     </section>
@@ -249,77 +247,56 @@
     </section>
     <!-- End Welcome Section -->
 
-    <!-- Counter Section -->
+    <!-- Strategic Initiatives Section -->
     <section class="counter-section">
-        <div class="image-layer" style="background-image: url({{ asset('images/gallery/gallery-08.jpg') }})"></div>
+        <div class="image-layer" style="background-image: url({{ asset('images/gallery/counter-bg.jpg') }})"></div>
         <div class="auto-container">
             <!-- Sec Title -->
             <div class="sec-title light centered">
-                <h2>{{ __('messages.about.title') }} {{ __('messages.about.titleHighlight') }}</h2>
-                <div class="text">{{ __('messages.about.description') }}</div>
+                <h2>{{ app()->getLocale() === 'am' ? 'ስትራቴጂካዊ ተግባራት' : 'Strategic Initiatives' }}</h2>
+                <div class="text">{{ app()->getLocale() === 'am' ? 'የአፋር ክልል ፍትህ ቢሮ በርካታ ስትራቴጂካዊ ተግባራትን በመተባበር እየተግባራዊ ያደርጋል።' : 'The Afar Regional Justice Bureau is advancing coordinated strategic initiatives across the justice sector.' }}</div>
             </div>
 
             <div class="fact-counter">
                 <div class="row clearfix justify-content-center">
 
-                    <!-- Column: Zone Justice Departments -->
-                    <div class="column counter-column col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="content">
-                                <div class="icon flaticon-briefcase"></div>
-                                <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="2000" data-stop="7">0</span>
-                                </div>
-                                <h6 class="counter-title">
-                                    {{ app()->getLocale() === 'am' ? 'ዞን ፍትህ መምሪያዎች' : 'Zone Justice Departments' }}
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
+                    @php
+                        $initiatives = [
+                            ['route' => 'initiatives.justice-sector-transformation', 'icon' => 'flaticon-briefcase', 'title_en' => 'Justice Sector Transformation', 'title_am' => 'የፍትህ ዘርፍ ትራንስፎርሜሽን'],
+                            ['route' => 'initiatives.transitional-justice', 'icon' => 'flaticon-balance', 'title_en' => 'Transitional Justice', 'title_am' => 'ትንሳሕተኛ ፍትህ'],
+                            ['route' => 'initiatives.legal-institutional-reform', 'icon' => 'flaticon-law', 'title_en' => 'Legal & Institutional Reform', 'title_am' => 'የሕግና የተቋማዊ ማሻሻያ'],
+                            ['route' => 'publications.strategy', 'icon' => 'flaticon-file', 'title_en' => '5-Year Strategic Plan', 'title_am' => 'የ5 ዓመት ስትራቴጂክ ዕቅድ'],
+                        ];
+                    @endphp
 
-                    <!-- Column: Woreda Justice Offices -->
-                    <div class="column counter-column col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="content">
-                                <div class="icon flaticon-balance"></div>
-                                <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="2500" data-stop="42">0</span>
+                    @foreach($initiatives as $index => $init)
+                        <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                            <a href="{{ route($init['route'], ['locale' => app()->getLocale()]) }}" class="inner wow {{ $index % 4 === 0 ? 'fadeInLeft' : ($index % 4 === 3 ? 'fadeInRight' : 'fadeInUp') }}" data-wow-delay="0ms" data-wow-duration="1500ms" style="display: block; text-decoration: none;">
+                                <div class="content" style="position: relative;">
+                                    @if($index === 0)
+                                        <span style="position: absolute; top: -12px; right: 10px; background: var(--afar-red); color: #fff; font-size: 10px; font-weight: 700; text-transform: uppercase; padding: 4px 10px; border-radius: 20px;">{{ app()->getLocale() === 'am' ? 'ንቁ' : 'Active' }}</span>
+                                    @endif
+                                    <div class="icon {{ $init['icon'] }}"></div>
+                                    <h6 class="counter-title" style="font-size: 0.95rem; margin-top: 12px; line-height: 1.45;">
+                                        {{ app()->getLocale() === 'am' ? $init['title_am'] : $init['title_en'] }}
+                                    </h6>
                                 </div>
-                                <h6 class="counter-title">
-                                    {{ app()->getLocale() === 'am' ? 'ወረዳ ፍትህ ጽ/ቤቶች' : 'Wereda Justice Offices' }}
-                                </h6>
-                            </div>
+                            </a>
                         </div>
-                    </div>
-
-                    <!-- Column: Kentiba Justice Offices -->
-                    <div class="column counter-column col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="content">
-                                <div class="icon flaticon-marketing"></div>
-                                <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="2000" data-stop="7">0</span>
-                                </div>
-                                <h6 class="counter-title">
-                                    {{ app()->getLocale() === 'am' ? 'ከንቲባ ፍትህ ጽ/ቤቶች' : 'Kentiba Justice Offices' }}
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
             </div>
 
         </div>
     </section>
-    <!-- End Counter Section -->
+    <!-- End Strategic Initiatives Section -->
 
-    <!-- Practice Section -->
+    <!-- Departments Section -->
     <section class="practice-section" style="background-image: url({{ asset('counsel/images/background/pattern-2.png') }})">
         <div class="auto-container">
             <!-- Sec Title -->
             <div class="sec-title centered">
-                <span class="civic-badge civic-badge-navy mb-2">{{ app()->getLocale() === 'am' ? 'የቢሮው ዋና ዋና ዳይሬክቶሬቶች' : 'Key Institutional Units' }}</span>
                 <h2>{{ app()->getLocale() === 'am' ? 'ዳይሬክቶሬቶች' : 'Departments' }}</h2>
             </div>
             <div class="inner-container">
@@ -333,10 +310,6 @@
                             ['icon' => 'flaticon-save-money', 'title_en' => 'Internal Audit and Control Directorate', 'title_am' => 'የውስጥ ኦዲትና ቁጥጥር ዳይሬክቶሬት', 'desc' => 'Conducts internal audits and ensures financial and operational controls.'],
                             ['icon' => 'flaticon-marketing', 'title_en' => 'Public Relations Directorate', 'title_am' => 'የህዝብ ግንኙነት ጉዳዮች ዳይሬክቶሬት', 'desc' => 'Manages public communications, media relations, and civic engagement.'],
                             ['icon' => 'flaticon-briefcase', 'title_en' => 'Financial Procurement and Asset Management Directorate', 'title_am' => 'የፋይናንስ ግዥና ንብረት አስተዳደር ዳይሮክቶሬት', 'desc' => 'Manages procurement, finance, and bureau assets.'],
-                            ['icon' => 'flaticon-save-money', 'title_en' => 'Service Delivery, Grievance Handling, and Justice System Reform Directorate', 'title_am' => 'የአገልግሎት አሰጣጥ ቅሬታ ማስተናገጃ እና ፍትህ ስርአት ማሻሻያ ዳይሬክቶሬት', 'desc' => 'Improves service delivery, handles public grievances, and leads justice reform.'],
-                            ['icon' => 'flaticon-injury', 'title_en' => 'Planning, Follow-up, and Evaluation Directorate', 'title_am' => 'የዕቅድ ዝግጅት ክትትል ግምገማ ዳይሬክቶሬት', 'desc' => 'Develops plans, monitors implementation, and evaluates bureau performance.'],
-                            ['icon' => 'flaticon-briefcase', 'title_en' => 'Information and Communication Technology Directorate', 'title_am' => 'የኢንፎርሜሽን ኮምንኬሽን ቴክኖሎጂ ዳይሬክቶሬት', 'desc' => 'Builds and maintains digital systems and ICT infrastructure.'],
-                            ['icon' => 'flaticon-balance', 'title_en' => 'Human Resources Management Directorate', 'title_am' => 'የሰው ሃብት አስተዳደር ዳይሬክቶሬት', 'desc' => 'Manages human capital, recruitment, training, and staff development.'],
                         ];
                     @endphp
 
@@ -356,10 +329,16 @@
                     @endforeach
 
                 </div>
+
+                <div class="text-center mt-4">
+                    <a href="{{ route('about.departments', ['locale' => app()->getLocale()]) }}" class="theme-btn btn-style-one">
+                        <span class="txt">{{ app()->getLocale() === 'am' ? 'ሁሉንም ዳይሬክቶሬቶች ይመልከቱ' : 'View All Departments' }} <i class="arrow flaticon-right"></i></span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-    <!-- End Practice Section -->
+    <!-- End Departments Section -->
 
     <!-- Announcements Section -->
     @if($latestAnnouncements->count() > 0)
