@@ -3,8 +3,8 @@
 return array (
   'metadata' => 
   array (
-    'title' => 'Qafar Rakaakayak Doolatak Maslahat Biiro',
-    'description' => 'Qafar Rakaakayak Doolatak Maslahat Biirok Saqalal Luk Websiite - Seerik Abbino kee Maslahat Taama',
+    'title' => 'Qafar Agatih Rakaakayih Doolatak Qadli Biiro',
+    'description' => 'Qafar Agatih Rakaakayih Doolatak Qadli Biiro Saqalal Luk Websiite - Seerik Abbino kee Maslahat Taama',
   ),
   'nav' => 
   array (
@@ -49,7 +49,7 @@ return array (
   ),
   'hero' => 
   array (
-    'badge' => 'Qafar Rakaakayak Doolatak Maslahat Biiro',
+    'badge' => 'Qafar Agatih Rakaakayih Doolatak Qadli Biiro',
     'title' => 'Seerik Abbino kee Qadaalat Qokol',
     'titleHighlight' => 'Qafar Rakaakayal',
     'description' => 'Konstityushin cakkitte diggoysaak, ummattah seerik qadaalat qokol bicissaak, aqaabe seerih taama tekkekeh xalayyowtaak kee Qafar madaqah maslahat taama diggoysak baaxoh salaam bicissa biiro.',
@@ -65,9 +65,9 @@ return array (
   'about' => 
   array (
     'sectionTag' => 'Nanu Maslahat Biiro',
-    'title' => 'Qafar Rakaakayak Doolatak',
-    'titleHighlight' => 'Maslahat Biiro',
-    'description' => 'Qafar Rakaakayak Doolatak Maslahat Biiro rakaakayak caddol seerik abbino diggoysaak, yakke dambitte korsaak firdih gicloosaak, doolat biiroorih seerik kassit yeceek, rakaakayih seeritte bicaak, ummattah cakkok daccarsit bicissa saqol le biiro kinni.',
+    'title' => 'Qafar Agatih Rakaakayih Doolatak',
+    'titleHighlight' => 'Qadli Biiro',
+    'description' => 'Qafar Agatih Rakaakayih Doolatak Qadli Biiro rakaakayak caddol seerik abbino diggoysaak, yakke dambitte korsaak firdih gicloosaak, doolat biiroorih seerik kassit yeceek, rakaakayih seeritte bicaak, ummattah cakkok daccarsit bicissa saqol le biiro kinni.',
     'learnMore' => 'Taamah Saqol Tubanna',
     'stats' => 
     array (
@@ -136,14 +136,14 @@ return array (
   ),
   'footer' => 
   array (
-    'description' => 'Qafar Rakaakayak Doolatak Maslahat Biiro seerik abbino diggoysaak, inkiinaytih cakkitte daccarsaak, macaadah firdih taama bicisak rakaakayal salaam daddosak taamita.',
+    'description' => 'Qafar Agatih Rakaakayih Doolatak Qadli Biiro seerik abbino diggoysaak, inkiinaytih cakkitte daccarsaak, macaadah firdih taama bicisak rakaakayal salaam daddosak taamita.',
     'quickLinks' => 'Sissik Raaqitte',
     'contactInfo' => 'Raaqit Oyti',
     'email' => 'Imeel',
     'phone' => 'Telefoon / Bilaashih Layn',
     'address' => 'Araca',
     'addressValue' => 'Doolat Buxaaxi Kompileks, Semera, Qafar, Itiyoppiya',
-    'rights' => '© {year} Qafar Rakaakayak Doolatak Maslahat Biiro. Seeril Daccarsimmeem.',
+    'rights' => '© {year} Qafar Agatih Rakaakayih Doolatak Qadli Biiro. Seeril Daccarsimmeem.',
     'partners' => 'Doolat Gaaduudu',
   ),
   'contact' => 
