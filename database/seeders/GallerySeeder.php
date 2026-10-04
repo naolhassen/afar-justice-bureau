@@ -5,41 +5,34 @@ namespace Database\Seeders;
 use App\Models\Gallery;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 
 class GallerySeeder extends Seeder
 {
     public function run(): void
     {
-        $sourceDir = base_path('web contents/Gallery');
         $targetDir = public_path('images/gallery/uploads');
 
-        if (! is_dir($sourceDir)) {
+        if (! is_dir($targetDir)) {
             return;
         }
 
-        if (! is_dir($targetDir)) {
-            mkdir($targetDir, 0755, true);
-        }
-
-        $files = File::files($sourceDir);
-        $order = 1;
+        // Create or update gallery records for every deployed image.
+        // Filename like photo_12.jpg -> order 12, slug gallery-photo-12.
+        $files = File::files($targetDir);
 
         foreach ($files as $file) {
             if (! in_array(strtolower($file->getExtension()), ['jpg', 'jpeg', 'png', 'gif', 'webp'])) {
                 continue;
             }
 
-            $safeName = 'photo_' . $order . '.' . $file->getExtension();
-            $publicPath = 'images/gallery/uploads/' . $safeName;
-            $targetPath = $targetDir . '/' . $safeName;
+            $publicPath = 'images/gallery/uploads/' . $file->getFilename();
 
-            if (! file_exists($targetPath)) {
-                copy($file->getPathname(), $targetPath);
-            }
+            preg_match('/(\d+)/', $file->getFilename(), $matches);
+            $order = isset($matches[1]) ? (int) $matches[1] : 0;
+            $slug = 'gallery-photo-' . $order;
 
             Gallery::updateOrCreate(
-                ['slug' => 'gallery-photo-' . $order],
+                ['slug' => $slug],
                 [
                     'title' => [
                         'en' => 'Gallery Photo ' . $order,
@@ -52,8 +45,6 @@ class GallerySeeder extends Seeder
                     'published_at' => now(),
                 ]
             );
-
-            $order++;
         }
     }
 }
