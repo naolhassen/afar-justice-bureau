@@ -30,7 +30,7 @@ return array (
     'transformationRoadmap' => 'Justice Sector Transformation',
     'briefing' => 'Newsroom',
     'news' => 'News Updates',
-    'articles' => 'Legal Articles',
+    'articles' => 'Articles',
     'events' => 'Events',
     'pressRelease' => 'Press Releases',
     'resources' => 'Laws & Resources',

@@ -1,12 +1,12 @@
 @extends('admin.layouts.app')
 
-@section('title', isset($item) ? 'Edit Publication' : 'New Publication')
+@section('title', isset($item) ? 'Edit Article' : 'New Article')
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
     <h4 class="fw-bold mb-0" style="color: var(--afar-deep);">
         <i class="fa-solid fa-book-open me-2" style="color: var(--afar-accent);"></i>
-        {{ isset($item) ? 'Edit Publication' : 'Create Publication' }}
+        {{ isset($item) ? 'Edit Article' : 'Create Article' }}
     </h4>
     <div class="d-flex align-items-center gap-3">
             <div class="locale-tabs" data-locale-tabs>

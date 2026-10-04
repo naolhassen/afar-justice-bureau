@@ -10,7 +10,7 @@ class PublicationController extends ResourceController
     protected string $model = Publication::class;
     protected string $viewPrefix = 'admin.publications';
     protected string $routeName = 'admin.publications';
-    protected string $label = 'Publication';
+    protected string $label = 'Article';
     protected array $fileFields = ['image', 'file_path'];
 
     protected function rules(?int $id = null): array

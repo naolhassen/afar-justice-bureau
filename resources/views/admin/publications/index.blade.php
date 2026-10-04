@@ -1,12 +1,12 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Publications')
+@section('title', 'Articles')
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
-    <h4 class="fw-bold mb-0" style="color: var(--afar-deep);"><i class="fa-solid fa-book-open me-2" style="color: var(--afar-accent);"></i>Publications</h4>
+    <h4 class="fw-bold mb-0" style="color: var(--afar-deep);"><i class="fa-solid fa-book-open me-2" style="color: var(--afar-accent);"></i>Articles</h4>
     @if(in_array(auth()->user()->role, ['admin', 'editor']))
-        <a href="{{ route('admin.publications.create') }}" class="btn btn-afar"><i class="fa-solid fa-plus me-2"></i> New Publication</a>
+        <a href="{{ route('admin.publications.create') }}" class="btn btn-afar"><i class="fa-solid fa-plus me-2"></i> New Article</a>
     @endif
 </div>
 
@@ -109,7 +109,7 @@
                     <tr>
                         <td colspan="8" class="text-center text-muted py-5">
                             <i class="fa-solid fa-book-open fa-2x mb-3 d-block" style="color: #c3d6e5;"></i>
-                            No Publication records yet.
+                            No Article records yet.
                             @if(in_array(auth()->user()->role, ['admin', 'editor']))
                                 <a href="{{ route('admin.publications.create') }}" style="color: var(--afar-accent);">Create the first one</a>.
                             @endif

@@ -104,7 +104,21 @@ Route::prefix('{locale}')
 
             return view('briefing.news-detail', compact('article', 'related'));
         })->name('briefing.news.show');
-        Route::get('/briefing/articles', fn () => view('briefing.articles'))->name('briefing.articles');
+        Route::get('/briefing/articles', function () {
+            $articles = \App\Models\Publication::published()
+                ->where(fn ($q) => $q->whereNull('published_at')->orWhere('published_at', '<=', now()))
+                ->orderByDesc('published_at')
+                ->orderByDesc('id')
+                ->paginate(10)
+                ->withQueryString();
+
+            return view('briefing.articles', compact('articles'));
+        })->name('briefing.articles');
+        Route::get('/briefing/articles/{id}', function (string $locale, int $id) {
+            $article = \App\Models\Publication::published()->findOrFail($id);
+
+            return view('briefing.article-detail', compact('article'));
+        })->name('briefing.articles.show');
         Route::get('/briefing/events', fn () => view('briefing.events'))->name('briefing.events');
         Route::get('/briefing/press-release', fn () => view('briefing.press-release'))->name('briefing.press-release');
         Route::get('/resources/laws', fn () => view('resources.laws'))->name('resources.laws');

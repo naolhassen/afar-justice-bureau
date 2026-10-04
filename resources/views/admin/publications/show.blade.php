@@ -1,10 +1,10 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Publication')
+@section('title', 'Article')
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
-    <h4 class="fw-bold mb-0" style="color: var(--afar-deep);"><i class="fa-solid fa-book-open me-2" style="color: var(--afar-accent);"></i>Publication</h4>
+    <h4 class="fw-bold mb-0" style="color: var(--afar-deep);"><i class="fa-solid fa-book-open me-2" style="color: var(--afar-accent);"></i>Article</h4>
     <div class="d-flex gap-2">
         <a href="{{ route('admin.publications.index') }}" class="btn btn-ghost"><i class="fa-solid fa-arrow-left me-2"></i> Back</a>
         @if(in_array(auth()->user()->role, ['admin', 'editor']))

@@ -30,7 +30,7 @@ return array (
     'transformationRoadmap' => 'የፍትሕ ዘርፍ ትራንስፎርሜሽን',
     'briefing' => 'መረጃ ማዕከል',
     'news' => 'ዜናዎች',
-    'articles' => 'የሕግ ጥናቶችና ጽሑፎች',
+    'articles' => 'ጽሑፎች',
     'events' => 'ዝግጅቶች',
     'pressRelease' => 'ጋዜጣዊ መግለጫ',
     'resources' => 'ሕጎችና ሰነዶች',

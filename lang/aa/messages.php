@@ -30,7 +30,7 @@ return array (
     'transformationRoadmap' => 'Maslahat Biirok Tubanna',
     'briefing' => 'Odob',
     'news' => 'Nagaayat',
-    'articles' => 'Seerih Barittoh Macammarat',
+    'articles' => 'Maqaalah',
     'events' => 'Qaadokaayih',
     'pressRelease' => 'Nagaayat Gufne',
     'resources' => 'Seeritte kee Kitooba',

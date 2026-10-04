@@ -362,7 +362,7 @@ $menu = [
         ['route' => 'admin.news',          'label' => 'News',          'icon' => 'fa-newspaper'],
         ['route' => 'admin.announcements', 'label' => 'Announcements', 'icon' => 'fa-bullhorn'],
         ['route' => 'admin.initiatives',   'label' => 'Initiatives',   'icon' => 'fa-lightbulb'],
-        ['route' => 'admin.publications',  'label' => 'Publications',  'icon' => 'fa-book-open'],
+        ['route' => 'admin.publications',  'label' => 'Articles',  'icon' => 'fa-book-open'],
         ['route' => 'admin.videos',        'label' => 'Videos',        'icon' => 'fa-video'],
         ['route' => 'admin.vacancies',     'label' => 'Vacancies',     'icon' => 'fa-briefcase'],
         ['route' => 'admin.documents',     'label' => 'Documents',     'icon' => 'fa-file-pdf'],

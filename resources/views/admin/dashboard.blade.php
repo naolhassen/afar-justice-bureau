@@ -9,7 +9,7 @@
             ['key' => 'news', 'route' => 'admin.news.index', 'label' => 'News', 'icon' => 'fa-newspaper'],
             ['key' => 'announcements', 'route' => 'admin.announcements.index', 'label' => 'Announcements', 'icon' => 'fa-bullhorn'],
             ['key' => 'initiatives', 'route' => 'admin.initiatives.index', 'label' => 'Initiatives', 'icon' => 'fa-lightbulb'],
-            ['key' => 'publications', 'route' => 'admin.publications.index', 'label' => 'Publications', 'icon' => 'fa-book-open'],
+            ['key' => 'publications', 'route' => 'admin.publications.index', 'label' => 'Articles', 'icon' => 'fa-book-open'],
             ['key' => 'videos', 'route' => 'admin.videos.index', 'label' => 'Videos', 'icon' => 'fa-video'],
             ['key' => 'vacancies', 'route' => 'admin.vacancies.index', 'label' => 'Vacancies', 'icon' => 'fa-briefcase'],
             ['key' => 'documents', 'route' => 'admin.documents.index', 'label' => 'Documents', 'icon' => 'fa-file-pdf'],
