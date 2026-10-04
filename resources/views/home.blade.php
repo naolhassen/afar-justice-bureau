@@ -319,70 +319,41 @@
         <div class="auto-container">
             <!-- Sec Title -->
             <div class="sec-title centered">
-                <h2>{{ __('messages.services.title') }} {{ __('messages.services.titleHighlight') }}</h2>
+                <span class="civic-badge civic-badge-navy mb-2">{{ app()->getLocale() === 'am' ? 'የቢሮው ዋና ዋና ዳይሬክቶሬቶች' : 'Key Institutional Units' }}</span>
+                <h2>{{ app()->getLocale() === 'am' ? 'ዳይሬክቶሬቶች' : 'Departments' }}</h2>
             </div>
             <div class="inner-container">
                 <div class="clearfix">
 
-                    <!-- Practice Block -->
-                    <div class="practice-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="icon flaticon-file"></div>
-                            <h5><a href="{{ route('initiatives.transitional-justice', ['locale' => app()->getLocale()]) }}">{{ __('messages.services.politicalEducation') }}</a></h5>
-                            <div class="text">{{ __('messages.services.politicalEducationDesc') }}</div>
-                            <a class="arrow flaticon-right-arrow-3" href="{{ route('initiatives.transitional-justice', ['locale' => app()->getLocale()]) }}"></a>
-                        </div>
-                    </div>
+                    @php
+                        $homeDepartments = [
+                            ['icon' => 'flaticon-file', 'title_en' => "Office of the Prosecutor's Administration Conference", 'title_am' => 'የዐቃብያነ ህግ አስተዳደር ጉባኤ ጽ/ቤት', 'desc' => 'Coordinates prosecutorial administration, conference planning, and internal governance.'],
+                            ['icon' => 'flaticon-balance', 'title_en' => 'Legal Audit, Ethics, and Discipline Monitoring Team', 'title_am' => 'የህግ ኦዲት፣ የስነ-ምግባርና የዲስፕሊን ጉዳዮች መከታተያ ቡድን', 'desc' => 'Oversees legal audit functions and monitors professional conduct and discipline.'],
+                            ['icon' => 'flaticon-handcuffs-1', 'title_en' => 'Board of Mercy and Pardons Office', 'title_am' => 'የምህረትና ይቅርታ ቦርድ ጽ/ቤት', 'desc' => 'Handles mercy and pardon matters, reviews petitions, and recommends decisions.'],
+                            ['icon' => 'flaticon-save-money', 'title_en' => 'Internal Audit and Control Directorate', 'title_am' => 'የውስጥ ኦዲትና ቁጥጥር ዳይሬክቶሬት', 'desc' => 'Conducts internal audits and ensures financial and operational controls.'],
+                            ['icon' => 'flaticon-marketing', 'title_en' => 'Public Relations Directorate', 'title_am' => 'የህዝብ ግንኙነት ጉዳዮች ዳይሬክቶሬት', 'desc' => 'Manages public communications, media relations, and civic engagement.'],
+                            ['icon' => 'flaticon-briefcase', 'title_en' => 'Financial Procurement and Asset Management Directorate', 'title_am' => 'የፋይናንስ ግዥና ንብረት አስተዳደር ዳይሮክቶሬት', 'desc' => 'Manages procurement, finance, and bureau assets.'],
+                            ['icon' => 'flaticon-save-money', 'title_en' => 'Service Delivery, Grievance Handling, and Justice System Reform Directorate', 'title_am' => 'የአገልግሎት አሰጣጥ ቅሬታ ማስተናገጃ እና ፍትህ ስርአት ማሻሻያ ዳይሬክቶሬት', 'desc' => 'Improves service delivery, handles public grievances, and leads justice reform.'],
+                            ['icon' => 'flaticon-injury', 'title_en' => 'Planning, Follow-up, and Evaluation Directorate', 'title_am' => 'የዕቅድ ዝግጅት ክትትል ግምገማ ዳይሬክቶሬት', 'desc' => 'Develops plans, monitors implementation, and evaluates bureau performance.'],
+                            ['icon' => 'flaticon-briefcase', 'title_en' => 'Information and Communication Technology Directorate', 'title_am' => 'የኢንፎርሜሽን ኮምንኬሽን ቴክኖሎጂ ዳይሬክቶሬት', 'desc' => 'Builds and maintains digital systems and ICT infrastructure.'],
+                            ['icon' => 'flaticon-balance', 'title_en' => 'Human Resources Management Directorate', 'title_am' => 'የሰው ሃብት አስተዳደር ዳይሬክቶሬት', 'desc' => 'Manages human capital, recruitment, training, and staff development.'],
+                        ];
+                    @endphp
 
-                    <!-- Practice Block -->
-                    <div class="practice-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="icon flaticon-briefcase"></div>
-                            <h5><a href="{{ route('initiatives.legal-institutional-reform', ['locale' => app()->getLocale()]) }}">{{ __('messages.services.youthEngagement') }}</a></h5>
-                            <div class="text">{{ __('messages.services.youthEngagementDesc') }}</div>
-                            <a class="arrow flaticon-right-arrow-3" href="{{ route('initiatives.legal-institutional-reform', ['locale' => app()->getLocale()]) }}"></a>
+                    @foreach($homeDepartments as $dept)
+                        <div class="practice-block col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-box">
+                                <div class="icon {{ $dept['icon'] }}"></div>
+                                <h5>
+                                    <a href="{{ route('about.departments', ['locale' => app()->getLocale()]) }}">
+                                        {{ app()->getLocale() === 'am' ? $dept['title_am'] : $dept['title_en'] }}
+                                    </a>
+                                </h5>
+                                <div class="text">{{ $dept['desc'] }}</div>
+                                <a class="arrow flaticon-right-arrow-3" href="{{ route('about.departments', ['locale' => app()->getLocale()]) }}"></a>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Practice Block -->
-                    <div class="practice-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="icon flaticon-handcuffs-1"></div>
-                            <h5><a href="{{ route('initiatives.justice-sector-transformation', ['locale' => app()->getLocale()]) }}">{{ __('messages.services.communityDev') }}</a></h5>
-                            <div class="text">{{ __('messages.services.communityDevDesc') }}</div>
-                            <a class="arrow flaticon-right-arrow-3" href="{{ route('initiatives.justice-sector-transformation', ['locale' => app()->getLocale()]) }}"></a>
-                        </div>
-                    </div>
-
-                    <!-- Practice Block -->
-                    <div class="practice-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="icon flaticon-save-money"></div>
-                            <h5><a href="{{ route('resources.services', ['locale' => app()->getLocale()]) }}">{{ __('messages.services.womenEmpowerment') }}</a></h5>
-                            <div class="text">{{ __('messages.services.womenEmpowermentDesc') }}</div>
-                            <a class="arrow flaticon-right-arrow-3" href="{{ route('resources.services', ['locale' => app()->getLocale()]) }}"></a>
-                        </div>
-                    </div>
-
-                    <!-- Practice Block -->
-                    <div class="practice-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="icon flaticon-injury"></div>
-                            <h5><a href="{{ route('resources.laws', ['locale' => app()->getLocale()]) }}">{{ __('messages.services.goodGovernance') }}</a></h5>
-                            <div class="text">{{ __('messages.services.goodGovernanceDesc') }}</div>
-                            <a class="arrow flaticon-right-arrow-3" href="{{ route('resources.laws', ['locale' => app()->getLocale()]) }}"></a>
-                        </div>
-                    </div>
-
-                    <!-- Practice Block -->
-                    <div class="practice-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="icon flaticon-law"></div>
-                            <h5><a href="{{ route('publications.strategy', ['locale' => app()->getLocale()]) }}">{{ __('messages.services.peaceBuilding') }}</a></h5>
-                            <div class="text">{{ __('messages.services.peaceBuildingDesc') }}</div>
-                            <a class="arrow flaticon-right-arrow-3" href="{{ route('publications.strategy', ['locale' => app()->getLocale()]) }}"></a>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
             </div>
