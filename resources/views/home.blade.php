@@ -107,7 +107,7 @@
                         <div class="message-position">{{ __('messages.leaders.leader1Position') }}</div>
                     </div>
                     <div class="message-body">
-                        <p>{{ __('messages.about.description') }}</p>
+                        <p>{{ __('messages.leaders.leader1Message') }}</p>
                     </div>
                     <div class="message-footer">
                         <a href="{{ route('departments.minister', ['locale' => app()->getLocale()]) }}" class="theme-btn btn-style-one">

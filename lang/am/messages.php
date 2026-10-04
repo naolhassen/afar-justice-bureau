@@ -67,7 +67,7 @@ return array (
     'sectionTag' => 'ስለ ቢሮአችን',
     'title' => 'የአፋር ብሔራዊ ክልላዊ መንግሥት',
     'titleHighlight' => 'የፍትሕ ቢሮ',
-    'description' => 'የአፋር ብሔራዊ ክልላዊ መንግሥት የፍትሕ ቢሮ በክልሉ የሕግ የበላይነትን የማስከበር፣ ወንጀሎችን የመመርመርና የመክሰስ፣ ለክልሉ መንግሥታዊ ተቋማት የሕግ ምክር የመስጠት፣ የክልል ረቂቅ ሕጎችን የማዘጋጀት፣ ሰብዓዊ መብቶችን የመከታተልና የማስከበር፣ እንዲሁም በሁሉም ዞኖችና ወረዳዎች ፍትህን ተደራሽ የማድረግ ዋና የመንግሥት አስፈጻሚ ተቋም ነው።',
+    'description' => 'ፍትሕ ቢሮ በክልሉ ጠቅላይ ዐቃቤ ሕግ መስሪያ ቤት ማቋቋሚያ አዋጅ ቁጥር 115/2011 ሕገ መንግሥቱንና ሕገ መንግሥታዊ ሥርዓቱን የማክበርና የማስከበር፣ የሕግ የበላይነትን የማረጋገጥ፣ የወንጀል ሕግን የማስከበር እና የፌዴራል መንግሥቱንና የሕዝብን የፍትሐብሔር ጥቅም የማስጠበቅ ዓላማዎች ተሰጥተውት የተቋቋመ ነው፡፡',
     'learnMore' => 'ሙሉ ሥልጣንና ተግባራትን ይመልከቱ',
     'stats' => 
     array (
@@ -105,6 +105,7 @@ return array (
     'titleHighlight' => 'አመራሮች',
     'leader1Name' => 'አስኬር መሀመድ በካሬ',
     'leader1Position' => 'ቢሮ ኃላፊ',
+    'leader1Message' => 'Leading the Afar National Regional State Justice Bureau with an unwavering dedication to the rule of law, institutional integrity, human rights protection, and harmonizing the pastoralist customary legal order with the Ethiopian constitutional framework.',
     'leader2Name' => 'መሀመድ አሊ ሄሌም',
     'leader2Position' => 'የህግ አገልግሎት ዘርፍ ም/ቢሮ ኃላፊ',
     'leader3Name' => 'አብዱሳሊህ ሁሞ',

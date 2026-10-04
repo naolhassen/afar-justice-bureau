@@ -67,7 +67,7 @@ return array (
     'sectionTag' => 'About Our Bureau',
     'title' => 'Afar National Regional State',
     'titleHighlight' => 'Justice Bureau',
-    'description' => 'The Afar National Regional State Justice Bureau is the chief executive justice organ of the regional government. We are mandated to oversee public prosecutions, provide authoritative legal counsel to regional organs, draft regional laws, protect human rights, and ensure equitable access to justice across all woredas and zones.',
+    'description' => 'The Bureau of Justice was set up by Establishment Proclamation No. 115/2011 from the Regional Prosecutor General\'s Office to respect and uphold the Constitution, ensure the rule of law, enforce criminal law, and protect the civil interests of the Federal Government and the people.',
     'learnMore' => 'Read Full Mandate',
     'stats' => 
     array (
@@ -111,6 +111,7 @@ return array (
     'titleHighlight' => 'Leadership',
     'leader1Name' => 'Asker Mahammad',
     'leader1Position' => 'Bureau Head',
+    'leader1Message' => 'Leading the Afar National Regional State Justice Bureau with an unwavering dedication to the rule of law, institutional integrity, human rights protection, and harmonizing the pastoralist customary legal order with the Ethiopian constitutional framework.',
     'leader2Name' => 'Mahammad Ali Helem',
     'leader2Position' => 'Legal Services Sector Deputy Head',
     'leader3Name' => 'Abdusalih Humo',

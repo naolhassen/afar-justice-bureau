@@ -105,6 +105,7 @@ return array (
     'titleHighlight' => 'Saqol',
     'leader1Name' => 'Qasker Macammad',
     'leader1Position' => 'Biiroh Saqal',
+    'leader1Message' => 'Leading the Afar National Regional State Justice Bureau with an unwavering dedication to the rule of law, institutional integrity, human rights protection, and harmonizing the pastoralist customary legal order with the Ethiopian constitutional framework.',
     'leader2Name' => 'Macammad Qali Celem',
     'leader2Position' => 'Madqah ayfaafayih ludda C/Saqal',
     'leader3Name' => 'Qabdusalic Cummo',
