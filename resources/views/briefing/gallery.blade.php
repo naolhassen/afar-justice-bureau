@@ -7,6 +7,12 @@
         description="{{ app()->getLocale() === 'am' ? 'የክልሉ ፍትህ ቢሮን የሚገነዘቡ ፎቶዎች እና የመረጃ ቪዲዮዎች' : 'Photos and videos from the Afar Regional Justice Bureau.' }}"
     />
 
+    @php
+        $galleryImageUrl = function ($image) {
+            return $image ? (Str::startsWith($image, ['images/', 'uploads/']) ? asset($image) : asset('storage/' . $image)) : null;
+        };
+    @endphp
+
     <section class="civic-section">
         <div class="auto-container">
             <!-- Tabs -->
@@ -24,8 +30,11 @@
                 @if($images->count() > 0)
                     <div class="gallery-grid">
                         @foreach($images as $image)
-                            <div class="gallery-item" data-gallery-image="{{ asset('storage/' . $image->image) }}" data-caption="{{ $image->title }}">
-                                <img src="{{ asset('storage/' . $image->image) }}" alt="{{ $image->title }}">
+                            @php
+                                $imgUrl = $galleryImageUrl($image->image) ?? asset('images/gallery/gallery-11.jpg');
+                            @endphp
+                            <div class="gallery-item" data-gallery-image="{{ $imgUrl }}" data-caption="{{ $image->title }}">
+                                <img src="{{ $imgUrl }}" alt="{{ $image->title }}">
                                 <div class="gallery-overlay">
                                     <i class="fa fa-search-plus"></i>
                                     @if($image->title)
@@ -61,7 +70,7 @@
                                 } elseif (preg_match('/vimeo\.com\/(\d+)/', $videoUrl, $matches)) {
                                     $embedUrl = 'https://player.vimeo.com/video/' . $matches[1];
                                 }
-                                $thumb = $video->thumbnail ? asset('storage/' . $video->thumbnail) : asset('images/gallery/gallery-11.jpg');
+                                $thumb = $video->thumbnail ? (Str::startsWith($video->thumbnail, ['images/', 'uploads/']) ? asset($video->thumbnail) : asset('storage/' . $video->thumbnail)) : asset('images/gallery/gallery-11.jpg');
                             @endphp
                             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                                 <div class="gallery-video-card" data-video-url="{{ $videoUrl }}">

@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             ProclamationSeeder::class,
             NewsSeeder::class,
             AnnouncementSeeder::class,
+            GallerySeeder::class,
         ]);
     }
 }
