@@ -15,7 +15,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -23,7 +23,7 @@ jobs:
           php-version: '8.2'
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: '20'
 
@@ -65,7 +65,7 @@ jobs:
             -x "public/storage"
 
       - name: Prepare remote process headroom
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.2.5
         env:
           DEBUGINFOD_URLS: ""
         with:
@@ -115,7 +115,7 @@ jobs:
           ssh-agent -k
 
       - name: Extract and finish on cPanel
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.2.5
         env:
           DEBUGINFOD_URLS: ""
         with:
