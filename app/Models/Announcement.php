@@ -14,7 +14,7 @@ class Announcement extends Model
 
     protected $fillable = [
         'title', 'slug', 'excerpt', 'body', 'image',
-        'status', 'published_at', 'author_id',
+        'status', 'category', 'published_at', 'author_id',
     ];
 
     protected function casts(): array

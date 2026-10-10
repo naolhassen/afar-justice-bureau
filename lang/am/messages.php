@@ -248,6 +248,7 @@ return array (
     array (
       'title' => 'ጋዜጣዊ',
       'titleHighlight' => 'መግለጫዎች',
+      'description' => '',
     ),
     'comingSoon' => 'መረጃው በቢሮው ኮሚዩኒኬሽን ቡድን እየተዘጋጀ ይገኛል...',
   ),

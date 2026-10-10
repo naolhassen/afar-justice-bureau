@@ -1,17 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-@php
-    $locale = app()->getLocale() ?: 'aa';
-    $releases = [
-        [
-            'title' => 'Official Communiqué on the Expansion of Pastoralist Legal Aid & Customary Harmonization',
-            'desc' => 'The Afar National Regional State Justice Bureau announces the operational rollout of mobile circuit legal counseling desks across remote pastoralist woredas and reinforces customary Mad\'aa harmonization guidelines.',
-            'date' => now()->format('M d, Y'),
-            'ref' => 'PR-AFAR-2025/01',
-        ],
-    ];
-@endphp
+    @php
+        $locale = app()->getLocale() ?: 'aa';
+    @endphp
 
     <x-page-hero
         title="{{ __('messages.pages.pressRelease.title') }}"
@@ -22,35 +14,50 @@
     <section class="civic-section">
         <div class="auto-container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    @foreach ($releases as $item)
-                        <div class="civic-card" style="border-top: 4px solid var(--afar-accent);">
-                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-                                <span class="civic-badge civic-badge-navy">{{ $item['ref'] }}</span>
-                                <span style="font-size: 12px; color: var(--afar-muted); font-weight: 600;">
-                                    <i class="fa fa-calendar me-1" style="color: var(--afar-accent);"></i> {{ $item['date'] }} &bull; Semera
-                                </span>
-                            </div>
-                            <h3 style="font-weight: 800; color: var(--afar-navy); font-size: 1.45rem; line-height: 1.35; margin-bottom: 14px;">
-                                {{ $item['title'] }}
-                            </h3>
-                            <p style="font-size: 1rem; line-height: 1.8; color: var(--afar-ink); margin-bottom: 24px;">
-                                {{ $item['desc'] }}
-                            </p>
-                            <div style="background: rgba(10,34,54,0.03); border: 1px solid var(--afar-border); border-radius: 14px; padding: 22px; margin-bottom: 24px;">
-                                <h6 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 6px;">Executive Communications Office</h6>
-                                <p style="font-size: 0.9rem; color: var(--afar-muted); line-height: 1.6; margin-bottom: 4px;">
-                                    Afar National Regional State Justice Bureau Headquarters, Semera, Ethiopia.
-                                </p>
-                                <p style="font-size: 0.9rem; margin: 0;">
-                                    Media Desk: <a href="mailto:{{ __('messages.contact.emailValue') }}" style="color: var(--afar-accent-dark); font-weight: 700;">{{ __('messages.contact.emailValue') }}</a>
-                                </p>
-                            </div>
-                            <a href="mailto:{{ __('messages.contact.emailValue') }}?subject=Press Inquiry - {{ $item['ref'] }}" class="theme-btn btn-style-one">
-                                <span class="txt"><i class="fa fa-microphone me-2"></i> Media Inquiries Desk &rarr;</span>
-                            </a>
+                <div class="col-lg-10 col-md-12">
+
+                    @if($releases->count() > 0)
+                        <div class="press-release-list" style="display: flex; flex-direction: column; gap: 28px;">
+                            @foreach ($releases as $item)
+                                @php
+                                    $detailUrl = route('briefing.press-release.show', ['locale' => $locale, 'slug' => $item->slug]);
+                                    $titleAm = $item->trans('title', 'am');
+                                    $titleEn = $item->trans('title', 'en');
+                                    $date = ($item->published_at ?? $item->created_at)->format('F d, Y');
+                                @endphp
+                                <div class="press-release-item" style="background: #ffffff; border-radius: 14px; border-left: 5px solid var(--afar-accent); box-shadow: 0 6px 24px rgba(10,34,54,0.06); padding: 26px 30px; transition: transform 0.2s ease;">
+                                    @if($titleAm)
+                                        <h4 style="font-size: 1.15rem; font-weight: 800; line-height: 1.4; margin-bottom: 6px;">
+                                            <a href="{{ $detailUrl }}" style="color: var(--afar-navy); text-decoration: none;">{{ $titleAm }}</a>
+                                        </h4>
+                                    @endif
+                                    <h5 style="font-size: 1.05rem; font-weight: 700; line-height: 1.45; margin-bottom: 14px;">
+                                        <a href="{{ $detailUrl }}" style="color: var(--afar-muted); text-decoration: none;">{{ $titleEn }}</a>
+                                    </h5>
+                                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; font-size: 0.9rem; color: var(--afar-muted); font-weight: 600;">
+                                        <span style="display: inline-flex; align-items: center; gap: 6px;">
+                                            <i class="fa fa-calendar" style="color: var(--afar-accent);"></i> {{ $date }}
+                                        </span>
+                                        @if($item->category)
+                                            <span style="display: inline-flex; align-items: center; gap: 6px;">
+                                                <i class="fa fa-tag" style="color: var(--afar-accent);"></i>
+                                                <span style="background: rgba(10,34,54,0.06); color: var(--afar-navy); padding: 3px 10px; border-radius: 20px; font-size: 0.8rem;">{{ $item->category }}</span>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
-                    @endforeach
+
+                        <div class="d-flex justify-content-center mt-5">
+                            {{ $releases->links() }}
+                        </div>
+                    @else
+                        <div class="civic-card text-center py-5">
+                            <h4 style="font-weight: 800; color: var(--afar-navy);">{{ __('messages.comingSoon') }}</h4>
+                        </div>
+                    @endif
+
                 </div>
             </div>
         </div>

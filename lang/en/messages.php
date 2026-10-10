@@ -249,6 +249,7 @@ return array (
     array (
       'title' => 'Official Press',
       'titleHighlight' => 'Releases',
+      'description' => 'Official press statements, public notices, and communications from the Afar Regional Justice Bureau.',
     ),
     'comingSoon' => 'Content currently being compiled by the Bureau communication team...',
   ),

@@ -136,7 +136,16 @@ Route::prefix('{locale}')
             return view('briefing.article-detail', compact('article'));
         })->name('briefing.articles.show');
         Route::get('/briefing/events', fn () => view('briefing.events'))->name('briefing.events');
-        Route::get('/briefing/press-release', fn () => view('briefing.press-release'))->name('briefing.press-release');
+        Route::get('/briefing/press-release', function () {
+            $releases = Announcement::published()
+                ->latest('published_at')
+                ->paginate(12);
+            return view('briefing.press-release', compact('releases'));
+        })->name('briefing.press-release');
+        Route::get('/briefing/press-release/{slug}', function (string $locale, string $slug) {
+            $release = Announcement::published()->where('slug', $slug)->firstOrFail();
+            return view('briefing.press-release-detail', compact('release'));
+        })->name('briefing.press-release.show');
         Route::get('/resources/laws', fn () => view('resources.laws'))->name('resources.laws');
         Route::get('/resources/proclamations', function () {
             $proclamations = \App\Models\Document::where('status', 'published')

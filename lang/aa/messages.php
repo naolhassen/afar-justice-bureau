@@ -252,6 +252,7 @@ return array (
     array (
       'title' => 'Nagaayat',
       'titleHighlight' => 'Gufne',
+      'description' => '',
     ),
     'comingSoon' => 'Biirok oytih gaadu taama bicisa...',
   ),
