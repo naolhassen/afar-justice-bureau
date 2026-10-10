@@ -43,7 +43,7 @@
                                 </div>
                                 <div>
                                     <h6 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 4px; font-size: 0.95rem;">{{ __('messages.footer.phone') }}</h6>
-                                    <a href="tel:+251336660123" style="color: var(--afar-navy); font-weight: 700; font-size: 0.95rem; text-decoration: none;">
+                                    <a href="tel:+2513366660437" style="color: var(--afar-navy); font-weight: 700; font-size: 0.95rem; text-decoration: none;">
                                         {{ __('messages.contact.phoneValue') }}
                                     </a>
                                 </div>
@@ -82,7 +82,7 @@
                                 Official Media Channels
                             </span>
                             <div style="display: flex; gap: 10px;">
-                                <a href="https://facebook.com" target="_blank" rel="noopener" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(10,34,54,0.06); color: var(--afar-navy); display: flex; align-items: center; justify-content: center; text-decoration: none;"><i class="fa fa-facebook-f"></i></a>
+                                <a href="https://web.facebook.com/afarjusticebureau" target="_blank" rel="noopener" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(10,34,54,0.06); color: var(--afar-navy); display: flex; align-items: center; justify-content: center; text-decoration: none;"><i class="fa fa-facebook-f"></i></a>
                                 <a href="https://twitter.com" target="_blank" rel="noopener" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(10,34,54,0.06); color: var(--afar-navy); display: flex; align-items: center; justify-content: center; text-decoration: none;"><i class="fa fa-twitter"></i></a>
                                 <a href="https://t.me" target="_blank" rel="noopener" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(10,34,54,0.06); color: var(--afar-navy); display: flex; align-items: center; justify-content: center; text-decoration: none;"><i class="fa fa-paper-plane"></i></a>
                             </div>

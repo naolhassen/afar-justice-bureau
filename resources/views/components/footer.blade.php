@@ -9,7 +9,7 @@
         <div class="widgets-section" style="padding-bottom: 40px;">
             <div class="row clearfix">
 
-                <!-- Col 1: Bureau Identity & Mission -->
+                <!-- Col 1: Bureau Identity and Mission -->
                 <div class="footer-column col-lg-4 col-md-6 col-sm-12 mb-4">
                     <div class="footer-widget logo-widget">
                         <div class="logo mb-3">
@@ -32,7 +32,7 @@
                         </p>
                         <!-- Social Links -->
                         <ul class="social-icon-one" style="display: flex; gap: 10px; padding: 0; list-style: none;">
-                            <li><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.12);"><i class="fa fa-facebook-f"></i></a></li>
+                            <li><a href="https://web.facebook.com/afarjusticebureau" target="_blank" rel="noopener" aria-label="Facebook" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.12);"><i class="fa fa-facebook-f"></i></a></li>
                             <li><a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.12);"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="https://t.me" target="_blank" rel="noopener" aria-label="Telegram" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.12);"><i class="fa fa-paper-plane"></i></a></li>
                             <li><a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.12);"><i class="fa fa-linkedin"></i></a></li>
@@ -58,18 +58,18 @@
                     </div>
                 </div>
 
-                <!-- Col 3: Initiatives & Public Resources -->
+                <!-- Col 3: Initiatives and Public Resources -->
                 <div class="footer-column col-lg-3 col-md-6 col-sm-12 mb-4">
                     <div class="footer-widget links-widget">
                         <h5 style="color: #ffffff; font-weight: 800; font-size: 1rem; margin-bottom: 18px; position: relative; padding-bottom: 8px;">
-                            {{ __('messages.nav.resources') }} & Reforms
+                            {{ __('messages.nav.resources') }} and Reforms
                             <span style="position: absolute; bottom: 0; left: 0; width: 28px; height: 2px; background: var(--afar-accent);"></span>
                         </h5>
                         <ul class="footer-list" style="list-style: none; padding: 0; margin: 0; line-height: 2.1; font-size: 13.5px;">
                             <li><a href="{{ route('initiatives.justice-sector-transformation', ['locale' => $locale]) }}">{{ __('messages.nav.transformationRoadmap') }}</a></li>
                             <li><a href="{{ route('initiatives.transitional-justice', ['locale' => $locale]) }}">{{ __('messages.nav.transitionalJustice') }}</a></li>
                             <li><a href="{{ route('initiatives.legal-institutional-reform', ['locale' => $locale]) }}">{{ __('messages.nav.institutionalReform') }}</a></li>
-                            <li><a href="{{ route('resources.laws', ['locale' => $locale]) }}">{{ __('messages.nav.laws') }} & Directives</a></li>
+                            <li><a href="{{ route('resources.laws', ['locale' => $locale]) }}">{{ __('messages.nav.laws') }} and Directives</a></li>
                             <li><a href="{{ route('resources.services', ['locale' => $locale]) }}">{{ __('messages.nav.services') }}</a></li>
                             <li><a href="https://justice.gov.et" target="_blank" rel="noopener" style="color: var(--afar-accent-soft);">Federal Ministry of Justice <i class="fa fa-external-link" style="font-size: 11px;"></i></a></li>
                         </ul>
@@ -90,7 +90,7 @@
                             </li>
                             <li style="display: flex; gap: 12px; margin-bottom: 14px; align-items: center;">
                                 <span class="fa fa-phone" style="color: var(--afar-accent); font-size: 16px;"></span>
-                                <a href="tel:+251336660123" style="color: rgba(255,255,255,0.85); font-weight: 700;">{{ __('messages.contact.phoneValue') }}</a>
+                                <a href="tel:+2513366660437" style="color: rgba(255,255,255,0.85); font-weight: 700;">{{ __('messages.contact.phoneValue') }}</a>
                             </li>
                             <li style="display: flex; gap: 12px; margin-bottom: 14px; align-items: center;">
                                 <span class="fa fa-envelope-o" style="color: var(--afar-accent); font-size: 16px;"></span>
