@@ -98,6 +98,10 @@ return array (
     'peaceBuilding' => 'የፍትሕ ዘርፍ ትራንስፎርሜሽን',
     'peaceBuildingDesc' => 'የፍትሕ ዘርፉን በቴክኖሎጂ ማዘመን፣ ዲጂታል የመረጃ አያያዝን መዘርጋት እና ፈጣን አገልግሎት ማረጋገጥ።',
   ),
+  'departments' => 
+  array (
+    'viewAll' => 'ሁሉንም ዳይሬክቶሬቶች ይመልከቱ',
+  ),
   'leaders' => 
   array (
     'sectionTag' => 'የቢሮው አመራሮች',
@@ -110,6 +114,11 @@ return array (
     'leader2Position' => 'የህግ አገልግሎት ዘርፍ ም/ቢሮ ኃላፊ',
     'leader3Name' => 'አብዱሳሊህ ሁሞ',
     'leader3Position' => 'የህግ ማስፈፀም ዘርፍ ም/ቢሮ ኃላፊ',
+  ),
+  'announcements' => 
+  array (
+    'title' => 'የቅርብ ጊዜ',
+    'titleHighlight' => 'ማስታወቂያዎች',
   ),
   'news' => 
   array (

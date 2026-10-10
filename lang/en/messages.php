@@ -98,6 +98,10 @@ return array (
     'peaceBuilding' => 'Justice Sector Modernization',
     'peaceBuildingDesc' => 'Implementing digital case management, building institutional capacity, and streamlining service delivery for all pastoralist communities.',
   ),
+  'departments' => 
+  array (
+    'viewAll' => 'View All Departments',
+  ),
   'announcements' => 
   array (
     'sectionTag' => 'Official Notices',

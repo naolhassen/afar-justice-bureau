@@ -252,7 +252,7 @@
         <div class="auto-container">
             <!-- Sec Title -->
             <div class="sec-title light centered">
-                <h2>{{ app()->getLocale() === 'am' ? 'ስትራቴጂካዊ ተግባራት' : 'Strategic Initiatives' }}</h2>
+                <h2>{{ __('messages.nav.initiatives') }}</h2>
                 <div class="text">{{ app()->getLocale() === 'am' ? 'የአፋር ክልል ፍትህ ቢሮ በርካታ ስትራቴጂካዊ ተግባራትን በመተባበር እየተግባራዊ ያደርጋል።' : 'The Afar Regional Justice Bureau is advancing coordinated strategic initiatives across the justice sector.' }}</div>
             </div>
 
@@ -293,7 +293,7 @@
         <div class="auto-container">
             <!-- Sec Title -->
             <div class="sec-title centered">
-                <h2>{{ app()->getLocale() === 'am' ? 'ዳይሬክቶሬቶች' : 'Departments' }}</h2>
+                <h2>{{ __('messages.nav.departments') }}</h2>
             </div>
             <div class="inner-container">
                 <div class="clearfix">
@@ -328,7 +328,7 @@
 
                 <div class="text-center mt-4">
                     <a href="{{ route('about.departments', ['locale' => app()->getLocale()]) }}" class="theme-btn btn-style-one">
-                        <span class="txt">{{ app()->getLocale() === 'am' ? 'ሁሉንም ዳይሬክቶሬቶች ይመልከቱ' : 'View All Departments' }} <i class="arrow flaticon-right"></i></span>
+                        <span class="txt">{{ __('messages.departments.viewAll') }} <i class="arrow flaticon-right"></i></span>
                     </a>
                 </div>
             </div>
