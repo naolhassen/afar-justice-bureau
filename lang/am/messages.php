@@ -180,6 +180,7 @@ return array (
     array (
       'title' => 'ራዕይ፣ ተልዕኮ እና',
       'titleHighlight' => 'እሴቶች',
+      'description' => '',
       'vision' => 'ራዕያችን',
       'visionText' => 'የሕግ የበላይነት የተረጋገጠበት የዜጎች ሰብዓዊና ዴሞክራሲያዊ መብቶች የተከበረበት ማህበረሰብ ተኮር ተደራሽና ተአማኒነት ያለው የፍትህ ሥርዓት መገንባት፤',
       'mission' => 'ተልዕኳችን',
@@ -243,6 +244,7 @@ return array (
     array (
       'title' => 'መርሐ-ግብሮችና',
       'titleHighlight' => 'ዝግጅቶች',
+      'description' => '',
     ),
     'pressRelease' => 
     array (

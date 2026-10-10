@@ -18,6 +18,7 @@
             'desc' => 'Comprehensive 4-day intensive training curriculum on modern forensic criminal investigation, cyber evidence analysis, and judicial ethics.',
             'date' => now()->addDays(14)->format('M d, Y'),
             'location' => 'Afar Regional Management Institute, Semera',
+            'img' => asset('images/gallery/gallery-11.jpg'),
             'status' => 'Registration Open',
             'badge' => 'civic-badge-navy',
         ],

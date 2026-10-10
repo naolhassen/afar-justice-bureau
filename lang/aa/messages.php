@@ -184,6 +184,7 @@ return array (
     array (
       'title' => 'Taamuge, Malaak kee',
       'titleHighlight' => 'Daddos',
+      'description' => '',
       'vision' => 'Ni Taamuge',
       'visionText' => 'Qafar rakaakayal seerik abbino diggoyteek, qadaalat ingih maral geytimtaak, inkiinaytih cakkitte daccarsimta qadaalat buxa tablem.',
       'mission' => 'Ni Malaak',
@@ -247,6 +248,7 @@ return array (
     array (
       'title' => 'Biirok',
       'titleHighlight' => 'Qaadokaayih',
+      'description' => '',
     ),
     'pressRelease' => 
     array (

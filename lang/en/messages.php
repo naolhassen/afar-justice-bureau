@@ -181,6 +181,7 @@ return array (
     array (
       'title' => 'Vision, Mission and',
       'titleHighlight' => 'Values',
+      'description' => 'The institutional compass, guiding principles, and public commitments of the Afar National Regional State Justice Bureau.',
       'vision' => 'Our Vision',
       'visionText' => 'Creating a justice system that\'s community-focused, accessible, and trustworthy, where everyone respects the law and the human and democratic rights of citizens are upheld.',
       'mission' => 'Our Mission',
@@ -244,6 +245,7 @@ return array (
     array (
       'title' => 'Programs and',
       'titleHighlight' => 'Events',
+      'description' => 'Upcoming public forums, workshops, and hearings organized by the Afar Regional Justice Bureau.',
     ),
     'pressRelease' => 
     array (
