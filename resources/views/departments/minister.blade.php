@@ -118,24 +118,7 @@
                             </div>
                         </div>
 
-                        <!-- Educational Background -->
-                        <h4 style="font-weight: 800; color: var(--afar-navy); margin-top: 24px; margin-bottom: 14px; font-size: 1.2rem;">
-                            <i class="fa fa-graduation-cap" style="color: var(--afar-navy); margin-right: 8px;"></i> Educational Qualifications & Expertise
-                        </h4>
-                        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2; font-size: 0.95rem; color: var(--afar-ink);">
-                            <li style="display: flex; align-items: center; gap: 10px;">
-                                <i class="fa fa-check" style="color: var(--afar-green);"></i>
-                                <span><strong>Master of Laws (LL.M)</strong> &mdash; Public Law, Comparative Jurisprudence & Human Rights</span>
-                            </li>
-                            <li style="display: flex; align-items: center; gap: 10px;">
-                                <i class="fa fa-check" style="color: var(--afar-green);"></i>
-                                <span><strong>Bachelor of Laws (LL.B)</strong> &mdash; Faculty of Law, Addis Ababa University</span>
-                            </li>
-                            <li style="display: flex; align-items: center; gap: 10px;">
-                                <i class="fa fa-check" style="color: var(--afar-green);"></i>
-                                <span><strong>Executive Diploma</strong> &mdash; Strategic Justice Administration & Customary Arbitration Harmonization</span>
-                            </li>
-                        </ul>
+
                     </div>
 
                     <!-- Contact the Department Form -->
