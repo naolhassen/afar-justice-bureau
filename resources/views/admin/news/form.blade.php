@@ -113,6 +113,24 @@
                     @error('image')<div class="text-danger small mt-1">{{ $message }}</div>@enderror
             </div>
             <div class="mb-4">
+                <label class="form-label fw-semibold">Additional Images</label>
+                    <div class="file-drop">
+                        <input type="file" name="images[]" id="images" accept="image/*" multiple>
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <div class="file-drop-text">Drag &amp; drop or <strong style="color: var(--afar-blue);">browse files</strong></div>
+                        <div class="file-preview mt-2 d-flex flex-wrap gap-2">
+                            @if($item && $item->images)
+                                @foreach($item->images as $imgPath)
+                                    @if(Str::endsWith($imgPath, ['.jpg', '.jpeg', '.png', '.gif', '.webp']))
+                                        <img src="{{ Str::startsWith($imgPath, 'uploads/') ? asset('storage/' . $imgPath) : asset($imgPath) }}" alt="" style="height: 70px; width: auto; border-radius: 6px; object-fit: cover;">
+                                    @endif
+                                @endforeach
+                            @endif
+                        </div>
+                    </div>
+                    @error('images.*')<div class="text-danger small mt-1">{{ $message }}</div>@enderror
+            </div>
+            <div class="mb-4">
                 <label class="form-label fw-semibold">Status</label>
                     <select name="status" class="form-select">
                         <option value="draft" {{ old('status', $item?->status ?? '') == 'draft' ? 'selected' : '' }}>Draft</option>

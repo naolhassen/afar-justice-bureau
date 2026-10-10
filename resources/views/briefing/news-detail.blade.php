@@ -1,9 +1,18 @@
 @extends('layouts.app')
 
 @php
-    $imgUrl = $article->image
-        ? (Str::startsWith($article->image, 'uploads/') ? asset('storage/' . $article->image) : asset($article->image))
-        : asset('counsel/images/background/1.jpg');
+    $allPaths = [];
+    if ($article->image) {
+        $allPaths[] = $article->image;
+    }
+    foreach ($article->images ?? [] as $img) {
+        if ($img) { $allPaths[] = $img; }
+    }
+    $allImageUrls = collect($allPaths)
+        ->map(fn ($img) => Str::startsWith($img, 'uploads/') ? asset('storage/' . $img) : asset($img))
+        ->filter()
+        ->values();
+    $imgUrl = $allImageUrls->first() ?: asset('counsel/images/background/1.jpg');
 @endphp
 
 @section('content')
@@ -37,11 +46,31 @@
         <div class="auto-container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
-                    <!-- Featured Image -->
-                    @if($article->image)
-                        <div style="border-radius: 16px; overflow: hidden; margin-bottom: 32px; box-shadow: 0 8px 32px rgba(15,41,66,0.10);">
-                            <img src="{{ $imgUrl }}" alt="{{ $article->title }}"
-                                 style="width: 100%; height: auto; display: block;">
+                    <!-- Image Slider -->
+                    @if($allImageUrls->isNotEmpty())
+                        <div id="newsImageCarousel" class="carousel slide" data-bs-ride="carousel" style="border-radius: 16px; overflow: hidden; margin-bottom: 32px; box-shadow: 0 8px 32px rgba(15,41,66,0.10);">
+                            <div class="carousel-indicators">
+                                @foreach($allImageUrls as $index => $url)
+                                    <button type="button" data-bs-target="#newsImageCarousel" data-bs-slide-to="{{ $index }}" class="{{ $index === 0 ? 'active' : '' }}" aria-current="{{ $index === 0 ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"></button>
+                                @endforeach
+                            </div>
+                            <div class="carousel-inner">
+                                @foreach($allImageUrls as $index => $url)
+                                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                                        <img src="{{ $url }}" alt="{{ $article->title }}" style="width: 100%; height: auto; display: block;">
+                                    </div>
+                                @endforeach
+                            </div>
+                            @if($allImageUrls->count() > 1)
+                                <button class="carousel-control-prev" type="button" data-bs-target="#newsImageCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">{{ app()->getLocale() === 'am' ? 'የቀደመው' : 'Previous' }}</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#newsImageCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">{{ app()->getLocale() === 'am' ? 'ቀጣዩ' : 'Next' }}</span>
+                                </button>
+                            @endif
                         </div>
                     @endif
 

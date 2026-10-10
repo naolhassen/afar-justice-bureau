@@ -13,7 +13,7 @@ class News extends Model
     protected array $translatable = ['title', 'excerpt', 'body'];
 
     protected $fillable = [
-        'title', 'slug', 'excerpt', 'body', 'image',
+        'title', 'slug', 'excerpt', 'body', 'image', 'images',
         'status', 'published_at', 'author_id',
     ];
 
@@ -21,6 +21,7 @@ class News extends Model
     {
         return [
             'published_at' => 'datetime',
+            'images' => 'array',
         ];
     }
 
