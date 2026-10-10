@@ -14,7 +14,7 @@ return array (
     'powersFunctions' => 'Powers and Functions',
     'visionMission' => 'Vision and Mission',
     'leadership' => 'Leadership',
-    'formation' => 'History and Cultural',
+    'formation' => 'Milestones',
     'departments' => 'Directorates',
     'regulations' => 'Regulations',
     'structure' => 'Organizational Structure',
