@@ -48,9 +48,7 @@
                                 <div style="position: relative; display: inline-block;">
                                     <img src="{{ asset('images/leaders/asker-mahammad.jpg') }}" alt="{{ __('messages.leaders.leader1Name') }}"
                                          style="width: 240px; height: 280px; object-fit: cover; object-position: center top; border-radius: 18px; box-shadow: 0 14px 32px rgba(10,34,54,0.18); border: 3px solid #ffffff;">
-                                    <div style="position: absolute; bottom: -10px; right: 10px; background: var(--afar-accent); color: var(--afar-navy); width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
-                                        <i class="fa fa-balance-scale"></i>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="col-md-7">
