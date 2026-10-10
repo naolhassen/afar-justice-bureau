@@ -312,7 +312,7 @@
                     @foreach($homeDepartments as $dept)
                         <div class="practice-block col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
-                                <div class="icon {{ $dept['icon'] }}"></div>
+                                <div class="icon"><img src="{{ asset('logo.png') }}" alt="Bureau logo" style="height: 48px; width: auto; object-fit: contain;"></div>
                                 <h5>
                                     <a href="{{ route('about.departments', ['locale' => app()->getLocale()]) }}">
                                         {{ app()->getLocale() === 'am' ? $dept['title_am'] : $dept['title_en'] }}
@@ -351,7 +351,7 @@
                         <div class="services-block col-lg-6 col-md-12 col-sm-12">
                             <div class="inner-box wow {{ $index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight' }}" data-wow-delay="{{ ($index % 2) * 150 }}ms" data-wow-duration="1500ms">
                                 <div class="content">
-                                    <div class="icon flaticon-marketing"></div>
+                                    <div class="icon"><img src="{{ asset('logo.png') }}" alt="Bureau logo" style="height: 48px; width: auto; object-fit: contain;"></div>
                                     <h4><a href="{{ route('briefing.press-release', ['locale' => app()->getLocale()]) }}">{{ Str::limit($announcement->title, 60) }}</a></h4>
                                     <div class="announcement-date"><i class="fa fa-calendar"></i> {{ ($announcement->published_at ?? $announcement->created_at)->format('M d, Y') }}</div>
                                     <div class="text">{{ Str::limit(strip_tags($announcement->excerpt ?? $announcement->body), 110) }}</div>
