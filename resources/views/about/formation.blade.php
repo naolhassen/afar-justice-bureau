@@ -34,7 +34,7 @@
                             </p>
                         </div>
                         <a href="{{ route('about.vision-mission', ['locale' => app()->getLocale()]) }}" class="theme-btn btn-style-one">
-                            <span class="txt">Vision & Mission &rarr;</span>
+                            <span class="txt">Vision and Mission &rarr;</span>
                         </a>
                     </div>
                 </div>

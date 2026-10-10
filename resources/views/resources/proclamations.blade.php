@@ -9,7 +9,7 @@
                     <span class="page-badge">
                         <i class="fa fa-gavel"></i> Legal Repository &bull; {{ $proclamations->total() }} Documents
                     </span>
-                    <h1>{{ __('messages.nav.proclamations') }} <span>&amp; Regulations</span></h1>
+                    <h1>{{ __('messages.nav.proclamations') }} <span>and Regulations</span></h1>
                     <p class="lead-desc">
                         Official proclamations enacted by the Afar National Regional State Council — searchable and downloadable certified PDFs.
                     </p>

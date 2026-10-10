@@ -145,12 +145,12 @@
                 </div>
             </div>
 
-            <!-- Regional Woreda & Zone Hierarchy -->
+            <!-- Regional Woreda and Zone Hierarchy -->
             <div style="background: rgba(10,34,54,0.03); border: 1px solid var(--afar-border); border-radius: 20px; padding: 32px;">
                 <div class="row align-items-center">
                     <div class="col-lg-8 col-md-12 mb-3 mb-lg-0">
                         <h4 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 8px;">
-                            {{ app()->getLocale() === 'am' ? 'የዞንና የወረዳ ቅርንጫፍ ጽ/ቤቶች' : 'Sub-Regional & Local Branch Offices' }}
+                            {{ app()->getLocale() === 'am' ? 'የዞንና የወረዳ ቅርንጫፍ ጽ/ቤቶች' : 'Sub-Regional and Local Branch Offices' }}
                         </h4>
                         <p style="color: var(--afar-muted); font-size: 0.95rem; line-height: 1.7; margin: 0;">
                             {{ app()->getLocale() === 'am'

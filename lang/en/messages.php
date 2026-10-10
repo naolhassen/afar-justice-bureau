@@ -11,10 +11,10 @@ return array (
     'home' => 'Home',
     'about' => 'About Us',
     'aboutBureau' => 'About the Bureau',
-    'powersFunctions' => 'Powers & Functions',
-    'visionMission' => 'Vision & Mission',
+    'powersFunctions' => 'Powers and Functions',
+    'visionMission' => 'Vision and Mission',
     'leadership' => 'Leadership',
-    'formation' => 'History & Cultural',
+    'formation' => 'History and Cultural',
     'departments' => 'Departments',
     'regulations' => 'Regulations',
     'structure' => 'Organizational Structure',
@@ -22,11 +22,11 @@ return array (
     'departments' => 'Departments',
     'bureauHead' => 'Bureau Head',
     'prosecution' => 'Public Prosecution',
-    'legalAdvisory' => 'Legal Advisory & Drafting',
-    'customaryJustice' => 'Traditional Justice & Legal Aid',
+    'legalAdvisory' => 'Legal Advisory and Drafting',
+    'customaryJustice' => 'Traditional Justice and Legal Aid',
     'initiatives' => 'Initiatives',
     'transitionalJustice' => 'Transitional Justice',
-    'institutionalReform' => 'Legal & Institutional Reform',
+    'institutionalReform' => 'Legal and Institutional Reform',
     'transformationRoadmap' => 'Justice Sector Transformation',
     'briefing' => 'Newsroom',
     'news' => 'News Updates',
@@ -34,7 +34,7 @@ return array (
     'gallery' => 'Gallery',
     'events' => 'Events',
     'pressRelease' => 'Press Releases',
-    'resources' => 'Laws & Resources',
+    'resources' => 'Laws and Resources',
     'laws' => 'Regional Laws',
     'proclamations' => 'Proclamations',
     'directives' => 'Directives',
@@ -50,14 +50,14 @@ return array (
   'hero' => 
   array (
     'badge' => 'Afar National Regional State Justice Bureau',
-    'title' => 'Upholding the Rule of Law & Fair Justice in',
+    'title' => 'Upholding the Rule of Law and Fair Justice in',
     'titleHighlight' => 'Afar Region',
     'description' => 'Dedicated to safeguarding constitutional rights, accessible legal protection, modern public prosecution, and strengthening customary dispute resolution for all communities.',
     'cta' => 'Our Legal Services',
     'secondaryCta' => 'About the Bureau',
-    'slide1Title' => 'Accessible, Fair & Accountable Justice',
+    'slide1Title' => 'Accessible, Fair and Accountable Justice',
     'slide1Subtitle' => 'Empowering pastoralist communities with transparent and responsive legal institutions.',
-    'slide2Title' => 'Harmonizing Statutory & Customary Justice',
+    'slide2Title' => 'Harmonizing Statutory and Customary Justice',
     'slide2Subtitle' => 'Integrating the traditional Mad\'aa resolution system with human rights standards.',
     'slide3Title' => 'Free Legal Aid for Vulnerable Citizens',
     'slide3Subtitle' => 'Providing dedicated legal representation and counsel for women, children, and low-income families.',
@@ -82,18 +82,18 @@ return array (
   ),
   'services' => 
   array (
-    'sectionTag' => 'Key Mandates & Services',
+    'sectionTag' => 'Key Mandates and Services',
     'title' => 'Core Justice',
     'titleHighlight' => 'Pillars',
-    'politicalEducation' => 'Public Prosecution & Criminal Justice',
+    'politicalEducation' => 'Public Prosecution and Criminal Justice',
     'politicalEducationDesc' => 'Investigating and prosecuting criminal offenses, representing public interest, and supervising penal custody compliance across the region.',
-    'youthEngagement' => 'Legal Advisory & Law Drafting',
+    'youthEngagement' => 'Legal Advisory and Law Drafting',
     'youthEngagementDesc' => 'Reviewing, drafting, and harmonizing regional proclamations, regulations, and executive directives with national standards.',
-    'communityDev' => 'Traditional Justice & Dispute Resolution',
+    'communityDev' => 'Traditional Justice and Dispute Resolution',
     'communityDevDesc' => 'Supporting and collaborating with the customary Mad\'aa dispute resolution system to ensure community peace and social cohesion.',
-    'womenEmpowerment' => 'Free Legal Aid & Public Defense',
+    'womenEmpowerment' => 'Free Legal Aid and Public Defense',
     'womenEmpowermentDesc' => 'Providing free legal advice, court representation, and advocacy for vulnerable women, children, persons with disabilities, and indigents.',
-    'goodGovernance' => 'Human Rights Protection & Monitoring',
+    'goodGovernance' => 'Human Rights Protection and Monitoring',
     'goodGovernanceDesc' => 'Monitoring detention centers, ensuring due process of law, promoting human rights education, and preventing civil liberties violations.',
     'peaceBuilding' => 'Justice Sector Modernization',
     'peaceBuildingDesc' => 'Implementing digital case management, building institutional capacity, and streamlining service delivery for all pastoralist communities.',
@@ -123,8 +123,8 @@ return array (
   ),
   'news' => 
   array (
-    'sectionTag' => 'Newsroom & Updates',
-    'title' => 'Latest News &',
+    'sectionTag' => 'Newsroom and Updates',
+    'title' => 'Latest News and',
     'titleHighlight' => 'Legal Developments',
     'readMore' => 'Read Full Story',
     'viewAll' => 'View All News',
@@ -179,7 +179,7 @@ return array (
   array (
     'visionMission' => 
     array (
-      'title' => 'Vision, Mission &',
+      'title' => 'Vision, Mission and',
       'titleHighlight' => 'Values',
       'vision' => 'Our Vision',
       'visionText' => 'Creating a justice system that\'s community-focused, accessible, and trustworthy, where everyone respects the law and the human and democratic rights of citizens are upheld.',
@@ -190,7 +190,7 @@ return array (
     ),
     'formation' => 
     array (
-      'title' => 'History &',
+      'title' => 'History and',
       'titleHighlight' => 'Milestones',
       'description' => 'Tracing the establishment and evolution of the Afar Justice Bureau in fostering regional stability, institutional justice, and legal reform since the inception of the regional state.',
     ),
@@ -226,7 +226,7 @@ return array (
     ),
     'rulesOfProcedure' => 
     array (
-      'title' => 'Directives &',
+      'title' => 'Directives and',
       'titleHighlight' => 'Procedures',
       'description' => 'Administrative directives, prosecutorial guidelines, and code of conduct governing judicial officers, attorneys, and staff across the bureau.',
     ),
@@ -237,12 +237,12 @@ return array (
     ),
     'articles' => 
     array (
-      'title' => 'Legal Studies &',
+      'title' => 'Legal Studies and',
       'titleHighlight' => 'Articles',
     ),
     'events' => 
     array (
-      'title' => 'Programs &',
+      'title' => 'Programs and',
       'titleHighlight' => 'Events',
     ),
     'pressRelease' => 

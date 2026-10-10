@@ -9,7 +9,7 @@
                     <span class="page-badge">
                         <i class="fa fa-scroll"></i> Legal Repository &bull; {{ $regulations->total() }} Documents
                     </span>
-                    <h1>{{ __('messages.nav.regulations') }} <span>&amp; Directives</span></h1>
+                    <h1>{{ __('messages.nav.regulations') }} <span>and Directives</span></h1>
                     <p class="lead-desc">
                         Official regulations and executive directives enacted by the Afar National Regional State Council and Justice Bureau.
                     </p>

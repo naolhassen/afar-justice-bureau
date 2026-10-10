@@ -263,7 +263,7 @@
                         $initiatives = [
                             ['route' => 'initiatives.justice-sector-transformation', 'icon' => 'flaticon-briefcase', 'title_en' => 'Justice Sector Transformation', 'title_am' => 'የፍትህ ዘርፍ ትራንስፎርሜሽን'],
                             ['route' => 'initiatives.transitional-justice', 'icon' => 'flaticon-balance', 'title_en' => 'Transitional Justice', 'title_am' => 'ትንሳሕተኛ ፍትህ'],
-                            ['route' => 'initiatives.legal-institutional-reform', 'icon' => 'flaticon-law', 'title_en' => 'Legal & Institutional Reform', 'title_am' => 'የሕግና የተቋማዊ ማሻሻያ'],
+                            ['route' => 'initiatives.legal-institutional-reform', 'icon' => 'flaticon-law', 'title_en' => 'Legal and Institutional Reform', 'title_am' => 'የሕግና የተቋማዊ ማሻሻያ'],
                             ['route' => 'publications.strategy', 'icon' => 'flaticon-file', 'title_en' => '5-Year Strategic Plan', 'title_am' => 'የ5 ዓመት ስትራቴጂክ ዕቅድ'],
                         ];
                     @endphp

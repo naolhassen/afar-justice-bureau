@@ -3,7 +3,7 @@
 @section('content')
     <x-page-hero
         title="{{ __('messages.nav.departments') }}"
-        titleHighlight="& Directorates"
+        titleHighlight=""
         description="Specialized directorates within the Afar National Regional State Justice Bureau, each mandated to deliver specific justice services across the region."
     />
 
@@ -119,11 +119,11 @@
                 @endforeach
             </div>
 
-            <!-- Zonal & Woreda Offices -->
+            <!-- Zonal and Woreda Offices -->
             <div style="background: rgba(10,34,54,0.03); border: 1px solid var(--afar-border); border-radius: 20px; padding: 28px; margin-top: 40px;">
                 <div class="row align-items-center">
                     <div class="col-lg-8 col-md-12 mb-3 mb-lg-0">
-                        <h5 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 6px;">Zone & Woreda Offices</h5>
+                        <h5 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 6px;">Zone and Woreda Offices</h5>
                         <p style="color: var(--afar-muted); font-size: 0.92rem; margin: 0;">
                             The Bureau operates through zone directorates and woreda-level prosecution offices across all administrative units of the Afar National Regional State, ensuring local access to justice services.
                         </p>

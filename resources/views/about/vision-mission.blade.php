@@ -9,7 +9,7 @@
 
     <section class="civic-section">
         <div class="auto-container">
-            <!-- Vision & Mission Side-by-Side Cards -->
+            <!-- Vision and Mission Side-by-Side Cards -->
             <div class="row g-4 mb-5">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="civic-card h-100" style="border-top: 4px solid var(--afar-accent);">
@@ -37,7 +37,7 @@
                                 <i class="fa fa-compass"></i>
                             </div>
                             <div>
-                                <span class="civic-badge civic-badge-green" style="font-size: 10px;">Mandate & Purpose</span>
+                                <span class="civic-badge civic-badge-green" style="font-size: 10px;">Mandate and Purpose</span>
                                 <h3 style="font-weight: 800; color: var(--afar-navy); margin: 4px 0 0; font-size: 1.5rem;">
                                     {{ __('messages.pages.visionMission.mission') }}
                                 </h3>
@@ -126,11 +126,11 @@
                 @endforeach
             </div>
 
-            <!-- Powers & Responsibilities -->
+            <!-- Powers and Responsibilities -->
             <div class="sec-title text-center mb-4" style="margin-top: 48px;">
                 <span class="civic-badge civic-badge-gold mb-2">Legal Mandate</span>
                 <h2 style="font-size: clamp(1.8rem, 2.8vw, 2.5rem); font-weight: 800; color: var(--afar-navy);">
-                    Powers &amp; Responsibilities
+                    Powers and Responsibilities
                 </h2>
                 <div class="text" style="max-width: 680px; margin: 10px auto 0; font-size: 0.95rem; color: var(--afar-muted);">
                     The statutory powers and responsibilities vested in the Afar National Regional State Justice Bureau.

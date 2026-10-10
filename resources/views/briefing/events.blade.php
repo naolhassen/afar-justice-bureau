@@ -5,7 +5,7 @@
     $locale = app()->getLocale() ?: 'aa';
     $events = [
         [
-            'title' => 'Regional Consultative Forum on Mad\'aa Harmonization & Transitional Justice',
+            'title' => 'Regional Consultative Forum on Mad\'aa Harmonization and Transitional Justice',
             'desc' => 'High-level conference bringing together regional clan leaders, woreda prosecutors, and academic jurists to discuss traditional dispute mechanisms.',
             'date' => now()->addDays(5)->format('M d, Y'),
             'location' => 'Semera Regional Justice Bureau Auditorium',
@@ -14,7 +14,7 @@
             'badge' => 'civic-badge-gold',
         ],
         [
-            'title' => 'Annual Capacity-Building Workshop for Zone & Woreda Public Prosecutors',
+            'title' => 'Annual Capacity-Building Workshop for Zone and Woreda Public Prosecutors',
             'desc' => 'Comprehensive 4-day intensive training curriculum on modern forensic criminal investigation, cyber evidence analysis, and judicial ethics.',
             'date' => now()->addDays(14)->format('M d, Y'),
             'location' => 'Afar Regional Management Institute, Semera',
@@ -33,7 +33,7 @@
     <section class="civic-section">
         <div class="auto-container">
             <div class="sec-title text-center mb-5">
-                <span class="civic-badge civic-badge-navy mb-2">Conferences & Public Forums</span>
+                <span class="civic-badge civic-badge-navy mb-2">Conferences and Public Forums</span>
                 <h2 style="font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 800; color: var(--afar-navy);">
                     {{ __('messages.pages.events.title') }} <span>{{ __('messages.pages.events.titleHighlight') }}</span>
                 </h2>

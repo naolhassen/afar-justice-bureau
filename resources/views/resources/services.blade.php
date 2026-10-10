@@ -27,7 +27,7 @@
                         <div style="font-family: 'Bellefair', serif; font-size: 1.6rem; font-weight: 700; color: #fff; margin: 4px 0;">
                             32+ Woreda Desks
                         </div>
-                        <span style="font-size: 12px; color: rgba(255,255,255,0.75);">5 Zone Directorates & Mobile Clinics</span>
+                        <span style="font-size: 12px; color: rgba(255,255,255,0.75);">5 Zone Directorates and Mobile Clinics</span>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                     Citizen-Centered Mandates
                 </div>
                 <h2 style="font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 800; color: var(--afar-navy);">
-                    Public Justice & Regulatory Services
+                    Public Justice and Regulatory Services
                 </h2>
                 <div class="text" style="max-width: 780px; margin: 12px auto 0; font-size: 1.05rem; color: var(--afar-muted); line-height: 1.7;">
                     Delivered through our central headquarters in Semera, zone justice directorates, woreda public prosecution offices, and mobile community legal clinics.
@@ -50,7 +50,7 @@
             </div>
 
             <div class="row clearfix g-4">
-                <!-- Service 1: Free Legal Aid & Public Defense -->
+                <!-- Service 1: Free Legal Aid and Public Defense -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="civic-card h-100 d-flex flex-column" style="padding: 32px 26px;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -60,7 +60,7 @@
                             <span class="civic-badge civic-badge-gold" style="font-size: 10px;">Free Citizen Aid</span>
                         </div>
                         <h4 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 12px; font-size: 1.2rem;">
-                            Free Legal Aid & Public Defense
+                            Free Legal Aid and Public Defense
                         </h4>
                         <p style="color: var(--afar-muted); font-size: 0.92rem; line-height: 1.7; flex-grow: 1;">
                             Providing free legal counseling, court representation, and advocacy for low-income citizens, women, children, and vulnerable pastoralist households lacking financial means.
@@ -74,7 +74,7 @@
                     </div>
                 </div>
 
-                <!-- Service 2: Public Prosecution & Criminal Justice -->
+                <!-- Service 2: Public Prosecution and Criminal Justice -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="civic-card h-100 d-flex flex-column" style="padding: 32px 26px;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -84,7 +84,7 @@
                             <span class="civic-badge civic-badge-navy" style="font-size: 10px;">Public Prosecution</span>
                         </div>
                         <h4 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 12px; font-size: 1.2rem;">
-                            Public Prosecution & Criminal Justice
+                            Public Prosecution and Criminal Justice
                         </h4>
                         <p style="color: var(--afar-muted); font-size: 0.92rem; line-height: 1.7; flex-grow: 1;">
                             Directing criminal investigations under regional jurisdiction and delegated federal authority, conducting trials, enforcing court orders, and recovering illicitly acquired assets.
@@ -98,7 +98,7 @@
                     </div>
                 </div>
 
-                <!-- Service 3: Document Authentication & Registration -->
+                <!-- Service 3: Document Authentication and Registration -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="civic-card h-100 d-flex flex-column" style="padding: 32px 26px;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -108,7 +108,7 @@
                             <span class="civic-badge civic-badge-green" style="font-size: 10px;">Authentication</span>
                         </div>
                         <h4 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 12px; font-size: 1.2rem;">
-                            Document Authentication & Registration
+                            Document Authentication and Registration
                         </h4>
                         <p style="color: var(--afar-muted); font-size: 0.92rem; line-height: 1.7; flex-grow: 1;">
                             Verification and official attestation of commercial agreements, powers of attorney, property transfers, and official affidavits across the region.
@@ -122,17 +122,17 @@
                     </div>
                 </div>
 
-                <!-- Service 4: Licensing & Supervision of Lawyers & Associations -->
+                <!-- Service 4: Licensing and Supervision of Lawyers and Associations -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="civic-card h-100 d-flex flex-column" style="padding: 32px 26px;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(201, 151, 56, 0.12); color: var(--afar-accent); display: flex; align-items: center; justify-content: center; font-size: 24px;">
                                 <i class="fa fa-id-card-o"></i>
                             </div>
-                            <span class="civic-badge civic-badge-gold" style="font-size: 10px;">Licensing & Bar</span>
+                            <span class="civic-badge civic-badge-gold" style="font-size: 10px;">Licensing and Bar</span>
                         </div>
                         <h4 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 12px; font-size: 1.2rem;">
-                            Licensing of Lawyers & Associations
+                            Licensing of Lawyers and Associations
                         </h4>
                         <p style="color: var(--afar-muted); font-size: 0.92rem; line-height: 1.7; flex-grow: 1;">
                             Administering professional advocacy licenses, overseeing regional bar compliance, and registering civic, professional, and regional public associations.
@@ -146,7 +146,7 @@
                     </div>
                 </div>
 
-                <!-- Service 5: Civil Representation & Contract Negotiation -->
+                <!-- Service 5: Civil Representation and Contract Negotiation -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="civic-card h-100 d-flex flex-column" style="padding: 32px 26px;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -156,7 +156,7 @@
                             <span class="civic-badge civic-badge-navy" style="font-size: 10px;">Civil Affairs</span>
                         </div>
                         <h4 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 12px; font-size: 1.2rem;">
-                            State Civil Defense & Contract Review
+                            State Civil Defense and Contract Review
                         </h4>
                         <p style="color: var(--afar-muted); font-size: 0.92rem; line-height: 1.7; flex-grow: 1;">
                             Representing regional government organs in civil litigations, negotiating major public infrastructure contracts, and arbitrating inter-office administrative disputes.
@@ -170,7 +170,7 @@
                     </div>
                 </div>
 
-                <!-- Service 6: Human Rights Monitoring & Customary Harmony -->
+                <!-- Service 6: Human Rights Monitoring and Customary Harmony -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="civic-card h-100 d-flex flex-column" style="padding: 32px 26px;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -180,7 +180,7 @@
                             <span class="civic-badge civic-badge-green" style="font-size: 10px;">Human Rights</span>
                         </div>
                         <h4 style="font-weight: 800; color: var(--afar-navy); margin-bottom: 12px; font-size: 1.2rem;">
-                            Human Rights & Detention Oversight
+                            Human Rights and Detention Oversight
                         </h4>
                         <p style="color: var(--afar-muted); font-size: 0.92rem; line-height: 1.7; flex-grow: 1;">
                             Conducting regular inspections of police stations and prisons to safeguard constitutional rights, foster Mad'aa customary mediation harmony, and implement national human rights action plans.

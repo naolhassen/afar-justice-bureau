@@ -10,7 +10,7 @@
     <section class="civic-section">
         <div class="auto-container">
             <div class="sec-title text-center mb-5">
-                <span class="civic-badge civic-badge-navy mb-2">{{ app()->getLocale() === 'am' ? 'ሕግና ምርምር' : 'Legal Jurisprudence & Research' }}</span>
+                <span class="civic-badge civic-badge-navy mb-2">{{ app()->getLocale() === 'am' ? 'ሕግና ምርምር' : 'Legal Jurisprudence and Research' }}</span>
                 <h2 style="font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 800; color: var(--afar-navy);">
                     {{ __('messages.pages.articles.title') }} <span>{{ __('messages.pages.articles.titleHighlight') }}</span>
                 </h2>
