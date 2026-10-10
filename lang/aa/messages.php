@@ -27,7 +27,7 @@ return array (
     'transitionalJustice' => 'Tabaah Maslahat',
     'institutionalReform' => 'Seerik Daddos',
     'transformationRoadmap' => 'Maslahat Biirok Tubanna',
-    'briefing' => 'Odob',
+    'briefing' => 'Xaagu',
     'news' => 'Xaagu',
     'announcements' => 'Maysaxxaga',
     'articles' => 'Maqaalah',
