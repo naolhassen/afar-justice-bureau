@@ -26,6 +26,8 @@ class NewsController extends ResourceController
                 'image' => ['nullable', 'image', 'max:10240'],
                 'images' => ['nullable', 'array'],
                 'images.*' => ['image', 'max:10240'],
+                'remove_images' => ['nullable', 'array'],
+                'remove_images.*' => ['string'],
                 'status' => ['required', Rule::in(['draft', 'published'])],
                 'published_at' => ['nullable', 'date'],
             ]
@@ -46,6 +48,18 @@ class NewsController extends ResourceController
 
         // Additional images
         $existing = $item ? ($item->images ?? []) : [];
+
+        // Remove explicitly marked images
+        $removed = $request->input('remove_images', []);
+        if ($removed) {
+            $existing = array_diff($existing, $removed);
+            foreach ($removed as $path) {
+                if ($path) {
+                    Storage::disk('public')->delete($path);
+                }
+            }
+        }
+
         $uploaded = [];
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $file) {

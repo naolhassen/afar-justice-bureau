@@ -496,14 +496,18 @@ $menu = [
         });
         input.addEventListener('change', renderPreview);
         function renderPreview() {
-            const f = input.files[0];
-            if (!f) return;
-            if (f.type.startsWith('image/')) {
-                const url = URL.createObjectURL(f);
-                preview.innerHTML = '<img src="' + url + '" alt=""><div class="file-name mt-2">' + f.name + '</div>';
-            } else {
-                preview.innerHTML = '<i class="fa-solid fa-file-arrow-up"></i><div class="file-name mt-1">' + f.name + '</div>';
-            }
+            const files = Array.from(input.files || []);
+            if (!files.length) return;
+            let html = '';
+            files.forEach(f => {
+                if (f.type.startsWith('image/')) {
+                    const url = URL.createObjectURL(f);
+                    html += '<div class="text-center"><img src="' + url + '" alt="" style="height: 70px; width: auto; border-radius: 6px; object-fit: cover;"><div class="file-name mt-1 small">' + f.name + '</div></div>';
+                } else {
+                    html += '<div><i class="fa-solid fa-file-arrow-up"></i><div class="file-name mt-1 small">' + f.name + '</div></div>';
+                }
+            });
+            preview.innerHTML = html;
         }
     });
 

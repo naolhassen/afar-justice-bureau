@@ -118,18 +118,29 @@
                         <input type="file" name="images[]" id="images" accept="image/*" multiple>
                         <i class="fa-solid fa-cloud-arrow-up"></i>
                         <div class="file-drop-text">Drag &amp; drop or <strong style="color: var(--afar-blue);">browse files</strong></div>
-                        <div class="file-preview mt-2 d-flex flex-wrap gap-2">
-                            @if($item && $item->images)
-                                @foreach($item->images as $imgPath)
-                                    @if(Str::endsWith($imgPath, ['.jpg', '.jpeg', '.png', '.gif', '.webp']))
-                                        <img src="{{ Str::startsWith($imgPath, 'uploads/') ? asset('storage/' . $imgPath) : asset($imgPath) }}" alt="" style="height: 70px; width: auto; border-radius: 6px; object-fit: cover;">
-                                    @endif
-                                @endforeach
-                            @endif
-                        </div>
+                        <div class="file-preview mt-2 d-flex flex-wrap gap-2"></div>
                     </div>
                     @error('images.*')<div class="text-danger small mt-1">{{ $message }}</div>@enderror
             </div>
+
+            @if($item && $item->images)
+            <div class="mb-4">
+                <label class="form-label fw-semibold">Existing Images</label>
+                <div class="d-flex flex-wrap gap-2">
+                    @foreach($item->images as $imgPath)
+                        @if(Str::endsWith($imgPath, ['.jpg', '.jpeg', '.png', '.gif', '.webp']))
+                            <div class="position-relative" style="display: inline-block;">
+                                <img src="{{ Str::startsWith($imgPath, 'uploads/') ? asset('storage/' . $imgPath) : asset($imgPath) }}" alt="" style="height: 70px; width: auto; border-radius: 6px; object-fit: cover;">
+                                <label class="position-absolute top-0 end-0 m-1" style="cursor: pointer;">
+                                    <input type="checkbox" name="remove_images[]" value="{{ $imgPath }}" class="form-check-input" title="Remove this image">
+                                </label>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+                <div class="form-text">Check the box on an image to remove it.</div>
+            </div>
+            @endif
             <div class="mb-4">
                 <label class="form-label fw-semibold">Status</label>
                     <select name="status" class="form-select">
