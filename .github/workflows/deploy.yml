@@ -2,7 +2,7 @@ name: Deploy to cPanel
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
   workflow_dispatch:
 
 concurrency:
@@ -114,6 +114,14 @@ jobs:
 
           ssh-agent -k
 
+      - name: Determine deploy directory
+        run: |
+          case "${{ github.ref }}" in
+            refs/heads/main) echo "DEPLOY_DIR=${{ secrets.CPANEL_PROD_DIR }}" >> $GITHUB_ENV ;;
+            refs/heads/dev)  echo "DEPLOY_DIR=${{ secrets.CPANEL_DEV_DIR }}" >> $GITHUB_ENV ;;
+            *) echo "Unsupported branch for deployment"; exit 1 ;;
+          esac
+
       - name: Extract and finish on cPanel
         uses: appleboy/ssh-action@v1.0.3
         env:
@@ -127,10 +135,10 @@ jobs:
           envs: DEBUGINFOD_URLS
           script: |
             set -e
-            APP_DIR='${{ secrets.CPANEL_DEV_DIR }}'
+            APP_DIR='${{ env.DEPLOY_DIR }}'
             APP_DIR="${APP_DIR#/}"
             APP_DIR="${APP_DIR%/}"
-            [ -z "$APP_DIR" ] && { echo "CPANEL_DEV_DIR is not set"; exit 1; }
+            [ -z "$APP_DIR" ] && { echo "DEPLOY_DIR is not set"; exit 1; }
             mkdir -p /home/${{ secrets.CPANEL_SSH_USER }}/$APP_DIR
             cd /home/${{ secrets.CPANEL_SSH_USER }}/$APP_DIR
             find . -mindepth 1 -maxdepth 1 ! -name '.env' ! -name 'storage' -exec rm -rf {} +
